@@ -1,0 +1,96 @@
+# WhatsAppPlus
+* Autor: Kostia Glatkii (Ukrajina)
+* Telegram kanal:
+(https://t.me/UnigramPlus)
+* Informacije o mogućnosti da donirate programeru:
+Ako imate želju, a što je najvažnije, priliku, da biste podržali programera ovog dodatka, možete to učiniti koristeći sledeće detalje:
+* PayPal: gladkii.kostia@gmail.com.
+* Ukrajinski sistem donacija:
+http://unigramlus.diaka.ua/donate.
+* Broj kartice:
+5169360009004502 ( Gladkij Konstantin).
+Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u programu, koje možete pronaći u nastavku.
+### Opšte funkcije dodatka
+* Sada će polje za unos poruke promeniti ime kada odgovorimo na poruku.
+* Dodate oznake za neke elemente programa za čitač ekrana.
+## Lista prečica:
+* * ALT+1 - Premesti fokus na listu za ćaskanje.
+* ALT+2 - Premesti fokus na poslednju poruku u otvorenom ćaskanju.
+* ALT+D - Pomerite fokus na polje za uređivanje. Ako je fokus već u polju za uređivanje, onda će se nakon pritiska na interventni taster pomeriti tamo gde je bio ranije.
+* ALT+T - Ime i status otvorenog ćaskanja.
+* ALT+shift+C - Upućivanje glasovnog poziva grupi ili kontaktu ili se pridružite tekućem glasovnom pozivu u grupi.
+* ALT+shift+V - upućivanje video poziva kontaktu ili grupi.
+* ALT+Y - Prihvati poziv.
+* ALT+N - Pritisnite dugme "Odbij poziv" ako postoji dolazni poziv,  dugme "ili poziv" ako je poziv u toku.
+* ALT+A - Privremeno isključite ili uključite mikrofon.
+* ALT+V - Uključite ili isključite kameru.
+* ALT+O - Pritisnite dugme još opcija.
+* Control+R - Snimite i pošaljite glasovnu poruku.
+* Control+D - Odbaci glasovnu poruku.
+* Control+shift+D - Pauzirajte/nastavite snimanje glasovne poruke.
+* ALT+delete - Izbrišite poruku ili ćaskanje.
+* control+shift+P - Otvori trenutni profil za ćaskanje.
+* control+shift+E - Prebacuje režim koji uklanja čitanje korisničkog broja prilikom čitanja poruka koje nisu na listi kontakata.
+* ALT+Q - Reagovanje na poruku.
+* ALT+S - Poruka sa zvezdicom.
+* ALT+F - Prosledi poruku.
+* ALT+R - Odgovori na poruku.
+* ALT+shift+R - Označite ćaskanje kao pročitano.
+* Control+C - Kopiraj poruku ako sadrži tekst.
+* ALT+C - Prikaži tekst poruke u iskačućem prozoru.
+* NVDA+control+W - otvara se prozor sa podešavanjima WhatsApPlus-a.
+* ALT3 – Premesti fokus na oznaku nepročitane poruke.
+* control+N - Pritisnite dugme "Novo ćaskanje".
+* control+shift+A - Pritisnite dugme "Priloži datoteku":
+* Alt+L: Omogući automatsko čitanje novih poruka u trenutnom ćaskanju.
+* control+S: Povećanje/smanjivanje brzine reprodukcije glasovnih poruka.
+* ALT+P: pusti/pauziraj glasovnu poruku koja se trenutno reprodukuje.
+##Istorija promena
+### ###Verzija 1.6.0
+* Dodata je mogućnost brzog odgovaranja članovima grupe. Za unos poruke dovoljno je u polju za uređivanje poruke napisati simbol ", strelicama gore i dole odabrati kome želite odgovoriti, a zatim pritisnuti taster enter.
+* Dodata je mogućnost brzog ubacivanja emotikona. Da biste to uradili, morate u polju za uređivanje poruke napisati dvotačku i naziv emotikona kojeg želite pronaći. Kasnije pomoću tastera sa strelicama levo i desno pronađite željeni emotikon, i pomoću tastera enter ga ubacite u polje za unos poruke.
+* U podešavanjima WhatsaPpplus-a dodata je opcija za omogućavanje reprodukcije zvukova prilikom snimanja, slanja i pauziranja glasovnih poruka.
+* Promenjena je tasterska prečica za otvaranje profila trenutnog ćaskanja u control+shift+P.
+* Dodata je nepalska lokalizacija.
+* Ispravljeno je nekoliko grešaka, uključujući problem kada automatsko čitanje novih poruka u otvorenom ćaskanju nije radilo za neke korisnike.
+
+### Verzija 1.5.0
+* Dodata je prečica na tastaturi za promenu brzine glasovne poruke koja se reprodukuje. Podrazumevani pokret je ctrl+s. Gest će raditi samo kada se glasovna poruka reprodukuje u otvorenom ćaskanju.
+* Dodata je prečica na tastaturi za pauziranje glasovne poruke koja se reprodukuje. Podrazumevani pokret je alt+P. Funkcija će raditi samo kada se glasovna poruka reprodukuje u otvorenom ćaskanju.
+* Sada se najava nove poruke u otvorenom ćaskanju može omogućiti ne samo dok se NVDA ne pokrene, već i zauvek.
+
+Verzija 1.4.0
+* Prilagođeno novoj verziji WhatsAp-.
+* Dodata je funkcija automatskih najava novih poruka u ćaskanju. Podrazumevano, ova funkcija se aktivira pritiskom na Alt+L. Funkcija ostaje aktivna samo dok se NVDA ne pokrene, može doći do problema sa stabilnošću ako ima previše novih poruka
+* Dodata je francuska lokalizacija.
+
+###Verzija 1.3.0
+* Sada će biti pročitan opis linkova priloženih uz poruku
+* Sada će biti najavljeno trajanje glasovnih poruka.
+* Sada možete da otvarate linkove prikačene uz poruke uz pomoć razmaka.
+* Dodate oznake za neke elemente interfejsa
+* Prilagođeno novoj verziji whatsapp-a tako da sve funkcije ispravno rade.
+* Ispravljene neke greške.
+
+###Verzija 1.2.0
+
+* Sada, kada se fokusirate na poruku napisanu kao odgovor na drugu poruku, prvo će biti izgovoren tekst te poruke, a zatim tekst poruke na koju je poslata.
+* Ime i tip fajlova poslatih u razgovoru će se sada izgovoriti.
+* ALT+1 sada radi čak i kada je otvorena arhiva ćaskanja ili odabrani odeljak poruka.
+* ALT+ strelica levo pomaže da se zatvori arhiva ćaskanja ili izabrana lista poruka ako su otvoreni.
+* Sada, pritiskom na control+D, pored odkazivanja glasovnih poruka, poništava se i odgovor na poruku.
+* Informacije o nemogućnosti snimanja glasovne poruke sada će biti prijavljene kada polje za unos poruke nije prazno. Ovo će rešiti problem gde bi se pritiskom na control+R poslala tekstualna poruka umesto da se započne snimanje glasovne poruke.
+* Dodate oznake nekih  stavke koje nisu bile označene.
+
+##Verzija 1.1.0
+
+* Dodata prečica na tastaturi za navigaciju do nepročitanih poruka.
+Pošto ova funkcija zavisi od jezika, ova funkcija se može konfigurisati u podešavanjima WhatsAppPlus-a.
+* Dodata je prečica na tastaturi za pritiskanje dugmeta „Novo ćaskanje“.
+* Dodata je prečica na tastaturi za pritiskanje dugmeta „Priloži datoteku“.
+* Sada, kada snimate glasovnu poruku, sinteza neće objaviti naziv dugmadi za kontrolu snimanja.
+* Dodate rumunske, srpske, hrvatske, španske, i turske lokalizacije.
+* Dodate oznake za neke elemente koji nisu imali oznake čitača ekrana.
+* Sada će informacije o reakcijama na poruku biti objavljene kada se fokusirate na poruku.
+* Sada kada puštate sopstvene glasovne poruke pomoću razmaka, iskačući prozor se neće pojaviti.
+* Ispravljene manje greške.

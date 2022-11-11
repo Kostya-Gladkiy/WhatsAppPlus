@@ -1,0 +1,776 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WhatsAppPlus\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2022-11-06 22:42+0200\n"
+"PO-Revision-Date: 2022-11-06 22:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: Milan Đukanović <milandjukanovic12@gmail.com>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: appModules\n"
+"X-Poedit-SearchPath-1: GlobalPlugins\n"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:53
+msgid "No updates available"
+msgstr "Nema dostupnih ažuriranja"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:54
+#: GlobalPlugins/WhatsAppPlus/__init__.py:80
+msgid "WhatsAppPlus update"
+msgstr "WhatsAppPlus ažuriranje"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:81
+msgid ""
+"A new version of the add-on is available. Do you want to update WhatsAppPlus "
+"to version %version?"
+msgstr ""
+"Nova verzija dodatka je dostupna. Da li želite da ažurirate WhatsAppPlus na "
+"verziju %version?"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:92
+msgid "Yes, update"
+msgstr "Da, ažuriraj"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:93
+msgid "No, not now"
+msgstr "Ne, ne sada"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:108
+msgid "Download in progress"
+msgstr "Preuzimanje je u toku"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:134
+msgid "Changes in this version:"
+msgstr "Promene u verziji:"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:135
+msgid "No update information"
+msgstr "Nema informacija o ažuriranju"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:166
+msgid "Open WhatsAppPlus settings window"
+msgstr "Otvori prozor sa podešavanjima WhatsAppPlus-a"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:175
+msgid ""
+"In this field, separate by commas, write all the matching phrases of the "
+"\"Unread messages\" element in your language. You need to write phrases "
+"without a number."
+msgstr ""
+"U ovo polje, odvojeno zarezima, upišite sve podudarajuće elementa "
+"„Nepročitane poruke“ na svom jeziku. Treba da pišete fraze bez broja."
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:178
+msgid "Play sounds when starting, pausing and sending a voice message"
+msgstr "Reprodukuj zvukove pri pokretanju, pauziranju i slanju glasovne poruke"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:181
+msgid "Check for WhatsAppPlus updates on NVDA startup"
+msgstr "Proveri da li ima ažuriranja za WhatsAppPlus kada se NVDA pokrene"
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:184
+msgid "Check for &updates"
+msgstr "Proveri da li postoje ažuriranja"
+
+#: appModules/whatsapp.py:163 appModules/whatsapp.py:190
+msgid "Chat list not found"
+msgstr "Lista ćaskanja nije pronađena"
+
+#: appModules/whatsapp.py:201
+msgid "Move focus to the last message in an open chat"
+msgstr "Pomeri fokus na poslednju poruku u otvorenom ćaskanju"
+
+#: appModules/whatsapp.py:212 appModules/whatsapp.py:240
+#: appModules/whatsapp.py:286 appModules/whatsapp.py:293
+msgid "No open chat"
+msgstr "Nema otvorenog ćaskanja"
+
+#: appModules/whatsapp.py:213 appModules/whatsapp.py:241
+msgid "This chat is empty"
+msgstr "Ćaskanje je prazno"
+
+#: appModules/whatsapp.py:216
+msgid "Move focus to chat list"
+msgstr "Pomeri fokus na listu ćaskanja"
+
+#: appModules/whatsapp.py:231
+msgid "Chat list is empty"
+msgstr "Lista ćaskanja je prazna"
+
+#: appModules/whatsapp.py:234
+msgid "Move focus to 'unread messages' label"
+msgstr "Premeštanje fokusa na oznaku nepročitane poruke"
+
+#: appModules/whatsapp.py:248
+msgid "There are no unread messages in this chat"
+msgstr "Nema nepročitanih poruka u ovom ćaskanju"
+
+#: appModules/whatsapp.py:251
+msgid "Increase/decrease the playback speed of voice messages"
+msgstr "Povećavanje i smanjivanje brzine reprodukcije glasovne poruke"
+
+#: appModules/whatsapp.py:254 appModules/whatsapp.py:262
+#: appModules/whatsapp.py:268 appModules/whatsapp.py:277
+msgid "Nothing is playing right now"
+msgstr "Trenutno se ništa ne reprodukuje"
+
+#: appModules/whatsapp.py:265
+msgid "Play/pause the voice message currently playing"
+msgstr "Pusti/pauziraj glasovnu poruku koja se trenutno reprodukuje"
+
+#: appModules/whatsapp.py:280
+msgid "Announce the name and status of an open chat"
+msgstr "Najavi ime i status otvorenog ćaskanja"
+
+#: appModules/whatsapp.py:288
+msgid "Open current chat profile"
+msgstr "Otvori trenutni profil ćaskanja"
+
+#: appModules/whatsapp.py:296
+msgid ""
+"Move the focus to the edit field. If the focus is already in the edit field, "
+"then after pressing the hotkey, it will move to where it was before"
+msgstr ""
+"Pomeri fokus na polje za uređivanje. Ako je fokus već u polju za uređivanje, "
+"onda će se nakon pritiska na interventni taster pomeriti tamo gde je bio "
+"ranije"
+
+#: appModules/whatsapp.py:313
+msgid "Copy the message if it contains text"
+msgstr "Kopiraj poruku ako sadrži tekst"
+
+#: appModules/whatsapp.py:323
+msgid "Message copied"
+msgstr "Poruka je kopirana"
+
+#: appModules/whatsapp.py:324 appModules/whatsapp.py:335
+msgid "This message contains no text"
+msgstr "Ova poruka ne sadrži tekst"
+
+#: appModules/whatsapp.py:327
+msgid "Show message text in popup window"
+msgstr "Prikaži tekst poruke u iskačućem prozoru"
+
+#: appModules/whatsapp.py:334
+msgid "message text"
+msgstr "Tekst poruke"
+
+#: appModules/whatsapp.py:338
+msgid "Make a voice call"
+msgstr "Uputi glasovni poziv"
+
+#: appModules/whatsapp.py:342
+msgid "Call unavailable"
+msgstr "Poziv nedostupno"
+
+#: appModules/whatsapp.py:345
+msgid "Make a video call"
+msgstr "Uputi video poziv"
+
+#: appModules/whatsapp.py:349
+msgid "Video call not available"
+msgstr "Video poziv nije dostupan"
+
+#: appModules/whatsapp.py:352
+msgid "Accept call"
+msgstr "Prihvati poziv"
+
+#: appModules/whatsapp.py:359
+#, fuzzy
+#| msgid ""
+#| "Press \"Decline call\" button  if there is an incoming call, \"or call\" "
+#| "button if a call is in progress"
+msgid ""
+"Press \"Decline call\" button  if there is an incoming call or \"End call\" "
+"button if a call is in progress"
+msgstr ""
+"Pritisni dugme \"Odbij poziv\" ako postoji dolazni poziv, ili poziv dugme "
+"ako je poziv u toku"
+
+#: appModules/whatsapp.py:366
+msgid "Mute or unmute the microphone"
+msgstr "Privremeno uključi ili privremeno isključi mikrofon"
+
+#: appModules/whatsapp.py:372
+msgid "Microphone on"
+msgstr "Mikrofon uključen"
+
+#: appModules/whatsapp.py:373
+msgid "Microphone off"
+msgstr "Mikrofon isključen"
+
+#: appModules/whatsapp.py:378
+msgid "Turn the camera on and off"
+msgstr "Uključi i isključi kameru"
+
+#: appModules/whatsapp.py:384
+msgid "Camera on"
+msgstr "Kamera uključena"
+
+#: appModules/whatsapp.py:385
+msgid "Camera off"
+msgstr "Kamera isključena"
+
+#: appModules/whatsapp.py:390
+msgid "Press \"Attach file\" button"
+msgstr "Pritisni priloži datoteku dugme"
+
+#: appModules/whatsapp.py:394 appModules/whatsapp.py:403
+#: appModules/whatsapp.py:506
+msgid "Button not found"
+msgstr "Dugme nije pronađeno"
+
+#: appModules/whatsapp.py:399
+msgid "Press \"More Options\" button"
+msgstr "Pritisni više opcija dugme"
+
+#: appModules/whatsapp.py:406
+msgid "Record and send a voice message"
+msgstr "Snimi i pošalji glasovnu poruku"
+
+#: appModules/whatsapp.py:413
+msgid ""
+"Recording a voice message will not be available until the edit field is empty"
+msgstr ""
+"Snimanje glasovne poruke neće biti moguće dok polje za uređivanje nije prazno"
+
+#: appModules/whatsapp.py:426
+msgid "Discard voice message"
+msgstr "Odbaci glasovnu poruku"
+
+#: appModules/whatsapp.py:439
+msgid "Reply canceled"
+msgstr "Odgovor je odkazan"
+
+#: appModules/whatsapp.py:442
+msgid "Pause/resume voice message recording"
+msgstr "Pauziraj/nastavi snimanje glasovne poruke"
+
+#: appModules/whatsapp.py:464
+msgid "Forward message"
+msgstr "Prosledi poruku"
+
+#: appModules/whatsapp.py:467 appModules/whatsapp.py:642
+msgid "React to message"
+msgstr "Reaguj na poruku"
+
+#: appModules/whatsapp.py:470
+msgid "Delete a message or chat"
+msgstr "Izbriši poruku ili ćaskanje"
+
+#: appModules/whatsapp.py:473
+msgid "Reply to message"
+msgstr "Odgovori na poruku"
+
+#: appModules/whatsapp.py:476
+msgid "Mark a chat as read"
+msgstr "Označi ćaskanje kao pročitano"
+
+#: appModules/whatsapp.py:479
+msgid "Star message"
+msgstr "Poruka sa zvezdicom"
+
+#: appModules/whatsapp.py:482
+msgid "Save file as..."
+msgstr "Sačuvaj datoteku kao..."
+
+#: appModules/whatsapp.py:504
+msgid "Back"
+msgstr "Nazad"
+
+#: appModules/whatsapp.py:509
+msgid ""
+"Toggles the mode that removes the reading of the user number when reading "
+"messages that are not in the contact list"
+msgstr ""
+"Prebacuje režim koji uklanja čitanje korisničkog broja prilikom čitanja "
+"poruka koje nisu na listi kontakata"
+
+#: appModules/whatsapp.py:512
+msgid "User numbers will be read"
+msgstr "Korisnički brojevi će biti pročitani"
+
+#: appModules/whatsapp.py:513
+msgid "User numbers will not be read"
+msgstr "Korisnički brojevi neće biti pročitani"
+
+#: appModules/whatsapp.py:515
+msgid "Enable automatic reading of new messages in the current chat"
+msgstr "Omogući automatsko najavljivanje novih poruka u trenutnom ćaskanju"
+
+#: appModules/whatsapp.py:520
+msgid "Automatic reading of new messages is disabled"
+msgstr "Automatsko najavljivanje novih poruka je onemogućeno"
+
+#: appModules/whatsapp.py:523
+msgid ""
+"Automatic reading of new messages is enabled until the NVDA is restarted"
+msgstr ""
+"Automatsko najavljivanje novih poruka je omogućeno dok se NVDA ne restartuje"
+
+#: appModules/whatsapp.py:526
+msgid "Automatic reading of messages is enabled"
+msgstr "Automatsko najavljivanje novih poruka je omogućeno"
+
+#: appModules/whatsapp.py:561
+msgid "In response to"
+msgstr "kao odgovor na"
+
+#: appModules/whatsapp.py:611
+msgid "Answer to"
+msgstr "Odgovor na"
+
+#: appModules/whatsapp.py:633
+msgid "Cancel reply"
+msgstr "Odkaži odgovor"
+
+#: appModules/whatsapp.py:634
+msgid "Close"
+msgstr "Zatvori"
+
+#: appModules/whatsapp.py:639
+msgid "Add"
+msgstr "Dodaj"
+
+#: appModules/whatsapp.py:640
+msgid "Star"
+msgstr "Zvezdica"
+
+#: appModules/whatsapp.py:641
+msgid "Unstar"
+msgstr "Bez zvezdice"
+
+#: appModules/whatsapp.py:643
+msgid "Next"
+msgstr "Sledeće"
+
+#: appModules/whatsapp.py:644
+msgid "Previous"
+msgstr "Prethodno"
+
+#: appModules/whatsapp.py:645
+msgid "Mute"
+msgstr "Privremeno isključi"
+
+#: appModules/whatsapp.py:646
+msgid "Unmute"
+msgstr "Privremeno uključi"
+
+#: appModules/whatsapp.py:647
+msgid "Pause"
+msgstr "Pauziraj"
+
+#: appModules/whatsapp.py:648
+msgid "Play"
+msgstr "Reprodukuj"
+
+#~ msgid "WhatsAppPlus"
+#~ msgstr "WhatsAppPlus"
+
+#~ msgid ""
+#~ "This add-on adds many hotkeys for quick navigation through the main "
+#~ "elements of the window, convenient interaction with chat messages, and "
+#~ "also adds many minor improvements that make working in WhatsApp much "
+#~ "easier."
+#~ msgstr ""
+#~ "Ovaj dodatak dodaje mnogo interventnih tastera za brzu navigaciju kroz "
+#~ "glavne elemente prozora, zgodnu interakciju sa porukama za ćaskanje, a "
+#~ "takođe dodaje mnoga manja poboljšanja koja znatno olakšavaju rad u "
+#~ "WhatsapP-u."
+
+#~ msgid "Press \"New chat\" button"
+#~ msgstr "Pritisni novo ćaskanje dugme"
+
+#~ msgid "Press the \"Attach\" button"
+#~ msgstr "Pritisni priloži dugme"
+
+#~ msgid "Arabic"
+#~ msgstr "Arapski"
+
+#~ msgid "Czech"
+#~ msgstr "Češki"
+
+#~ msgid "English"
+#~ msgstr "Engleski"
+
+#~ msgid "French"
+#~ msgstr "Francuski"
+
+#~ msgid "Finnish"
+#~ msgstr "Finski"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovački"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norveški"
+
+#~ msgid "German"
+#~ msgstr "Nemački"
+
+#~ msgid "Italian"
+#~ msgstr "Italijanski"
+
+#~ msgid "Persian"
+#~ msgstr "Persijski"
+
+#~ msgid "Polish"
+#~ msgstr "Poljski"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalski"
+
+#~ msgid "Russian"
+#~ msgstr "Ruski"
+
+#~ msgid "Spanish"
+#~ msgstr "Španski"
+
+#~ msgid "Turkish"
+#~ msgstr "Turski"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrajinski"
+
+#~ msgid "Croatian"
+#~ msgstr "Hrvatski"
+
+#~ msgid "Serbian"
+#~ msgstr "Srpski"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Kineski, tradicionalni"
+
+#~ msgid "Before chat name"
+#~ msgstr "Pre imena za ćaskanje"
+
+#~ msgid "After chat name"
+#~ msgstr "Posle imena za ćaskanje"
+
+#~ msgid "Do not speak chat type"
+#~ msgstr "Ne izgovaraj tip ćaskanja"
+
+#~ msgid "Revert to standard voice message recording behavior"
+#~ msgstr "Vratite se na standardno ponašanje snimanja glasovnih poruka"
+
+#~ msgid "Text notification"
+#~ msgstr "Tekstualno obaveštenje"
+
+#~ msgid "sound notification"
+#~ msgstr "zvučno obaveštenje"
+
+#~ msgid "Announce all progress bars"
+#~ msgstr "Najavi sve trake napredovanja"
+
+#~ msgid "Do not announce any progress bars"
+#~ msgstr "Bez najavljivanja trake napredovanj"
+
+#~ msgid "Announce some progress bars"
+#~ msgstr "Najavljivanje nekih traka napredovanja"
+
+#~ msgid "Do not say at all"
+#~ msgstr "Ne izgovaraj trake napredovanja"
+
+#~ msgid "Only in sent messages"
+#~ msgstr "Samo u poslatim porukama"
+
+#~ msgid "Only in received messages"
+#~ msgstr "Samo u primljenim porukama"
+
+#~ msgid "In all messages"
+#~ msgstr "U svim porukama"
+
+#~ msgid "Interface language in Unigram:"
+#~ msgstr "Jezik interfeisa u unigramu:"
+
+#~ msgid "Speak the type of chat in the chat list:"
+#~ msgstr "Izgovori tip ćaskanja u listi za ćaskanje:"
+
+#~ msgid "Say the sender's name in:"
+#~ msgstr "Izgovori ime pošiljaoca u:"
+
+#~ msgid "Speak \"Not Seen\" before reading contents of a message"
+#~ msgstr "Izgovori nije viđeno pre čitanja sadržaja poruke"
+
+#~ msgid "Speak folder names when switching between them"
+#~ msgstr "Izgovori ime fascikle kada se prelazi sa jedne na drugu"
+
+#~ msgid "Notify about deleting a message and chat with a sound"
+#~ msgstr "Obavesti zvukom o brisanju poruke i ćaskanja"
+
+#~ msgid "Display confirmation dialog when deleting messages and chats"
+#~ msgstr "Prikaži dijalog za potvrdu o brisanju poruka i ćaskanja"
+
+#~ msgid "Set voice message recording notification method as:"
+#~ msgstr "Podesi način obaveštenja o snimanju glasovne poruke kao:"
+
+#~ msgid "Select the progress bar notification level:"
+#~ msgstr "Odaberi nivo obaveštenja trake napredovanja:"
+
+#~ msgid "Read description of URLs attached to messages"
+#~ msgstr "Pročitaj opis URL-ova priloženih uz poruke"
+
+#~ msgid "Read full video description in YouTube URLs"
+#~ msgstr "Pročitaj pun opis video URL-ova sa YouTube-a"
+
+#~ msgid "Announce if there is a reply in the group"
+#~ msgstr "Najavi da li u grupi ima odgovora"
+
+#~ msgid "Announce if the message contains a reaction"
+#~ msgstr "Objavi da li poruka sadrži reakciju"
+
+#~ msgid ""
+#~ "Check this box if the voice message recording function or the voice "
+#~ "message playback speed change function does not work properly"
+#~ msgstr ""
+#~ "Označite ovo polje ako funkcija snimanja glasovne poruke ili promena "
+#~ "brzine reprodukcije glasovne poruke ne rade ispravno"
+
+#~ msgid "Menu"
+#~ msgstr "Meni"
+
+#~ msgid "Attach"
+#~ msgstr "Priloži"
+
+#~ msgid "Edit"
+#~ msgstr "Uređivanje"
+
+#~ msgid "Photo"
+#~ msgstr "Fotografija"
+
+#~ msgid "Image"
+#~ msgstr "Slika"
+
+#~ msgid "Invite link"
+#~ msgstr "Pozivni link"
+
+#~ msgid "Choose time"
+#~ msgstr "Izaberi vreme"
+
+#~ msgid "Title field"
+#~ msgstr "Polje naslova"
+
+#~ msgid "Insert emojis"
+#~ msgstr "Ubaci emotikone"
+
+#~ msgid "Done"
+#~ msgstr "Gotovo"
+
+#~ msgid "Merge files"
+#~ msgstr "Spajanje datoteka"
+
+#~ msgid "Search"
+#~ msgstr "Pretraži"
+
+#~ msgid "Delete"
+#~ msgstr "Izbriši"
+
+#~ msgid "Close audio player"
+#~ msgstr "Zatvori audio plejer"
+
+#~ msgid "The audio player has been closed"
+#~ msgstr "Audio plejer je zatvoren"
+
+#~ msgid "Call if it's a contact, or enter a voice chat if it's a group"
+#~ msgstr "Pozovite ako je kontakt ili uđite u glasovno ćaskanje ako je grupa"
+
+#~ msgid ""
+#~ "Press \"Instant view\" button, if it is included in the current message"
+#~ msgstr "Pritisni instant viev ako se nalazi u trenutnoj poruci"
+
+#~ msgid "Press \"Enable/disable camera\" button"
+#~ msgstr "Pritisni \"Uključi/isključi kameru\" dugme"
+
+#~ msgid ""
+#~ "Copy the message if it contains text. If the focus is on a link, the link "
+#~ "will be copied"
+#~ msgstr ""
+#~ "Kopiraj poruku ako sadrži tekst. Ako je fokus na linku, link će biti "
+#~ "kopiran"
+
+#~ msgid "Link copied"
+#~ msgstr "Link je kopiran"
+
+#~ msgid "Copy messages with formatting preserved"
+#~ msgstr "Kopiraj poruke uz održavanje formatiranja"
+
+#~ msgid "Message input field not found"
+#~ msgstr "Polje za unos poruke nije pronađeno"
+
+#~ msgid "Open navigation menu"
+#~ msgstr "Otvori meni za navigaciju"
+
+#~ msgid "Navigation menu not available"
+#~ msgstr "Meni za navigaciju nedostupno"
+
+#~ msgid "Open comments"
+#~ msgstr "Otvori komentare"
+
+#~ msgid "Button to open comments not found"
+#~ msgstr "Dugme za otvaranje komentara nije pronađeno"
+
+#~ msgid "Record sent"
+#~ msgstr "Zapis je poslat"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgid "Voice recording notifications set to text"
+#~ msgstr "Obaveštenje o snimanju glasovne poruke je podešeno kao tekst"
+
+#~ msgid "Voice recording notifications set to sounds"
+#~ msgstr "Obaveštenje o snimanju glasovne poruke je podešeno kao zvuk"
+
+#~ msgid "Recording voice messages has standard behavior"
+#~ msgstr "Snimanje glasovne poruke ima standardno ponašanje"
+
+#~ msgid "Answer options"
+#~ msgstr "Opcije odgovora"
+
+#~ msgid "You"
+#~ msgstr "Vi"
+
+#~ msgid "Not sent"
+#~ msgstr "Nije poslato"
+
+#~ msgid "Reactions"
+#~ msgstr "Reakcije"
+
+#~ msgid "there are replies for you"
+#~ msgstr "ima odgovora za vas"
+
+#~ msgid "Toggle progress bar announcements"
+#~ msgstr "Uključi najave trake napredovanja"
+
+#~ msgid "Editing"
+#~ msgstr "Uređivanje"
+
+#~ msgid "Reply"
+#~ msgstr "Odgovori"
+
+#~ msgid "Duration"
+#~ msgstr "Trajanje"
+
+#~ msgid "Size"
+#~ msgstr "Veličina"
+
+#~ msgid "Enable video"
+#~ msgstr "Uključi video"
+
+#~ msgid "Disable video"
+#~ msgstr "Isključi video"
+
+#~ msgid "Delete message or chat from both sides"
+#~ msgstr "Brisanje poruke ili ćaskanja obe strane"
+
+#~ msgid "Inline results not found"
+#~ msgstr "Inline rezultati nisu odkriveni"
+
+#~ msgid "Inline results not detected"
+#~ msgstr "Inline rezultati nisu odkriveni"
+
+#~ msgid "Switch to selection mode"
+#~ msgstr "Prebacivanje u režim izbora"
+
+#~ msgid "Message deleted on both sides"
+#~ msgstr "Poruka je izbrisana sa obe strane"
+
+#~ msgid "Message deleted"
+#~ msgstr "Poruka izbrisana"
+
+#~ msgid "You left the group"
+#~ msgstr "Napustili ste grupu"
+
+#~ msgid "You left the channel"
+#~ msgstr "Napustili ste kanal"
+
+#~ msgid "Bot removed and blocked"
+#~ msgstr "Bot je uklonjeni blokiran"
+
+#~ msgid "Bot removed"
+#~ msgstr "Bot uklonjen"
+
+#~ msgid "Chat deleted on both sides"
+#~ msgstr "Ćaskanje je izbrisano sa obe strane"
+
+#~ msgid "Chat deleted"
+#~ msgstr "Ćaskanje izbrisano"
+
+#~ msgid "Copy data for broadcasting to the clipboard"
+#~ msgstr "Kopiraj podatke da biste izvršili emitivanje u privermenu memoriju"
+
+#~ msgid "Broadcast window not found"
+#~ msgstr "Prozor za emitovanje nije pronađen"
+
+#~ msgid "%url and %key copied to clipboard"
+#~ msgstr "%url and %ključ su kopirani u privremenu memoriju"
+
+#~ msgid "Fast forward a voice message"
+#~ msgstr "Premotaj glasovnu poruku unapred"
+
+#~ msgid "Right answer"
+#~ msgstr "Pravi odgovor"
+
+#~ msgid "Selected"
+#~ msgstr "Izabrano"
+
+#~ msgid ""
+#~ "Press \"More Options\" button in an open chat, voice chat, or call window"
+#~ msgstr ""
+#~ "Pritisnite dugme više opcija u otvorenom prozoru za ćaskanje, glasovno "
+#~ "ćaskanje ili pozivu"
+
+#~ msgid "Contains reaction"
+#~ msgstr "Sadrži reakciju"
+
+#~ msgid ""
+#~ "Announce all progress bars except voice message playback progress bar"
+#~ msgstr ""
+#~ "Najavi sve trake napredovanja osim trake napredovanja reprodukcije "
+#~ "glasovne poruke"
+
+#~ msgid "The broadcast window is not found"
+#~ msgstr "Lista ćaskanja nije pronađena"
+
+#~ msgid "Select level of notification of progress bars: "
+#~ msgstr "izaberi nivo obaveštenja o traci napredovanja"
+
+#~ msgid "Announce the presence of reaction in the messages"
+#~ msgstr "Najavi prisustvo reakcije u porukama"
+
+#~ msgid "Reply to messages by pressing  Enter"
+#~ msgstr "Pritiskom na enter odgovara na poruku"
+
+#~ msgid ""
+#~ "Read profile name and status in a public chat. Press twice to switch "
+#~ "between \"Turn on tracking chat activity until closing of the app\", "
+#~ "\"Turn tracking chat activity on\" and \"Turn tracking chat activity off\""
+#~ msgstr ""
+#~ "Pročitaj ime profila i statusa u javnom ćaskanju. Pritisnite dvaput da bi "
+#~ "ste se prebacili između \"Uključi praćenje aktivnosti ćaskanja do "
+#~ "zatvaranja aplikacije\", \"Uključi praćenje aktivnosti ćaskanja\" I "
+#~ "isključi praćenje aktivnosti ćaskanja\""
+
+#~ msgid "Chat activity tracking disabled"
+#~ msgstr "Praćenje aktivnosti za ćaskanje isključeno"
+
+#~ msgid "Chat activity tracking is on until closing of the app"
+#~ msgstr ""
+#~ "Praćenje aktivnosti za ćaskanje je uključeno do zatvaranja aplikacije"
+
+#~ msgid "Chat activity tracking enabled"
+#~ msgstr "Praćenje aktivnosti za ćaskanje uključeno"
+
+#~ msgid "This message is not playing"
+#~ msgstr "Ova poruka se ne reprodukuje"

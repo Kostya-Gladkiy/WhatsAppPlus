@@ -1,0 +1,106 @@
+# WhatsAppPlus
+
+* Autor: Kostya Gladkiy (Ucraina)
+* [Canal Telegram](https://t.me/unigramPlus)
+
+##Informații despre posibilitatea de a face donații către dezvoltator:
+
+Dacă ai dorința și, mai ales, posibilitatea de a sprijini dezvoltatorul acestui add-on, o poți face folosind următoarele detalii:
+
+* PayPal: gladkiy.kostya@gmail.com.
+* Sistemul ucrainean de donații: https://unigramplus.diaka.ua/donate.
+* Număr card: 5169360009004502 (Gladkiy Constantine).
+
+A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o muncă productivă și confortabilă în program, care pot fi găsite mai jos.
+
+### Caracteristici generale ale add-on-ului
+
+* Acum, câmpul de introducere a mesajului își va schimba numele atunci când răspunzi la un mesaj.
+* Au fost adăugate etichete pentru unele elemente de program care sunt citite de cititorii de ecran.
+
+## Lista de taste rapide:
+
+* ALT+1 - Mută focalizarea pe lista de chat-uri.
+* ALT+2 - Mută focalizarea pe ultimul mesaj dintr-un chat deschis.
+* ALT+D - Mută focalizarea pe câmpul de editare. Dacă focalizarea se află deja în câmpul de editare, după apăsarea tastei rapide, se va muta în locul în care se afla înainte.
+* ALT+T - Anunță numele și starea unui chat deschis.
+* ALT+shift+C - Efectuează un apel vocal către un grup sau un contact sau alătură-te unui apel vocal în curs de desfășurare într-un grup.
+* ALT+shift+V - Efectuează un apel video către un contact sau un grup.
+* ALT+Y - Răspunde apelului.
+* ALT+V - Pornește și oprește camera.
+* ALT+O - Apasă butonul "Mai multe opțiuni".
+* control+R - Înregistrează și trimite un mesaj vocal.
+* control+D - Anulează mesajul vocal.
+* control+shift+D - Pune pe pauză/reia înregistrarea mesajului vocal.
+* ALT+delete - Șterge un mesaj sau un chat.
+* control+Shift+P - Deschide profilul de chat curent.
+* ALT+shift+A - Apasă butonul "Atașați un fișier".
+* control+shift+E - Comută modul care elimină citirea numărului de utilizator atunci când se citesc mesajele utilizatorilor care nu se află în lista de contacte.
+* ALT+Q - Reacționează la mesaj.
+* ALT+S - Marchează mesajul cu stea.
+* ALT+F - Redirecționează mesajul.
+* ALT+R - Răspunde la mesaj.
+* ALT+shift+R - Marchează un chat ca fiind citit.
+* control+C - Copiază mesajul, dacă acesta conține text.
+* ALT+C - Afișează textul mesajului într-o fereastră popup.
+* NVDA+control+W - Deschide fereastra de setări WhatsAppPlus.
+* ALT+3 - Deplasează focalizarea pe eticheta "mesaje necitite".
+* control+N - Apasă butonul "Chat nou".
+* control+shift+A - Apasă butonul "Atașează fișier".
+* ALT+L: Activează citirea automată a mesajelor noi din chat-ul curent.
+* control+S: Creșteți/diminuați viteza de redare a mesajelor vocale.
+* ALT+P: Redați/opriți mesajul vocal.
+
+##Istoricul modificărilor
+
+###Versiunea 1.6.0
+
+* A fost adăugată posibilitatea de a răspunde rapid membrilor grupului. Pentru a introduce un mesaj, este suficient să scrieți simbolul "@" în câmpul de introducere a mesajului, să folosiți săgețile în sus și în jos pentru a selecta persoana căreia doriți să-i răspundeți și apoi să apăsați tasta Enter.
+* A fost adăugată posibilitatea de a insera rapid emoticoane. Pentru a face acest lucru, trebuie să scrieți două puncte și numele emoticoanelor pe care doriți să le găsiți în câmpul de introducere a mesajului. Ulterior, folosiți tastele săgeată stânga și dreapta pentru a găsi emoticoanele dorite și folosiți tasta Enter pentru a le insera în câmpul de introducere a mesajului.
+* În setările WhatsAppPlus, a fost adăugată o opțiune pentru a activa redarea sunetelor la înregistrarea, întreruperea și trimiterea mesajelor vocale.
+* A fost schimbată comanda rapidă de la tastatură pentru deschiderea profilului conversației curente la Control+Shift+P.
+* A fost adăugată localizarea în limba nepaleză.
+* Au fost reparate mai multe erori, inclusiv o problemă în care citirea automată a mesajelor noi dintr-o conversație deschisă nu funcționa pentru unii utilizatori.
+
+###Versiunea 1.5.0
+
+* A fost adăugată o comandă rapidă de la tastatură pentru a schimba viteza de redare a mesajului vocal. Gestul implicit este ctrl+s. Gestul va funcționa numai atunci când un mesaj vocal este redat într-o conversație deschisă.
+* A fost adăugată o comandă rapidă de la tastatură pentru a pune pe pauză un mesaj vocal care se redă. Gestul implicit este alt+p. Funcția va funcționa numai atunci când un mesaj vocal este redat într-un chat deschis.
+* Acum, enunțarea unui mesaj nou într-un chat deschis poate fi activată nu numai până la repornirea NVDA, ci și pentru totdeauna.
+
+###Versiunea 1.4.0
+
+* Am adaptat addonul la cea mai recentă versiune de WhatsApp.
+* A fost adăugată funcția de anunțare automată a mesajelor noi în chat. În mod implicit, această funcție este activată prin apăsarea ALT+L. Funcția rămâne activă numai până când NVDA este repornit. Pot exista probleme de stabilitate dacă sunt prea multe mesaje noi.
+* A fost adăugată localizarea în limba franceză.
+
+###Versiunea 1.3.0
+
+* Descrierea link-urilor atașate la mesaj va fi acum citită.
+* Acum va fi anunțată durata mesajelor vocale.
+* Acum poți deschide link-urile atașate la mesaje apăsând spațiu.
+* Au fost adăugate etichete pentru unele elemente de interfață
+* Am adaptat add-on-ul la cea mai recentă versiune de WhatsApp, astfel încât toate caracteristicile să funcționeze corect.
+* Au fost corectate unele erori
+
+###Versiunea 1.2.0
+
+* Acum, când te focalizezi pe un mesaj scris ca răspuns la un alt mesaj, va fi enunțat mai întâi textul acelui mesaj și apoi textul mesajului la care a fost trimis.
+* Numele și tipul fișierelor trimise în conversație vor fi acum enunțate.
+* ALT+1 funcționează acum chiar și atunci când arhiva de chat sau secțiunea de mesaje selectate este deschisă.
+* ALT + săgeată stânga ajută la închiderea arhivei de chat sau a listei de mesaje selectate, dacă acestea sunt deschise.
+* Acum, apăsarea comenzii control+D, pe lângă anularea mesajelor vocale, anulează și răspunsul la mesaj.
+* Informațiile despre imposibilitatea de a înregistra un mesaj vocal vor fi acum raportate atunci când câmpul de introducere a mesajului nu este gol. Acest lucru va rezolva o problemă în care apăsarea comenzii control+R trimitea un mesaj text în loc să înceapă înregistrarea unui mesaj vocal.
+* Au fost etichetate unele elemente care nu aveau deja etichete.
+
+###Versiunea 1.1.0
+
+* A fost adăugată o comandă rapidă de la tastatură pentru a naviga la mesajele necitite. Deoarece această funcție depinde de limbă, ea poate fi configurată în setările WhatsAppPlus.
+* A fost adăugată o comandă rapidă de la tastatură pentru apăsarea butonului "Chat nou".
+* A fost adăugată o comandă rapidă de la tastatură pentru apăsarea butonului "Atașează fișier".
+* Acum, atunci când înregistrezi un mesaj vocal, sintetizatorul nu va anunța numele butoanelor de control al înregistrării.
+* A fost adăugată localizarea în limbile română, sârbă, croată, spaniolă și turcă.
+* Au fost adăugate etichete pentru unele elemente care nu aveau etichete pentru cititorii de ecran.
+* Acum, informațiile despre reacțiile la un mesaj vor fi anunțate atunci când te focalizezi pe un mesaj.
+* Acum, la redarea propriilor mesaje vocale cu bara de spațiu, nu va mai apărea o fereastră pop-up.
+* Am rezolvat bug-uri minore.
