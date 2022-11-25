@@ -28,16 +28,16 @@ baseDir = os.path.join(os.path.dirname(__file__), "media\\")
 addonHandler.initTranslation()
 
 icon_from_context_menu = {
-	"відповісти на повідомлення": "\ue97a",
-	"встановити реакцію": "\ue76e",
-	"переслати повідомлення": "\uee35",
-	"видалити": "\ue74d",
-	"помітити як прочитаний": "\ue8bd",
-	"позначити як непрочитаний": "\ue668",
-	"покинути групу": "\ue89b",
-	"добавити в обрані": "\ue734",
-	"видалити з обраних": "\ue735",
-	"зберегти як": "\ue74e"
+	"reply to message": "\ue97a",
+	"react": "\ue76e",
+	"forward message": "\uee35",
+	"Delete": "\ue74d",
+	"mark as read": "\ue8bd",
+	"mark as unread": "\ue668",
+	"leave the group": "\ue89b",
+	"star message": "\ue734",
+	"remove from starred messages": "\ue735",
+	"save as": "\ue74e"
 }
 
 lang = languageHandler.getLanguage().split("_")[0]
@@ -49,6 +49,7 @@ phrases_of_unread_messages = {
 	"it": "messaggi non letti,messaggio non letto",
 	"en": "unread messages,unread message",
 	"ro": "mesaje necitite",
+	"ru": "непрочитанное сообщение,непрочитанные сообщения,непрочитанных сообщения",
 	"sr": "nepročitane poruke",
 	"hr": "nepročitanih poruka,nepročitane poruke,nepročitana poruka",
 }
@@ -70,10 +71,10 @@ class Chat_update:
 		if not Chat_update.active: return
 		try : last_message = Chat_update.app.get_messages_element().lastChild
 		except: last_message = False
-		# Перший елемент це назва чату, в якому було зафіксовано останнє повідомлення
-		# Другий елемент це індекс повідомлення
+		# The first item is the name of the chat in which the last message was recorded
+		# The second item is the index of the message
 		last_saved_message = Chat_update.last_message
-		# Якщо є проблеми з отриманням індекса повідомлення, тоді ми завершуємо функцію і викликаємо наступну ітерацію
+		# If there is a problem getting the message index, end the function and call the next iteration
 		try:
 			last_message.positionInfo["indexInGroup"]
 			last_message.positionInfo["similarItemsInGroup"]
@@ -117,7 +118,7 @@ class AppModule(appModuleHandler.AppModule):
 		self.is_old_interface = False
 		if int(str(self.app_version).replace(".", "")) < 2224010:
 			self.is_old_interface = True
-		# Запускаємо функцію автоматичного озвучення нових повідомлень у відкритому чаті
+		# Launching the function of automatic announcement of new messages in an open chat
 		config.conf.spec['WhatsAppPlus'] = SPEC
 		if not Chat_update.active:
 			Chat_update.toggle(self, config.conf['WhatsAppPlus']['automaticReadingOfNewMessages'])
@@ -200,7 +201,7 @@ class AppModule(appModuleHandler.AppModule):
 		self.title_chat_element = self.title_chat_element or next((item for item in self.get_elements() if controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId == "TitleButton"), None)
 		return self.title_chat_element
 
-	# Перейти до останнього повідомлення в чаті
+	# Go to the last message in the chat
 	@script(description=_("Move focus to the last message in an open chat"), gesture="kb:ALT+2")
 	def script_toLastMessage(self, gesture):
 		obj = api.getFocusObject()
@@ -215,7 +216,7 @@ class AppModule(appModuleHandler.AppModule):
 			if not list: message(_("No open chat"))
 			elif not list.lastChild: message(_("This chat is empty"))
 
-	# Перейти до списку чатів	
+	# Go to chat list	
 	@script(description=_("Move focus to chat list"), gesture="kb:ALT+1")
 	def script_toChatList(self, gesture, arg = False):
 		obj = api.getFocusObject()
@@ -228,12 +229,12 @@ class AppModule(appModuleHandler.AppModule):
 		chats = self.get_chats_element()
 		try:
 			element = chats.firstChild
-			# Обробляємо ситуацію, коли відкритий список обраних повідомлень. В цьому списку першим елементом є не елемент списку, а назва списку
+			# Processing the situation when the list of starred messages is open. In this list, the first item is not the list item, but the name of the list
 			if element.role != controlTypes.Role.LISTITEM and element.next and element.next.role == controlTypes.Role.LISTITEM: element = element.next
 			element.setFocus()
 		except: message(_("Chat list is empty"))
 	
-	# Перейти до мітки "непрочитані повідомлення"
+	# Go to "unread messages" label
 	@script(description=_("Move focus to 'unread messages' label"), gesture="kb:ALT+3")
 	def script_goToTheLastUnreadMessage(self, gesture):
 		list = self.get_messages_element()
@@ -250,7 +251,7 @@ class AppModule(appModuleHandler.AppModule):
 		if element: element.setFocus()
 		else: message(_("There are no unread messages in this chat"))
 	
-	# Зміна швидкості відтворення голосового повідомлення
+	# Changing the playback speed of a voice message
 	@script(description=_("Increase/decrease the playback speed of voice messages"), gesture="kb:control+S")
 	def script_voiceMessageAcceleration(self, gesture):
 		if not self.rewind_slider:
@@ -264,7 +265,7 @@ class AppModule(appModuleHandler.AppModule):
 			last_focus.setFocus()
 		else: message(_("Nothing is playing right now"))
 
-	# Призупинити відтворення голосового повідомлення
+	# Play/pause voice message
 	@script(description=_("Play/pause the voice message currently playing"), gesture="kb:ALT+P")
 	def script_pauseVoiceMessage(self, gesture):
 		if not self.rewind_slider or self.rewind_slider.value == "0":
@@ -279,7 +280,7 @@ class AppModule(appModuleHandler.AppModule):
 			mouseHandler.executeMouseEvent(winUser.MOUSEEVENTF_LEFTUP, 0, 0)
 		else: message(_("Nothing is playing right now"))
 
-	# Озвучує назву і статус профілю, в відкритому чаті
+	# Read profile name and status in open chat
 	@script(description=_("Announce the name and status of an open chat"), gesture="kb:ALT+T")
 	def script_read_profile_name(self, gesture):
 		title = self.get_title_element()
@@ -295,7 +296,7 @@ class AppModule(appModuleHandler.AppModule):
 		try: self.title_chat_element.doAction()
 		except: message(_("No open chat"))
 
-	# Перенести фокус в поле вводу повідомлення. Якщо фокус вже знаходиться в цьому полі, тоді перенести його на останній елемент який був в фокусі перед цим полем
+	# Перенести фокус в поле вводу повідомлення. Якщо фокус вже знаходиться в цьому полі, тоді перенести його на останній елемент який був в фокусі перед цим полемMove the focus to the edit field. If the focus is already in this field, then move it to the last element that had focus before this field
 	@script(description=_("Move the focus to the edit field. If the focus is already in the edit field, then after pressing the hotkey, it will move to where it was before"), gesture="kb:ALT+D")
 	def script_to_message_box(self, gesture, arg = False):
 		obj = api.getFocusObject()
@@ -312,7 +313,7 @@ class AppModule(appModuleHandler.AppModule):
 			self.message_box_element = False
 			self.script_to_message_box(gesture)
 
-	# Скопіювати поточне повідомлення в буфер обміну
+	# Copy current message to clipboard
 	@script(description=_("Copy the message if it contains text"), gesture="kb:control+C")
 	def script_copyMessage(self, gesture):
 		obj = api.getFocusObject()
@@ -326,7 +327,7 @@ class AppModule(appModuleHandler.AppModule):
 			message(_("Message copied"))
 		else: message(_("This message contains no text"))
 
-	# Показати текст повідомлення в спливаючому вікні
+	# Show message text in popup window
 	@script(description=_("Show message text in popup window"), gesture="kb:ALT+C")
 	def script_show_text_message(self, gesture):
 		gesture.send()
@@ -337,35 +338,35 @@ class AppModule(appModuleHandler.AppModule):
 		if text: TextWindow(text.strip(), _("message text"), readOnly=False)
 		else: message(_("This message contains no text"))
 
-	# Зателефонувати якщо це контакт, або увійти до голосового чату, якщо це група
+	# Call if it's a contact, or enter a voice chat if it's a group
 	@script(description=_("Make a voice call"), gesture="kb:shift+alt+C")
 	def script_call(self, gesture):
 		button = next((item for item in self.get_elements() if item.UIAAutomationId == "AudioCallButton" and controlTypes.State.FOCUSABLE in item.states), None)
 		if button: button.doAction()
 		else: message(_("Call unavailable"))
 
-	# Зателефонувати по відеозв'язку якщо це контакт
+	# Make a video call if it's a contact
 	@script(description=_("Make a video call"), gesture="kb:shift+alt+V")
 	def script_videoCall(self, gesture):
 		button = next((item for item in self.get_elements() if item.UIAAutomationId == "VideoCallButton" and controlTypes.State.FOCUSABLE in item.states), None)
 		if button: button.doAction()
 		else: message(_("Video call not available"))
 
-	# Відповідь на дзвінок
+	# Accept call
 	@script(description=_("Accept call"), gesture="kb:ALT+Y")
 	def script_answeringCall(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
 		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue717"), None)
 		if button: button.doAction()
 
-	# Завершити дзвінок або відхилити дзвінок
+	# End or decline call
 	@script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:ALT+N")
 	def script_callCancellation(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
 		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue65a"), None)
 		if button: button.doAction()
 
-	# Вимкнення/увімкнення мікрофону
+	# Mute/unmute the microphone
 	@script(description=_("Mute or unmute the microphone"), gesture="kb:ALT+A")
 	def script_microphone(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
@@ -377,7 +378,7 @@ class AppModule(appModuleHandler.AppModule):
 		button.doAction()
 		focus.setFocus()
 
-	# Вимкнення/увімкнення камери
+	# Turn on/off the camera
 	@script(description=_("Turn the camera on and off"), gesture="kb:ALT+V")
 	def script_video(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
@@ -389,30 +390,30 @@ class AppModule(appModuleHandler.AppModule):
 		button.doAction()
 		focus.setFocus()
 
-	# Натиснути кнопку "Вкласти медіа"
+	# Press the "Attach media" button
 	@script(description=_("Press \"Attach file\" button"), gesture="kb:control+shift+A")
 	def script_add_files(self, gesture):
 		button = next((item for item in self.get_elements() if controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId == "AttachButton"), None)
 		if button: button.doAction()
 		else: message(_("Button not found"))
 
-		# Натиснути кнопку "Нова розмова"
+		# Press the "New conversation" button
 	
-	# Натиснути кнопку "Більше опцій"
+	# Press the "More options" button
 	@script(description=_("Press \"More Options\" button"), gesture="kb:ALT+O")
 	def script_showMoreOptions(self, gesture):
 		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and item.UIAAutomationId == "SettingsButton"), None)
 		if button: button.doAction()
 		else: message(_("Button not found"))
 
-	# Функція запису і надсилання голосового повідомлення
+	# Function of recording and sending a voice message
 	@script(description=_("Record and send a voice message"), gesture="kb:control+R")
 	def script_recordingVoiceMessage(self, gesture):
 		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("RightButton", "PttSendButton")), None)
 		if not button: return
 		if button.UIAAutomationId == "RightButton":
 			if button.firstChild.name == "\ue724":
-				# Якщо поле вводу не порожнє
+				# If the edit field is not empty
 				message(_("Recording a voice message will not be available until the edit field is empty"))
 				return
 			if config.conf["WhatsAppPlus"]['playSoundWhenRecordingVoiceMessage']:
@@ -425,7 +426,7 @@ class AppModule(appModuleHandler.AppModule):
 			if config.conf["WhatsAppPlus"]['playSoundWhenRecordingVoiceMessage']:
 				playWaveFile(baseDir+"wa_ptt_sent.wav")
 
-	# Фунція скасовування запису голосового повідомлення
+	# Voice message discard function
 	@script(description=_("Discard voice message"), gesture="kb:control+D")
 	def script_cancelVoiceMessageRecording(self, gesture):
 		button = next((item for item in self.get_elements() if (item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId == "PttDeleteButton") or (item.firstChild and item.firstChild.name == "\ue8bb")), None)
@@ -441,7 +442,7 @@ class AppModule(appModuleHandler.AppModule):
 			focus.setFocus()
 			message(_("Reply canceled"))
 	
-	# Фунція призупиненя запису голосового повідомлення
+	# Voice message recording pause function
 	@script(description=_("Pause/resume voice message recording"), gesture="kb:control+shift+d")
 	def script_stopVoiceMessageRecording(self, gesture):
 		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("PttPauseButton", "PttResumeButton")), None)
@@ -466,25 +467,25 @@ class AppModule(appModuleHandler.AppModule):
 
 	@script(description=_("Forward message"), gesture="kb:ALT+F")
 	def script_forwardMessage(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["переслати повідомлення"])
+		self.activate_option_for_menu(icon_from_context_menu["forward message"])
 	@script(description=_("React to message"), gesture="kb:ALT+Q")
 	def script_set_reaction(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["встановити реакцію"])
+		self.activate_option_for_menu(icon_from_context_menu["react to message"])
 	@script(description=_("Delete a message or chat"), gesture="kb:ALT+delete")
 	def script_deletion(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["видалити"])
+		self.activate_option_for_menu(icon_from_context_menu["delete"])
 	@script(description=_("Reply to message"), gesture="kb:ALT+R")
 	def script_reply_to_message(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["відповісти на повідомлення"])
+		self.activate_option_for_menu(icon_from_context_menu["reply to message"])
 	@script(description=_("Mark a chat as read"), gesture="kb:ALT+shift+R")
 	def script_read_chat(self, gesture):
-		self.activate_option_for_menu((icon_from_context_menu["помітити як прочитаний"], icon_from_context_menu["позначити як непрочитаний"]))
+		self.activate_option_for_menu((icon_from_context_menu["mark as read"], icon_from_context_menu["позначити як непрочитаний"]))
 	@script(description=_("Star message"), gesture="kb:ALT+S")
 	def script_Star_message(self, gesture):
-		self.activate_option_for_menu((icon_from_context_menu["добавити в обрані"], icon_from_context_menu["видалити з обраних"]))
+		self.activate_option_for_menu((icon_from_context_menu["star message"], icon_from_context_menu["видалити з обраних"]))
 	@script(description=_("Save file as..."))
 	def script_save_file(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["зберегти як"])
+		self.activate_option_for_menu(icon_from_context_menu["save as"])
 	def script_action_space(self, gesture):
 		obj = api.getFocusObject()
 		try: obj.UIAAutomationId
@@ -508,7 +509,7 @@ class AppModule(appModuleHandler.AppModule):
 			button.doAction()
 		else: message(_("Button not found"))
 
-	# Перемикання режиму видалення номеру телефону в іменах контактів	
+	# Switching the mode of deleting a phone number in contact names	
 	@script(description=_("Toggles the mode that removes the reading of the user number when reading messages that are not in the contact list"), gesture="kb:control+shift+E")
 	def script_save_as(self, gesture):
 		config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"] = not config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"]
@@ -528,13 +529,13 @@ class AppModule(appModuleHandler.AppModule):
 			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = True
 			message(_("Automatic reading of messages is enabled"))
 
-	# Обробляємо повідомлення яке потрапило в фокус
+	# Processing the message that got into focus
 	def action_message_focus(self, obj):
 		reactions = ""
 		answer = False
 		duration = False
 		time_element = False
-		# Тут зберігаємо текст відповіді, якщо повідомлення було написано у відповідь
+		# Save reply text if message was written as a reply to a message
 		text = False
 		for item in obj.children:
 			if item.UIAAutomationId == "Text": text = item
@@ -543,11 +544,11 @@ class AppModule(appModuleHandler.AppModule):
 				item = item.previous
 				try:
 					if text and obj.firstChild.UIAAutomationId in ("", "NameTextBlock"):
-						# Тут зберігаємо ім'я користувача, яке потрібно вирізати з повідомлення
+						# Saving a username to remove from a message
 						name = obj.children[0]
-						# Тут зберігаємо ім'я користувача, яке потрібно буде дописати в кінці повідомлення
+						# Saving the username to be added at the end of the message
 						new_name = text.previous
-						# У випадку, коли користувач з номером телефону відповідає на моє повідомлення посиланням
+						# If a user with a phone number replies to a message with a link
 						if new_name.previous and new_name.previous.UIAAutomationId == "PushNameTextBlock": name =new_name
 						answer = (name.name, new_name.name, text.name.strip())
 				except: pass
@@ -555,7 +556,7 @@ class AppModule(appModuleHandler.AppModule):
 				reactions = item.name
 			elif item.UIAAutomationId == "Duration": duration = item.name
 			elif item.UIAAutomationId == "TitleTextBlock"and " http" in obj.name:
-				# Якщо повідомлення містить посилання, тоді намагаємось відобразити опис даного посилання
+				# If the message contains a link, then try to display the description of that link
 				obj.name = obj.name.replace("http", item.name+", "+"http")
 
 		if obj.name.endswith(" "): obj.name = obj.name[:-1]
@@ -570,7 +571,7 @@ class AppModule(appModuleHandler.AppModule):
 		if duration: obj.name = obj.name.replace("   ", " "+duration+", ")
 		if reactions: obj.name += ".\n"+reactions
 
-		# Видаляємо номери телефону з імен користувачів
+		# Remove phone number from usernames
 		if not config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"]: obj.name = sub(reg_for_delete_phon_number, '', obj.name)
 	
 	
@@ -618,7 +619,7 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 
-	# Обробляємо ініціалізацію елементів
+	# Processing item initialization
 	# def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 	def event_NVDAObject_init(self,obj):
 		try:
@@ -630,7 +631,7 @@ class AppModule(appModuleHandler.AppModule):
 				elif obj.name == 'WhatsApp.Design.ThemeData':
 					obj.name = obj.children[1].name
 				elif controlTypes.State.SELECTED in obj.states and obj.parent.UIAAutomationId in ("EmojiList", "MentionsList"):
-					# Озвучуємо ім'я вибраного користувача в списку з підказками, при ведені символа @
+					# Reading the name of the selected user in the list with hints when typing the @ symbol
 					message(obj.name)
 			elif obj.role == controlTypes.Role.BUTTON:
 				if obj.name == "\ue8bb": obj.name = _("Cancel reply")

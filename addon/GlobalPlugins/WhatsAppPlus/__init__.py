@@ -135,10 +135,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__(*args, **kwargs)
 		config.conf.spec['WhatsAppPlus'] = SPEC
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(WhatsAppPlusSettings)
-		# Перевіряємо чи користувацька папка містить тимчасовий файл додатка, якщо так, тоді видаляємо його
+		# Check if the user folder contains a temporary add-on file, if so, then delete it
 		fp = os.path.join(globalVars.appArgs.configPath, "whatsappplus.nvda-addon")
 		if os.path.exists(fp): os.remove(fp)
-		# Перевіряємо наявність оновлень
+		# Checking for updates
 		if config.conf["WhatsAppPlus"]["isAutomaticallyCheckForUpdates"]:
 			threading.Thread(target=onCheckForUpdates, args=(False, True,)).start()
 
@@ -150,16 +150,16 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 	title = "WhatsAppPlus"
 	def makeSettings(self, settingsSizer):
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Поле для налаштування функції переходу до непрочитаних повідомлень
+		# Field for setting the function of moving focus to unread messages
 		self.phrases_of_unread_messages = settingsSizerHelper.addLabeledControl(_('In this field, separate by commas, write all the matching phrases of the "Unread messages" element in your language. You need to write phrases without a number.'), wx.TextCtrl)
 		self.phrases_of_unread_messages.Value = getConfig("phrasesOfUnreadMessages")
-		# Увімкнення звуків при записі голосових повідомлень
+		# Turn on sounds when recording voice messages
 		self.is_play_sound_when_recording_voice_message = settingsSizerHelper.addItem(wx.CheckBox(self, label=_("Play sounds when starting, pausing and sending a voice message")))
 		self.is_play_sound_when_recording_voice_message.SetValue(getConfig("playSoundWhenRecordingVoiceMessage"))
-		# Перевірка оновлення при старті програми
+		# Checking for Updates on NVDA Startup
 		self.is_automatically_check_for_updates = settingsSizerHelper.addItem(wx.CheckBox(self, label=_("Check for WhatsAppPlus updates on NVDA startup")))
 		self.is_automatically_check_for_updates.SetValue(getConfig("isAutomaticallyCheckForUpdates"))
-		# Кнопка для провірки оновлень
+		# Button to check for updates
 		self.checkForUpdates = settingsSizerHelper.addItem(wx.Button(self, label=_("Check for &updates")))
 		self.checkForUpdates.Bind(wx.EVT_BUTTON, onCheckForUpdates)
 
