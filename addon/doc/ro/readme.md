@@ -50,8 +50,16 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * ALT+L: Activează citirea automată a mesajelor noi din chat-ul curent.
 * control+S: Creșteți/diminuați viteza de redare a mesajelor vocale.
 * ALT+P: Redați/opriți mesajul vocal.
+* ALT+U: Anunță valoarea curentă a barei de progres. Atunci când este apăsat de două ori, activează/dezactivează sonorizarea automată a indicatorilor de performanță.
 
 ##Istoricul modificărilor
+
+### Versiunea 1.7.0
+
+* A fost adăugată o funcție care anunță automat bara de progres dacă ești focalizat pe un mesaj.
+* A fost adăugată o comandă rapidă de la tastatură pentru a anunța valoarea barei de progres dacă focalizarea este pe un mesaj. În mod implicit, combinația de taste ALT+U este atribuită acestei funcții. Dacă această combinație este apăsată de două ori, funcția de anunțare automată a indicatorilor de performanță va fi activată.
+* A fost rezolvată o problemă prin care nu se putea muta focalizarea în lista de chat.
+* Au fost adăugate etichete la unele elemente.
 
 ###Versiunea 1.6.0
 

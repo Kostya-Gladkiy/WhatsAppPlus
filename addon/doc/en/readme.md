@@ -50,8 +50,16 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * ALT+L: Enable automatic reading of new messages in the current chat.
 * control+S: Increase/decrease the playback speed of voice messages.
 * ALT+P: Play/pause the voice message currently playing.
+* ALT+U: Announce the current value of the progress bar. When double-pressed, turns on/off the automatic sounding of performance indicators.
 
 ## History of changes
+
+### Version 1.7.0
+
+* Added a function that automatically announces the progress bar if the focus is on a message.
+* Added keyboard shortcut to report progress bar value if focus is on a message. By default, the ALT+U key combination is assigned to this function. If this combination is pressed twice, the function of automatic announcing of performance indicators will be enabled.
+* Fixed an issue where focus could not be moved to the chat list.
+* Added labels to some elements.
 
 ### Version 1.6.0
 

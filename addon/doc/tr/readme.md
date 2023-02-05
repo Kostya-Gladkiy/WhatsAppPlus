@@ -50,8 +50,17 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT + L: Geçerli sohbetteki yeni mesajların otomatik okunmasını etkinleştir.
 * CTRL + S Sesli mesajların oynatma hızını artırın veya azaltın.
 * ALT+P: Şu anda çalınan sesli mesajı oynat / duraklat 
+* ALT +U: İlerleme çubuğunun geçerli değerini - seslendir.. Çift basıldığında,  İlerleme çubuğunun - otomatik  seslendirmesini  açar / kapatır.
+
 
 ##Değişiklik listesi:
+
+### Sürüm 1.7.0
+
+* Odak mesaj üzerindeyse ilerleme çubuğunu otomatik olarak seslendiren bir özellik eklendi.
+* Odağı mesaja   taşırsınızsa ilerleme çubuğu değerini bildirmek için bir klavye kısayolu eklendi. Bu işlev için standart olarak ALT+U tuş kombinasyonu   atanmıştır.. Bu kombinasyona iki kez basarsanız, ilerleme çubuklarının otomatik seslendirmesi etkinleştirilir.
+* Odağı konuşma listesine taşıyamadığınız bir sorun düzeltildi.
+* Bazı etiketsis  öğelere etiketler eklendi.
 
 ### Sürüm 1.6.0
 

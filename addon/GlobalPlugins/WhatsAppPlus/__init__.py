@@ -156,6 +156,11 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 		# Turn on sounds when recording voice messages
 		self.is_play_sound_when_recording_voice_message = settingsSizerHelper.addItem(wx.CheckBox(self, label=_("Play sounds when starting, pausing and sending a voice message")))
 		self.is_play_sound_when_recording_voice_message.SetValue(getConfig("playSoundWhenRecordingVoiceMessage"))
+		# Automatically report progress indicators
+		self.automatically_report_progress_indicators = settingsSizerHelper.addItem(wx.CheckBox(
+		    self, label=_("Automatically report progress bar updates when focus is on a message")))
+		self.automatically_report_progress_indicators.SetValue(
+		    getConfig("automatically_report_progress_indicators"))
 		# Checking for Updates on NVDA Startup
 		self.is_automatically_check_for_updates = settingsSizerHelper.addItem(wx.CheckBox(self, label=_("Check for WhatsAppPlus updates on NVDA startup")))
 		self.is_automatically_check_for_updates.SetValue(getConfig("isAutomaticallyCheckForUpdates"))
@@ -172,6 +177,7 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 		phrases_of_unread_messages = [item.lower().strip() for item in phrases_of_unread_messages]
 		self.phrases_of_unread_messages.Value = ",".join(phrases_of_unread_messages)
 		setConfig("phrasesOfUnreadMessages", self.phrases_of_unread_messages.Value)
+		setConfig("automatically_report_progress_indicators", self.automatically_report_progress_indicators.Value)
 		setConfig("isAutomaticallyCheckForUpdates", self.is_automatically_check_for_updates.IsChecked())
 		setConfig("playSoundWhenRecordingVoiceMessage", self.is_play_sound_when_recording_voice_message.IsChecked())
 

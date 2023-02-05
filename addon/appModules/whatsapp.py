@@ -1,5 +1,6 @@
 import appModuleHandler
 import api
+import scriptHandler
 from scriptHandler import script
 from ui import message
 import controlTypes
@@ -21,7 +22,6 @@ from nvwave import playWaveFile
 from re import *
 
 reg_for_delete_phon_number = compile(r"\+\d[()\d\s‬-]{12,}")
-# reg_time_message = compile(r"?\s?\d\d:\d\d\s??")
 
 baseDir = os.path.join(os.path.dirname(__file__), "media\\")
 
@@ -60,6 +60,7 @@ SPEC = {
 	'isAutomaticallyCheckForUpdates': 'boolean(default=True)',
 	'displayPhoneNumberInUsername': 'boolean(default=True)',
 	'automaticReadingOfNewMessages': 'boolean(default=False)',
+	'automatically_report_progress_indicators': 'boolean(default=False)',
 }
 
 class Chat_update:
@@ -110,8 +111,34 @@ class Chat_update:
 			return False
 
 
+class FileDownloadIndicator:
+	active = False
+	interval = 1
+	progress_object = None
+	last_value = None
+	def start():
+		obj = api.getFocusObject()
+		FileDownloadIndicator.progress_object = next(
+			(item for item in obj.children if item.role == controlTypes.Role.PROGRESSBAR and item.next and item.next.name == "\ue711"), None)
+		if FileDownloadIndicator.progress_object:
+			FileDownloadIndicator.active = True
+			FileDownloadIndicator.tick()
+	def tick():
+		obj = api.getFocusObject()
+		if not FileDownloadIndicator.progress_object or not obj.UIAAutomationId or obj.UIAAutomationId != "BubbleListItem" or not FileDownloadIndicator.progress_object.location.left:
+			FileDownloadIndicator.active = False
+			FileDownloadIndicator.progress_object = None
+			return False
+		value = FileDownloadIndicator.progress_object.value or FileDownloadIndicator.progress_object.name or "Wait"
+		if not FileDownloadIndicator.last_value or FileDownloadIndicator.last_value != value:
+			message(value)
+			FileDownloadIndicator.last_value = value
+		Timer(FileDownloadIndicator.interval, FileDownloadIndicator.tick).start()
+
+
 class AppModule(appModuleHandler.AppModule):
 	scriptCategory = "WhatsAppPlus"
+	
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self.app_version = self.productVersion
@@ -128,6 +155,7 @@ class AppModule(appModuleHandler.AppModule):
 	chats_list_element = None
 	last_focus_chat_element = None
 	title_chat_element = None
+	last_title_value = ""
 	message_box_element = None
 	execute_context_menu_option = None
 	save_focus = None
@@ -172,7 +200,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def get_chats_element(self):
 		obj = self.chats_list_element
-		if not obj or (obj and not obj.location.width):
+		if not obj or (not obj.location.width):
 			obj = next((item.firstChild for item in self.get_elements() if item.UIAAutomationId == "ChatList"), None)
 			if obj: self.chats_list_element = obj
 		return obj
@@ -228,11 +256,12 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		chats = self.get_chats_element()
 		try:
-			element = chats.firstChild
+			element = chats.next.firstChild
 			# Processing the situation when the list of starred messages is open. In this list, the first item is not the list item, but the name of the list
 			if element.role != controlTypes.Role.LISTITEM and element.next and element.next.role == controlTypes.Role.LISTITEM: element = element.next
 			element.setFocus()
-		except: message(_("Chat list is empty"))
+		except Exception as e:
+			message(_("Chat list is empty"))
 	
 	# Go to "unread messages" label
 	@script(description=_("Move focus to 'unread messages' label"), gesture="kb:ALT+3")
@@ -529,6 +558,20 @@ class AppModule(appModuleHandler.AppModule):
 			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = True
 			message(_("Automatic reading of messages is enabled"))
 
+	@script(description=_("Announce the current value of the progress bar. When double-pressed, turns on/off the automatic sounding of performance indicators."), gesture="kb:ALT+U")
+	def script_announce_progress_bar(self, gesture):
+		if scriptHandler.getLastScriptRepeatCount() == 1:
+			config.conf["WhatsAppPlus"]["automatically_report_progress_indicators"] = not config.conf["WhatsAppPlus"]["automatically_report_progress_indicators"]
+			if config.conf["WhatsAppPlus"]["automatically_report_progress_indicators"]: message(_("Now the values ​​of the performance indicators will be announced automatically"))
+			else: message(_("Now the values ​​of the progress indicators will not be announced automatically"))
+			return
+		obj = api.getFocusObject()
+		if obj.UIAAutomationId == "BubbleListItem":
+			progress = next((item for item in obj.children if item.role == controlTypes.Role.PROGRESSBAR and (item.value or item.name)), None)
+			if progress: message(progress.value or progress.name)
+			else: message(_("This message does not include a progress bar"))
+		else: message(_("This element is not a message"))
+
 	# Processing the message that got into focus
 	def action_message_focus(self, obj):
 		reactions = ""
@@ -603,6 +646,7 @@ class AppModule(appModuleHandler.AppModule):
 				speech.cancelSpeech()
 				self.last_focus_message_element = obj
 				self.action_message_focus(obj)
+				if config.conf["WhatsAppPlus"]["automatically_report_progress_indicators"]: FileDownloadIndicator.start()
 			elif obj.UIAAutomationId == "ChatsListItem":
 				speech.cancelSpeech()
 				self.last_focus_chat_element = obj
@@ -633,6 +677,9 @@ class AppModule(appModuleHandler.AppModule):
 				elif controlTypes.State.SELECTED in obj.states and obj.parent.UIAAutomationId in ("EmojiList", "MentionsList"):
 					# Reading the name of the selected user in the list with hints when typing the @ symbol
 					message(obj.name)
+				elif obj.name == "WhatsApp.Design.CallHistoryListCellVm":
+					# We sign the list items in the "Calls" section
+					obj.name = ", ".join([item.name for item in obj.firstChild.children if item.name])
 			elif obj.role == controlTypes.Role.BUTTON:
 				if obj.name == "\ue8bb": obj.name = _("Cancel reply")
 				elif obj.UIAAutomationId == "CloseButton": obj.name = _("Close")
@@ -659,19 +706,12 @@ class AppModule(appModuleHandler.AppModule):
 					obj.name = obj.firstChild.name
 			elif obj.role == controlTypes.Role.SLIDER:
 				if obj.UIAAutomationId == "Scrubber" and obj.value != "0": self.rewind_slider = obj
-			elif obj.role == controlTypes.Role.PROGRESSBAR:
-				message(obj.value)
-				message(obj.name)
+			elif obj.role == controlTypes.Role.CHECKBOX:
+				if obj.name == "" and obj.childCount == 3 and obj.parent.UIAAutomationId == "BubbleListItem":
+					# We sign the answer options in the surveys
+					obj.name = obj.firstChild.name+", "+obj.children[1].name+" votes"+obj.lastChild.value
 		except: pass
 
-	def _event_nameChange(self, obj, nextHandler):
-		message(obj.name)
-		if obj.role == controlTypes.Role.PROGRESSBAR:
-			message(str(obj.value))
-		nextHandler()
-
 	def event_valueChange(self, obj, nextHandler):
-		# message(obj.value)
-		# message(obj.name)
 		if obj.UIAAutomationId == "Scrubber": self.rewind_slider = obj
 		nextHandler()

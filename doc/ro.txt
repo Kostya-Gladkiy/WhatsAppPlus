@@ -1,0 +1,9 @@
+* A fost adăugată o funcție care anunță automat bara de progres dacă ești focalizat pe un mesaj.
+* A fost adăugată o comandă rapidă de la tastatură pentru a anunța valoarea barei de progres dacă focalizarea este pe un mesaj. În mod implicit, combinația de taste ALT+U este atribuită acestei funcții. Dacă această combinație este apăsată de două ori, funcția de anunțare automată a indicatorilor de performanță va fi activată.
+* A fost rezolvată o problemă prin care nu se putea muta focalizarea în lista de chat.
+* Au fost adăugate etichete la unele elemente.
+
+Dacă ai dorința și, mai ales, posibilitatea de a sprijini dezvoltatorul acestui add-on, o poți face folosind următoarele detalii:
+* PayPal: gladkiy.kostya@gmail.com.
+* Sistemul ucrainean de donații: https://unigramplus.diaka.ua/donate.
+* Număr card: 5169360009004502 (Gladkiy Constantine).

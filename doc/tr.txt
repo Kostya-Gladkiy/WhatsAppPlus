@@ -1,0 +1,9 @@
+* Odak mesaj üzerindeyse ilerleme çubuğunu otomatik olarak seslendiren bir özellik eklendi.
+* Odağı mesaja   taşırsınızsa ilerleme çubuğu değerini bildirmek için bir klavye kısayolu eklendi. Bu işlev için standart olarak ALT+U tuş kombinasyonu   atanmıştır.. Bu kombinasyona iki kez basarsanız, ilerleme çubuklarının otomatik seslendirmesi etkinleştirilir.
+* Odağı konuşma listesine taşıyamadığınız bir sorun düzeltildi.
+* Bazı etiketsis  öğelere etiketler eklendi.
+
+Bu eklentinin geliştiricisini destekleme isteğiniz ve en önemlisi fırsatınız varsa, aşağıdaki ayrıntıları kullanarak bunu yapabilirsiniz:
+* PeyPal: gladkiy.kostya@gmail.com.
+* Ukrayna bağış sistemi: https://unigramplus.diaka.ua/donate.
+* Kart numarası: 5169360009004502 (Gladkiy Constantine).

@@ -51,8 +51,16 @@ Aggiunto un gran numero di scorciatoie da tastiera per un lavoro produttivo e co
 * ALT+L Abilita la lettura automatica dei nuovi messaggi nella chat corrente.
 * control+S: Aumenta/diminuisce la velocità dei messaggi vocali.
 * ALT+P: Riproduce o mette in pausa il messaggio vocale che si sta ascoltando.
+* ALT+U: annuncia il valore corrente della barra di avanzamento. Se premuto due volte, attiva/disattiva il suono automatico degli indicatori di performance.
 
 ##Storico dei cambiamenti
+
+### Versione 1.7.0
+
+* Aggiunta una funzione che annuncia automaticamente la barra di avanzamento se il focus è su un messaggio.
+* Aggiunta scorciatoia da tastiera per riportare il valore della barra di avanzamento se il focus è su un messaggio. Per impostazione predefinita, la combinazione di tasti ALT+U è assegnata a questa funzione. Se questa combinazione viene premuta due volte, verrà abilitata la funzione di annuncio automatico degli indicatori di performance.
+* Risolto un problema per cui il focus non poteva essere spostato sull'elenco chat.
+* Aggiunte etichette ad alcuni elementi.
 
 ###Version 1.6.0
 
