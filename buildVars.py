@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""This add-on adds many hotkeys for quick navigation through the main elements of the window, convenient interaction with chat messages, and also adds many minor improvements that make working in WhatsApp much easier."""),
 	# version
-	"addon_version": "1.7.0",
+	"addon_version": "1.7.1",
 	# Author(s)
 	"addon_author": "Kostya Gladkiy<gladkiy.kostya@gmail.com>",
 	# URL for the add-on documentation support

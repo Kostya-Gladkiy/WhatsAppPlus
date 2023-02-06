@@ -499,7 +499,7 @@ class AppModule(appModuleHandler.AppModule):
 		self.activate_option_for_menu(icon_from_context_menu["forward message"])
 	@script(description=_("React to message"), gesture="kb:ALT+Q")
 	def script_set_reaction(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["react to message"])
+		self.activate_option_for_menu(icon_from_context_menu["react"])
 	@script(description=_("Delete a message or chat"), gesture="kb:ALT+delete")
 	def script_deletion(self, gesture):
 		self.activate_option_for_menu(icon_from_context_menu["delete"])
@@ -508,7 +508,7 @@ class AppModule(appModuleHandler.AppModule):
 		self.activate_option_for_menu(icon_from_context_menu["reply to message"])
 	@script(description=_("Mark a chat as read"), gesture="kb:ALT+shift+R")
 	def script_read_chat(self, gesture):
-		self.activate_option_for_menu((icon_from_context_menu["mark as read"], icon_from_context_menu["позначити як непрочитаний"]))
+		self.activate_option_for_menu((icon_from_context_menu["mark as read"], icon_from_context_menu["mark as unread"]))
 	@script(description=_("Star message"), gesture="kb:ALT+S")
 	def script_Star_message(self, gesture):
 		self.activate_option_for_menu((icon_from_context_menu["star message"], icon_from_context_menu["видалити з обраних"]))

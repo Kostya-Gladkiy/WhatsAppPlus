@@ -45,7 +45,13 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * Alt+L: Omogući automatsko čitanje novih poruka u trenutnom ćaskanju.
 * control+S: Povećanje/smanjivanje brzine reprodukcije glasovnih poruka.
 * ALT+P: pusti/pauziraj glasovnu poruku koja se trenutno reprodukuje.
+ALT+U: Najavljivanje trenutne vrednosti trake napredka. Kada se dvaput pritisne uključivanje/isključivanje automatsko ozvučenje indikatora performansi.
 ##Istorija promena
+### Verzija 1.7.0
+* Dodata je funkcija koja automatski najavljuje traku napredka ako je fokus na poruci.
+* Dodata je prečica na tastaturi za prijavljivanje vrednosti trake napredka ako je fokus na poruci. Podrazumevano, konbinacija tastera ALT+U je dodeljena ovoj funkciji. Ako se ova kombinacija pritisne dva puta, biće omogućena funkcija automatskog oglašavanja indikatora napredka.
+* Rešen je problem gde fokus nije mogao da se premesti na listu za ćaskanje.
+* Dodate oznake nekim elementima.
 ### ###Verzija 1.6.0
 * Dodata je mogućnost brzog odgovaranja članovima grupe. Za unos poruke dovoljno je u polju za uređivanje poruke napisati simbol ", strelicama gore i dole odabrati kome želite odgovoriti, a zatim pritisnuti taster enter.
 * Dodata je mogućnost brzog ubacivanja emotikona. Da biste to uradili, morate u polju za uređivanje poruke napisati dvotačku i naziv emotikona kojeg želite pronaći. Kasnije pomoću tastera sa strelicama levo i desno pronađite željeni emotikon, i pomoću tastera enter ga ubacite u polje za unos poruke.

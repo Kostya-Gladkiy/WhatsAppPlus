@@ -1,7 +1,6 @@
-* Added a function that automatically announces the progress bar if the focus is on a message.
-* Added keyboard shortcut to report progress bar value if focus is on a message. By default, the ALT+U key combination is assigned to this function. If this combination is pressed twice, the function of automatic announcing of performance indicators will be enabled.
-* Fixed an issue where focus could not be moved to the chat list.
-* Added labels to some elements.
+* Fixed issue where ALT+shift+R key combination did not work.
+* Fixed issue where ALT+Q key combination did not work.
+* Updated Spanish, Serbian and Turkish localization.
 
 If you have the desire, and most importantly the opportunity, to support the developer of this add-on, you can do so using the following details:
 * PeyPal: gladkiy.kostya@gmail.com.
