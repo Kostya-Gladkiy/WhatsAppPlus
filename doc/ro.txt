@@ -1,7 +1,8 @@
-* A fost adăugată o funcție care anunță automat bara de progres dacă ești focalizat pe un mesaj.
-* A fost adăugată o comandă rapidă de la tastatură pentru a anunța valoarea barei de progres dacă focalizarea este pe un mesaj. În mod implicit, combinația de taste ALT+U este atribuită acestei funcții. Dacă această combinație este apăsată de două ori, funcția de anunțare automată a indicatorilor de performanță va fi activată.
-* A fost rezolvată o problemă prin care nu se putea muta focalizarea în lista de chat.
-* Au fost adăugate etichete la unele elemente.
+* Suplimentul a fost testat pentru a asigura compatibilitatea cu NVDA-2023.
+* A fost adăugată o comandă rapidă de la tastatură pentru selectarea mesajelor. Pentru a intra în modul de selecție, apăsați Ctrl+Spațiu, apoi utilizați Spațiu pentru a selecta următorul mesaj.
+* A fost adăugată o nouă funcție pentru a anunța automat activitatea într-un chat deschis. În mod implicit, această funcție este activată prin apăsarea dublă a combinației ALT+T. Acest lucru îi ajută pe utilizatori să fie la curent cu mesajele noi și cu alte activități de chat.
+* Funcția care anunță automat mesajele noi din chat a fost revizuită substanțial pentru o funcționare mai stabilă. Astfel, se asigură că utilizatorii sunt anunțați de mesajele noi cu acuratețe și fiabilitate.
+* Au fost adăugate etichete la unele butoane neetichetate.
 
 Dacă ai dorința și, mai ales, posibilitatea de a sprijini dezvoltatorul acestui add-on, o poți face folosind următoarele detalii:
 * PayPal: gladkiy.kostya@gmail.com.

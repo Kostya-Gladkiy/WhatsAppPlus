@@ -51,9 +51,17 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * CTRL + S Sesli mesajların oynatma hızını artırın veya azaltın.
 * ALT+P: Şu anda çalınan sesli mesajı oynat / duraklat 
 * ALT +U: İlerleme çubuğunun geçerli değerini - seslendir.. Çift basıldığında,  İlerleme çubuğunun - otomatik  seslendirmesini  açar / kapatır.
-
+* ctrl +boşluk: Seçim moduna geçin.
 
 ##Değişiklik listesi:
+
+### Sürüm 1.8.0
+
+* NVDA-2023 ile uyumluluk sağlandı.
+* Mesajları seçmek için bir klavye kısayolu eklendi. Seçim moduna girmek için Ctrl +Boşluk tuşlarına basın ve ardından bir sonraki mesajı seçmek için Boşluk tuşunu kullanın.
+* Açık bir sohbetteki etkinliği otomatik olarak  seslendirmek için yeni bir işlev eklendi. Varsayılan olarak, bu özellik ALT + T kombinasyonuna çift basılarak etkinleştirilir. Bu, kullanıcıların yeni mesajlar ve diğer sohbet etkinlikleri hakkında güncel  bilgi almasına yardımcı olur.
+* Yeni sohbet mesajlarını otomatik olarak  seslendiren özellik, daha  düzgün çalışması  için büyük ölçüde yeniden tasarlandı. Bu, kullanıcıların yeni mesajların bildirimlerini doğru bir şekilde almasını sağlar.
+* Bazı imzasız düğmelere etiketler eklendi.
 
 ### Sürüm 1.7.0
 

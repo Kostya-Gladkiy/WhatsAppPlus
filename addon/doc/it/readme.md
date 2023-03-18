@@ -55,6 +55,14 @@ Aggiunto un gran numero di scorciatoie da tastiera per un lavoro produttivo e co
 
 ##Storico dei cambiamenti
 
+### Versione 1.8.0
+
+* L'add-on è stato testato per garantire la compatibilità con NVDA-.
+* Aggiunta una scorciatoia da tastiera per selezionare i messaggi. Per accedere alla modalità di selezione, premere Ctrl+Spazio, quindi util.
+* È stata aggiunta una nuova funzione per annunciare automaticamente l'attività in una chat aperta. Per impostazione predefinita, questa funzione viene abilitata premendo due volte la combinazione ALT+T. Questo aiuta gli utenti a rimanere aggiornati sui nuovi messaggi e su altre attività di chat
+* La funzione che annuncia automaticamente i nuovi messaggi nella chat è stata sostanzialmente rivista per un funzionamento più stabile. Ciò garantisce che gli utenti vengano avvisati di nuovi messaggi in modo accurato e affidabile.
+* Aggiunte etichette ad alcuni pulsanti non etichettati.
+
 ### Versione 1.7.0
 
 * Aggiunta una funzione che annuncia automaticamente la barra di avanzamento se il focus è su un messaggio.

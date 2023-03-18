@@ -6,7 +6,7 @@
 Ako imate želju, a što je najvažnije, priliku, da biste podržali programera ovog dodatka, možete to učiniti koristeći sledeće detalje:
 * PayPal: gladkii.kostia@gmail.com.
 * Ukrajinski sistem donacija:
-http://unigramlus.diaka.ua/donate.
+http://unigramplus.diaka.ua/donate.
 * Broj kartice:
 5169360009004502 ( Gladkij Konstantin).
 Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u programu, koje možete pronaći u nastavku.
@@ -46,8 +46,17 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * control+S: Povećanje/smanjivanje brzine reprodukcije glasovnih poruka.
 * ALT+P: pusti/pauziraj glasovnu poruku koja se trenutno reprodukuje.
 ALT+U: Najavljivanje trenutne vrednosti trake napredka. Kada se dvaput pritisne uključivanje/isključivanje automatsko ozvučenje indikatora performansi.
+Control+space: Prebacivanje na režim izbora.
 ##Istorija promena
-### Verzija 1.7.0
+
+###Verzija 1.8.0
+* Dodatak je testiran da bi se obezbedila kompatibilnost sa NVDA 2023.
+* Dodata je prečica na tastaturi za biranje poruka. Da bi ste ušli u režim izbora, pritisnite ctrl+Space, a zatim koristite razmak da biste izabrali sledeću poruku.
+* Dodata je nova funkcija za automatsku najavu aktivnosti u otvorenom ćaskanju. Ova funkcija je podrazumevano omogućena dvostrukim pritiskom na kombinaciju ALT+T. Ovo pomaže korisnicima da budu u toku sa novim porukama i drugim aktivnostima ćaskanja.
+* Funkcija koja automatski najavljuje nove poruke u ćaskanju je značajno revidirana za stabilniji rad. Ovo osigurava da su korisnici tačno i pouzdano upozoreni na nove poruke.
+* Dodate oznake nekim nepodpisanim dugmadima.
+
+Verzija 1.7.0
 * Dodata je funkcija koja automatski najavljuje traku napredka ako je fokus na poruci.
 * Dodata je prečica na tastaturi za prijavljivanje vrednosti trake napredka ako je fokus na poruci. Podrazumevano, konbinacija tastera ALT+U je dodeljena ovoj funkciji. Ako se ova kombinacija pritisne dva puta, biće omogućena funkcija automatskog oglašavanja indikatora napredka.
 * Rešen je problem gde fokus nije mogao da se premesti na listu za ćaskanje.

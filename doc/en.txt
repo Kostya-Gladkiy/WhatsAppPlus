@@ -1,6 +1,8 @@
-* Fixed issue where ALT+shift+R key combination did not work.
-* Fixed issue where ALT+Q key combination did not work.
-* Updated Spanish, Serbian and Turkish localization.
+* The add-on has been tested to ensure compatibility with NVDA-2023.
+* Added a keyboard shortcut for selecting messages. To enter selection mode, press Ctrl+Space, and then use Space to select the next message.
+* A new function has been added to automatically announce activity in an open chat. By default, this feature is enabled by double-pressing the ALT+T combination. This helps users stay up-to-date on new messages and other chat activity.
+* The function that automatically announces new messages in the chat has been substantially revised for more stable operation. This ensures that users are alerted to new messages accurately and reliably.
+* Added labels to some unsigned buttons.
 
 If you have the desire, and most importantly the opportunity, to support the developer of this add-on, you can do so using the following details:
 * PeyPal: gladkiy.kostya@gmail.com.

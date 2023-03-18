@@ -1,7 +1,8 @@
-* Odak mesaj üzerindeyse ilerleme çubuğunu otomatik olarak seslendiren bir özellik eklendi.
-* Odağı mesaja   taşırsınızsa ilerleme çubuğu değerini bildirmek için bir klavye kısayolu eklendi. Bu işlev için standart olarak ALT+U tuş kombinasyonu   atanmıştır.. Bu kombinasyona iki kez basarsanız, ilerleme çubuklarının otomatik seslendirmesi etkinleştirilir.
-* Odağı konuşma listesine taşıyamadığınız bir sorun düzeltildi.
-* Bazı etiketsis  öğelere etiketler eklendi.
+* NVDA-2023 ile uyumluluk sağlandı.
+* Mesajları seçmek için bir klavye kısayolu eklendi. Seçim moduna girmek için Ctrl +Boşluk tuşlarına basın ve ardından bir sonraki mesajı seçmek için Boşluk tuşunu kullanın.
+* Açık bir sohbetteki etkinliği otomatik olarak  seslendirmek için yeni bir işlev eklendi. Varsayılan olarak, bu özellik ALT + T kombinasyonuna çift basılarak etkinleştirilir. Bu, kullanıcıların yeni mesajlar ve diğer sohbet etkinlikleri hakkında güncel  bilgi almasına yardımcı olur.
+* Yeni sohbet mesajlarını otomatik olarak  seslendiren özellik, daha  düzgün çalışması  için büyük ölçüde yeniden tasarlandı. Bu, kullanıcıların yeni mesajların bildirimlerini doğru bir şekilde almasını sağlar.
+* Bazı imzasız düğmelere etiketler eklendi.
 
 Bu eklentinin geliştiricisini destekleme isteğiniz ve en önemlisi fırsatınız varsa, aşağıdaki ayrıntıları kullanarak bunu yapabilirsiniz:
 * PeyPal: gladkiy.kostya@gmail.com.

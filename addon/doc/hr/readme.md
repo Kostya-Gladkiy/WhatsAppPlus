@@ -49,9 +49,26 @@ Dodan veliki broj tipkovničkih prečaca za produktivan i ugodan rad u programu,
 * Control+Shift+A: Pritišće gumb "Priloži".
 * Alt+L: Omogućava automatsko čitanje novih poruka u trenutnom razgovoru.
 * Control+S: Povećava/smanjuje reprodukciju glasovnih poruka.
-* ALT+P: Reproducira/pauzira glasovnu poruku koja se trenutno reproducira.
+* Alt+P: Reproducira/pauzira glasovnu poruku koja se trenutno reproducira.
+* Alt+U: Najavljuje trenutnu vrijednost trake napretka. Kada se dvaput pritisne, uključuje/isključuje automatsko oglašavanje indikatora performansi.
+* Control+Razmaknica: Prebacuje na način odabira.
 
-##Povijest promjena
+## Povijest promjena
+
+### Verzija 1.8.0
+
+* Dodatak je testiran kako bi se osigurala kompatibilnost s NVDA-2023.
+* Dodan je tipkovnički prečac za odabir poruka. Za ulazak u način odabira pritisnite Control+Razmaknica, a zatim koristite Razmaknicu za odabir sljedeće poruke.
+* Dodana je nova funkcija za automatso najavljivanje aktivnosti otvorenog razgovora. Prema zadanim postavkama, ova je značajka omogućena dvostrukim pritiskom kombinacije Alt+T. To pomaže korisnicima da ostanu u tijeku s novim porukama i drugim aktivnostima razgovora.
+* Funkcija koja automatski najavljuje nove poruke u razgovoru znatno je revidirana radi stabilnijeg rada. Ovo osigurava da su korisnici točno i pouzdano upozoreni na nove poruke.
+* Dodane oznake nekim neoznačenim gumbima.
+
+### Verzija 1.7.0
+
+* Dodana funkcija koja automatski najavljuje traku napretka ako je fokus na poruci.
+* Dodan tipkovnički prečac za prijavljivanje vrijednosti trake napretka ako je fokus na poruci. Prema zadanim postavkama ovoj funkciji dodijeljena je kombinacija tipki Alt+U. Ako ovu kombinaciju pritisnete dvaput, aktivirat će se funkcija automatskog najavljivanja indikatora performansi.
+* Riješen je problem zbog kojeg se fokus nije mogao premjestiti na popis razgovora.
+* Dodane su oznake nekim elementima.
 
 ###Verzija 1.6.0
 

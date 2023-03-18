@@ -51,8 +51,18 @@ Se agrega un gran número de atajos para un trabajo productivo y cómodo con el 
 * Control+S: Aumenta o disminuye la velocidad de reproducción de los mensajes de voz.
 * ALT+P: Reproduce o pausa el mensaje de voz actualmente en reproducción.
 * ALT+U: Anuncia el valor actual de la barra de progreso. Si se pulsa dos veces, activa o desactiva el anuncio automático de los indicadores.
+* Control+Espacio: Cambiar al modo de selección.
 
 ##Historial de cambios
+
+### Versión 1.8.0
+
+* El complemento se probó para asegurar la compatibilidad con NVDA-2023.
+* Se añadió un atajo de teclado para seleccionar mensajes. Para entrar al modo de selección, pulsa control+espacio, y luego  usa espacio para seleccionar el siguiente mensaje.
+* Se añadió una función para anunciar automáticamente la actividad de un chat. Esta función se activa presionando dos veces la combinación ALT+T. Esto ayuda a los usuarios a obtener actualizaciones sobre nuevos mensajes y otra actividad del chat.
+* La función que anuncia automáticamente nuevos mensajes en el chat se ha revisado sustancialmente para un funcionamiento más estable. Esto garantiza que los usuarios reciban alertas de nuevos mensajes de manera precisa y confiable.
+* Se agregaron etiquetas para algunos botones sin etiquetar.
+
 
 ### Versión 1.7.0
 

@@ -51,8 +51,17 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * control+S: Increase/decrease the playback speed of voice messages.
 * ALT+P: Play/pause the voice message currently playing.
 * ALT+U: Announce the current value of the progress bar. When double-pressed, turns on/off the automatic sounding of performance indicators.
+* control+space: Switch to selection mode.
 
 ## History of changes
+
+### Version 1.8.0
+
+* The add-on has been tested to ensure compatibility with NVDA-2023.
+* Added a keyboard shortcut for selecting messages. To enter selection mode, press Ctrl+Space, and then use Space to select the next message.
+* A new function has been added to automatically announce activity in an open chat. By default, this feature is enabled by double-pressing the ALT+T combination. This helps users stay up-to-date on new messages and other chat activity.
+* The function that automatically announces new messages in the chat has been substantially revised for more stable operation. This ensures that users are alerted to new messages accurately and reliably.
+* Added labels to some unsigned buttons.
 
 ### Version 1.7.0
 

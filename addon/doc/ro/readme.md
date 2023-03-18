@@ -51,8 +51,17 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * control+S: Creșteți/diminuați viteza de redare a mesajelor vocale.
 * ALT+P: Redați/opriți mesajul vocal.
 * ALT+U: Anunță valoarea curentă a barei de progres. Atunci când este apăsat de două ori, activează/dezactivează sonorizarea automată a indicatorilor de performanță.
+* control+spațiu: Treci la modul de selecție.
 
 ##Istoricul modificărilor
+
+### Versiunea 1.8.0
+
+* Suplimentul a fost testat pentru a asigura compatibilitatea cu NVDA-2023.
+* A fost adăugată o comandă rapidă de la tastatură pentru selectarea mesajelor. Pentru a intra în modul de selecție, apăsați Ctrl+Spațiu, apoi utilizați Spațiu pentru a selecta următorul mesaj.
+* A fost adăugată o nouă funcție pentru a anunța automat activitatea într-un chat deschis. În mod implicit, această funcție este activată prin apăsarea dublă a combinației ALT+T. Acest lucru îi ajută pe utilizatori să fie la curent cu mesajele noi și cu alte activități de chat.
+* Funcția care anunță automat mesajele noi din chat a fost revizuită substanțial pentru o funcționare mai stabilă. Astfel, se asigură că utilizatorii sunt anunțați de mesajele noi cu acuratețe și fiabilitate.
+* Au fost adăugate etichete la unele butoane neetichetate.
 
 ### Versiunea 1.7.0
 

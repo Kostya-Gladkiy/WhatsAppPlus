@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WhatsAppPlus\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-02-04 11:58+0200\n"
-"PO-Revision-Date: 2023-02-04 12:03+0200\n"
+"POT-Creation-Date: 2023-03-17 21:03+0200\n"
+"PO-Revision-Date: 2023-03-17 21:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: TecWindow <AhmedBakr593@gmail.com>\n"
 "Language: ar\n"
@@ -19,68 +19,76 @@ msgstr ""
 "X-Poedit-SearchPath-0: appModules\n"
 "X-Poedit-SearchPath-1: GlobalPlugins\n"
 
-#: addon\appModules\whatsapp.py:224 addon\appModules\whatsapp.py:251
+#: addon\appModules\whatsapp.py:252 addon\appModules\whatsapp.py:279
 msgid "Chat list not found"
 msgstr "قائمة الدردشة غير موجودة"
 
 #. Go to the last message in the chat
-#: addon\appModules\whatsapp.py:262
+#: addon\appModules\whatsapp.py:290
 msgid "Move focus to the last message in an open chat"
 msgstr "الإنتقال إلى آخر رسالة في المحادثة المفتوحة"
 
-#: addon\appModules\whatsapp.py:273 addon\appModules\whatsapp.py:302
-#: addon\appModules\whatsapp.py:348 addon\appModules\whatsapp.py:355
+#: addon\appModules\whatsapp.py:301 addon\appModules\whatsapp.py:330
+#: addon\appModules\whatsapp.py:380 addon\appModules\whatsapp.py:387
 msgid "No open chat"
 msgstr "لا توجد محادثة مفتوحة"
 
-#: addon\appModules\whatsapp.py:274 addon\appModules\whatsapp.py:303
+#: addon\appModules\whatsapp.py:302 addon\appModules\whatsapp.py:331
 msgid "This chat is empty"
 msgstr "هذه المحادثة فارغة"
 
 #. Go to chat list
-#: addon\appModules\whatsapp.py:277
+#: addon\appModules\whatsapp.py:305
 msgid "Move focus to chat list"
 msgstr "الإنتقال إلى قائمة المحادثات"
 
-#: addon\appModules\whatsapp.py:293
+#: addon\appModules\whatsapp.py:321
 msgid "Chat list is empty"
 msgstr "قائمة الدردشات فارغة"
 
 #. Go to "unread messages" label
-#: addon\appModules\whatsapp.py:296
+#: addon\appModules\whatsapp.py:324
 msgid "Move focus to 'unread messages' label"
 msgstr "نقل التركيز إلى تصنيف \"الرسائل غير المقروءة\""
 
-#: addon\appModules\whatsapp.py:310
+#: addon\appModules\whatsapp.py:338
 msgid "There are no unread messages in this chat"
 msgstr "لا توجد رسائل غير مقروءة في هذه الدردشة"
 
 #. Changing the playback speed of a voice message
-#: addon\appModules\whatsapp.py:313
+#: addon\appModules\whatsapp.py:341
 msgid "Increase/decrease the playback speed of voice messages"
 msgstr "Пришвидшити/уповільнити швидкість відтворення голосового повідомлення"
 
-#: addon\appModules\whatsapp.py:316 addon\appModules\whatsapp.py:324
-#: addon\appModules\whatsapp.py:330 addon\appModules\whatsapp.py:339
+#: addon\appModules\whatsapp.py:344 addon\appModules\whatsapp.py:352
+#: addon\appModules\whatsapp.py:358 addon\appModules\whatsapp.py:367
 msgid "Nothing is playing right now"
 msgstr "Зараз нічого не відтворюється"
 
 #. Play/pause voice message
-#: addon\appModules\whatsapp.py:327
+#: addon\appModules\whatsapp.py:355
 msgid "Play/pause the voice message currently playing"
 msgstr "قم بتشغيل / إيقاف تشغيل الرسالة الصوتية التي تعمل حاليا"
 
 #. Read profile name and status in open chat
-#: addon\appModules\whatsapp.py:342
+#: addon\appModules\whatsapp.py:370
 msgid "Announce the name and status of an open chat"
 msgstr "الإعلان عن إسم وحالة المحادثة المفتوحة"
 
-#: addon\appModules\whatsapp.py:350
+#: addon\appModules\whatsapp.py:373
+msgid "Chat activity tracking is enabled"
+msgstr "تفعيل الإعلان عن حالة الدردشة"
+
+#: addon\appModules\whatsapp.py:374
+msgid "Chat activity tracking is disabled"
+msgstr "تعطيل الإعلان عن حالة الدردشة"
+
+#: addon\appModules\whatsapp.py:382
 msgid "Open current chat profile"
 msgstr "فتح ملف المحادثة الحالية"
 
 #. Перенести фокус в поле вводу повідомлення. Якщо фокус вже знаходиться в цьому полі, тоді перенести його на останній елемент який був в фокусі перед цим полемMove the focus to the edit field. If the focus is already in this field, then move it to the last element that had focus before this field
-#: addon\appModules\whatsapp.py:358
+#: addon\appModules\whatsapp.py:390
 msgid ""
 "Move the focus to the edit field. If the focus is already in the edit field, "
 "then after pressing the hotkey, it will move to where it was before"
@@ -89,52 +97,52 @@ msgstr ""
 "الاختصار سيعيدك إلى آخر مكان كنت فيه قبل الضغط على الاختصار"
 
 #. Copy current message to clipboard
-#: addon\appModules\whatsapp.py:375
+#: addon\appModules\whatsapp.py:407
 msgid "Copy the message if it contains text"
 msgstr "انسخ الرسالة إذا كانت تحتوي على نص"
 
-#: addon\appModules\whatsapp.py:385
+#: addon\appModules\whatsapp.py:417
 msgid "Message copied"
 msgstr "تم نسخ الرسالة"
 
-#: addon\appModules\whatsapp.py:386 addon\appModules\whatsapp.py:397
+#: addon\appModules\whatsapp.py:418 addon\appModules\whatsapp.py:429
 msgid "This message contains no text"
 msgstr "هذه الرسالة لا تحتوي على نص"
 
 #. Show message text in popup window
-#: addon\appModules\whatsapp.py:389
+#: addon\appModules\whatsapp.py:421
 msgid "Show message text in popup window"
 msgstr "عرض محتوى الرسالة في نافذة منبثقة"
 
-#: addon\appModules\whatsapp.py:396
+#: addon\appModules\whatsapp.py:428
 msgid "message text"
 msgstr "نص الرسالة"
 
 #. Call if it's a contact, or enter a voice chat if it's a group
-#: addon\appModules\whatsapp.py:400
+#: addon\appModules\whatsapp.py:432
 msgid "Make a voice call"
 msgstr "إجراء مكالمة صوتية"
 
-#: addon\appModules\whatsapp.py:404
+#: addon\appModules\whatsapp.py:436
 msgid "Call unavailable"
 msgstr "الإتصال غير متوفر"
 
 #. Make a video call if it's a contact
-#: addon\appModules\whatsapp.py:407
+#: addon\appModules\whatsapp.py:439
 msgid "Make a video call"
 msgstr "إجراء مكالمة فيديو"
 
-#: addon\appModules\whatsapp.py:411
+#: addon\appModules\whatsapp.py:443
 msgid "Video call not available"
 msgstr "مكالمة الفيديو غير متاحة"
 
 #. Accept call
-#: addon\appModules\whatsapp.py:414
+#: addon\appModules\whatsapp.py:446
 msgid "Accept call"
 msgstr "الرد على المكالمة"
 
 #. End or decline call
-#: addon\appModules\whatsapp.py:421
+#: addon\appModules\whatsapp.py:453
 msgid ""
 "Press \"Decline call\" button  if there is an incoming call or \"End call\" "
 "button if a call is in progress"
@@ -143,107 +151,107 @@ msgstr ""
 "\" إذا كانت هناك مكالمة جارية"
 
 #. Mute/unmute the microphone
-#: addon\appModules\whatsapp.py:428
+#: addon\appModules\whatsapp.py:460
 msgid "Mute or unmute the microphone"
 msgstr "كتم أو إلغاء كتم صوت الميكروفون"
 
-#: addon\appModules\whatsapp.py:434
+#: addon\appModules\whatsapp.py:466
 msgid "Microphone on"
 msgstr "الميكروفون مفتوح"
 
-#: addon\appModules\whatsapp.py:435
+#: addon\appModules\whatsapp.py:467
 msgid "Microphone off"
 msgstr "الميكروفون مغلق"
 
 #. Turn on/off the camera
-#: addon\appModules\whatsapp.py:440
+#: addon\appModules\whatsapp.py:472
 msgid "Turn the camera on and off"
 msgstr "تعطيل أو تشغيل الكاميرا"
 
-#: addon\appModules\whatsapp.py:446
+#: addon\appModules\whatsapp.py:478
 msgid "Camera on"
 msgstr "الكاميرة مفعلة"
 
-#: addon\appModules\whatsapp.py:447
+#: addon\appModules\whatsapp.py:479
 msgid "Camera off"
 msgstr "الكاميرة معطلة"
 
 #. Press the "Attach media" button
-#: addon\appModules\whatsapp.py:452
+#: addon\appModules\whatsapp.py:484
 msgid "Press \"Attach file\" button"
 msgstr "اضغط على زر \"إرفاق ملف\""
 
-#: addon\appModules\whatsapp.py:456 addon\appModules\whatsapp.py:465
-#: addon\appModules\whatsapp.py:568
+#: addon\appModules\whatsapp.py:488 addon\appModules\whatsapp.py:497
+#: addon\appModules\whatsapp.py:600
 msgid "Button not found"
 msgstr "ردًا على"
 
 #. Press the "New conversation" button
 #. Press the "More options" button
-#: addon\appModules\whatsapp.py:461
+#: addon\appModules\whatsapp.py:493
 msgid "Press \"More Options\" button"
 msgstr "الضغط على زر المزيد من الخيارات"
 
 #. Function of recording and sending a voice message
-#: addon\appModules\whatsapp.py:468
+#: addon\appModules\whatsapp.py:500
 msgid "Record and send a voice message"
 msgstr "تسجيل وإرسال رسالة صوتية"
 
 #. If the edit field is not empty
-#: addon\appModules\whatsapp.py:475
+#: addon\appModules\whatsapp.py:507
 msgid ""
 "Recording a voice message will not be available until the edit field is empty"
 msgstr ""
 "في حال كان مربع كتابة الرسالة يحتوي على محتوى, فإن زر تسجيل رسالة سيكون معطلا"
 
 #. Voice message discard function
-#: addon\appModules\whatsapp.py:488
+#: addon\appModules\whatsapp.py:520
 msgid "Discard voice message"
 msgstr "تجاهل الرسالة الصوتية"
 
-#: addon\appModules\whatsapp.py:501
+#: addon\appModules\whatsapp.py:533
 msgid "Reply canceled"
 msgstr "تم إلغاء الرد على الرسالة"
 
 #. Voice message recording pause function
-#: addon\appModules\whatsapp.py:504
+#: addon\appModules\whatsapp.py:536
 msgid "Pause/resume voice message recording"
 msgstr "إيقاف أو استئناف تسجيل الرسالة الصوتية"
 
-#: addon\appModules\whatsapp.py:526
+#: addon\appModules\whatsapp.py:558
 msgid "Forward message"
 msgstr "إعادة توجيه الرسالة"
 
-#: addon\appModules\whatsapp.py:529 addon\appModules\whatsapp.py:722
+#: addon\appModules\whatsapp.py:561 addon\appModules\whatsapp.py:755
 msgid "React to message"
 msgstr "التفاعل مع الرسالة"
 
-#: addon\appModules\whatsapp.py:532
+#: addon\appModules\whatsapp.py:564
 msgid "Delete a message or chat"
 msgstr "حذف الرسالة أو المحادثة"
 
-#: addon\appModules\whatsapp.py:535
+#: addon\appModules\whatsapp.py:567
 msgid "Reply to message"
 msgstr "الرد على الرسالة"
 
-#: addon\appModules\whatsapp.py:538
+#: addon\appModules\whatsapp.py:570
 msgid "Mark a chat as read"
 msgstr "جعل المحادثة مقروأة"
 
-#: addon\appModules\whatsapp.py:541
+#: addon\appModules\whatsapp.py:573
 msgid "Star message"
 msgstr "إضافة نجمة"
 
-#: addon\appModules\whatsapp.py:544
+#: addon\appModules\whatsapp.py:576
 msgid "Save file as..."
 msgstr "حفظ الملف كا..."
 
-#: addon\appModules\whatsapp.py:566
+#: addon\appModules\whatsapp.py:598
 msgid "Back"
 msgstr "العودة"
 
 #. Switching the mode of deleting a phone number in contact names
-#: addon\appModules\whatsapp.py:571
+#: addon\appModules\whatsapp.py:603
 msgid ""
 "Toggles the mode that removes the reading of the user number when reading "
 "messages that are not in the contact list"
@@ -251,31 +259,27 @@ msgstr ""
 "تبديل وضع القراءة, عند التنقل في المحادثات, يتم تعطيل نطق أرقام المستخدمين "
 "الغير موجودين في جهات الإتصال"
 
-#: addon\appModules\whatsapp.py:574
+#: addon\appModules\whatsapp.py:606
 msgid "User numbers will be read"
 msgstr "ستتم قراءة أرقام المستخدمين"
 
-#: addon\appModules\whatsapp.py:575
+#: addon\appModules\whatsapp.py:607
 msgid "User numbers will not be read"
 msgstr "لم يتم قراءة أرقام المستخدمين"
 
-#: addon\appModules\whatsapp.py:577
+#: addon\appModules\whatsapp.py:609
 msgid "Enable automatic reading of new messages in the current chat"
 msgstr "تمكين القراءة التلقائية للرسائل الجديدة في الدردشة الحالية"
 
-#: addon\appModules\whatsapp.py:582
-msgid "Automatic reading of new messages is disabled"
-msgstr "تم تعطيل القراءة التلقائية للرسائل الجديدة"
-
-#: addon\appModules\whatsapp.py:585
-msgid "Automatic reading of new messages is enabled until the NVDA is restarted"
-msgstr "يتم تمكين القراءة التلقائية للرسائل الجديدة حتى يتم إعادة تشغيل NVDA"
-
-#: addon\appModules\whatsapp.py:588
+#: addon\appModules\whatsapp.py:611
 msgid "Automatic reading of messages is enabled"
 msgstr "تم تمكين القراءة التلقائية للرسائل"
 
-#: addon\appModules\whatsapp.py:590
+#: addon\appModules\whatsapp.py:612
+msgid "Automatic reading of new messages is disabled"
+msgstr "تم تعطيل القراءة التلقائية للرسائل الجديدة"
+
+#: addon\appModules\whatsapp.py:614
 msgid ""
 "Announce the current value of the progress bar. When double-pressed, turns on/"
 "off the automatic sounding of performance indicators."
@@ -283,75 +287,95 @@ msgstr ""
 "الإعلان عن القيمة الحالية لشريط التقدم. عند الضغط عليه مرتين، قم بتشغيل / "
 "إيقاف تشغيل الصوت التلقائي لشريط التقدم."
 
-#: addon\appModules\whatsapp.py:594
+#: addon\appModules\whatsapp.py:618
 msgid ""
 "Now the values ​​of the performance indicators will be announced automatically"
 msgstr "الآن سيتم الإعلان عن قيم شريط التقدم  تلقائيًا"
 
-#: addon\appModules\whatsapp.py:595
+#: addon\appModules\whatsapp.py:619
 msgid ""
 "Now the values ​​of the progress indicators will not be announced automatically"
 msgstr "الآن لن يتم الإعلان عن قيم شريط التقدم تلقائيًا"
 
-#: addon\appModules\whatsapp.py:601
+#: addon\appModules\whatsapp.py:625
 msgid "This message does not include a progress bar"
 msgstr "هذه الرسالة لا تحتوي على شريط تقدم"
 
-#: addon\appModules\whatsapp.py:602
+#: addon\appModules\whatsapp.py:626
 msgid "This element is not a message"
 msgstr "هذا العنصر ليس رسالة"
 
-#: addon\appModules\whatsapp.py:637
+#: addon\appModules\whatsapp.py:628
+msgid "Switch to selection mode"
+msgstr "Перейти у режим вибору"
+
+#: addon\appModules\whatsapp.py:665
 msgid "In response to"
 msgstr "ردا على"
 
-#: addon\appModules\whatsapp.py:688
+#: addon\appModules\whatsapp.py:677
+msgid "Selected"
+msgstr "Виділено"
+
+#: addon\appModules\whatsapp.py:721
 msgid "Answer to"
 msgstr "الرد على"
 
-#: addon\appModules\whatsapp.py:713
+#: addon\appModules\whatsapp.py:746
 msgid "Cancel reply"
 msgstr "إلغاء الرد على الرسالة"
 
-#: addon\appModules\whatsapp.py:714
+#: addon\appModules\whatsapp.py:747
 msgid "Close"
 msgstr "إغلاق"
 
-#: addon\appModules\whatsapp.py:719
+#: addon\appModules\whatsapp.py:752
 msgid "Add"
 msgstr "إضافة"
 
-#: addon\appModules\whatsapp.py:720
+#: addon\appModules\whatsapp.py:753
 msgid "Star"
 msgstr "تمييز الرسالة بنجمة"
 
-#: addon\appModules\whatsapp.py:721
+#: addon\appModules\whatsapp.py:754
 msgid "Unstar"
 msgstr "إلغاء تمييز الرسالة بنجمة"
 
-#: addon\appModules\whatsapp.py:723
+#: addon\appModules\whatsapp.py:756
 msgid "Next"
 msgstr "Далі"
 
-#: addon\appModules\whatsapp.py:724
+#: addon\appModules\whatsapp.py:757
 msgid "Previous"
 msgstr "السابق"
 
-#: addon\appModules\whatsapp.py:725
+#: addon\appModules\whatsapp.py:758
 msgid "Mute"
 msgstr "كتم"
 
-#: addon\appModules\whatsapp.py:726
+#: addon\appModules\whatsapp.py:759
 msgid "Unmute"
 msgstr "إلغاء الكتم"
 
-#: addon\appModules\whatsapp.py:727
+#: addon\appModules\whatsapp.py:760
 msgid "Pause"
 msgstr "إيقاف"
 
-#: addon\appModules\whatsapp.py:728
+#: addon\appModules\whatsapp.py:761
 msgid "Play"
 msgstr "تشغيل"
+
+#: addon\appModules\whatsapp.py:762
+msgid "Copy"
+msgstr "نسخ"
+
+#: addon\appModules\whatsapp.py:763
+msgid "Forward"
+msgstr "إعادة توجيه"
+
+#: addon\appModules\whatsapp.py:764
+msgid "Delete"
+msgstr "Видалити"
 
 #: addon\GlobalPlugins\WhatsAppPlus\__init__.py:37
 msgid "No updates available"
@@ -441,29 +465,26 @@ msgstr ""
 "للنافذة، كما تسهل التفاعل مع رسائل الدردشة، وتضيف أيضًا العديد من التحسينات "
 "الطفيفة التي تجعل العمل مع WhatsApp أسهل بكثير."
 
+msgid ""
+"Report file upload/download progress bar updates. When pressed twice, toggles "
+"automatic reporting of progress bar updates on and off."
+msgstr ""
+"Dosya yükleme / indirme ilerleme çubuğu güncellemelerini bildirin. İki kez "
+"basıldığında, ilerleme çubuğu güncellemelerinin otomatik  seslendirilmesini "
+"açar ve kapatır."
+
+msgid "Report progress bar updates"
+msgstr "İlerleme çubuğu güncellemelerini bildir"
+
+msgid "No progress bar updates"
+msgstr "İlerleme çubuğu güncellemelerini bildirme"
+
+#~ msgid ""
+#~ "Automatic reading of new messages is enabled until the NVDA is restarted"
+#~ msgstr "يتم تمكين القراءة التلقائية للرسائل الجديدة حتى يتم إعادة تشغيل NVDA"
+
 #~ msgid "Press \"New chat\" button"
 #~ msgstr "اضغط على زر \"محادثة جديدة\""
-
-#~ msgid ""
-#~ "It will not be possible to record a voice message until the edit field is "
-#~ "empty"
-#~ msgstr "لا يمكن تسجيل رسالة صوتية حتى يصبح حقل الكتابة  فارغًا"
-
-#~ msgid "unmuted"
-#~ msgstr "تم إلغاء الكتم"
-
-#~ msgid ""
-#~ "Decline call\" button  if there is an incoming call or \"End call\" button "
-#~ "if a call is in progress`), gesture="
-#~ msgstr ""
-#~ "زر رفض المكالمة \"إذا كانت هناك مكالمة واردة أو زر\" إنهاء المكالمة \"إذا "
-#~ "كانت هناك مكالمة بالفعل`), gesture="
-
-#~ msgid "Copy the message if it contains text."
-#~ msgstr "إنسخ الرسالة إذا كانت تحتوي على نص"
-
-#~ msgid "Make a voice call "
-#~ msgstr "إجراء مكالمة صوتية"
 
 #~ msgid "Press the \"Attach\" button"
 #~ msgstr "الضغط على زر ارفاق."
@@ -557,9 +578,6 @@ msgstr ""
 
 #~ msgid "Announce all progress bars"
 #~ msgstr "Озвучувати усі індикатори виконання"
-
-#~ msgid "Do not announce any progress bars"
-#~ msgstr "Не озвучувати жодних індикаторів виконання"
 
 #~ msgid "Announce some progress bars"
 #~ msgstr "Озвучувати деякі індикатори виконання"
@@ -661,9 +679,6 @@ msgstr ""
 #~ msgid "Search"
 #~ msgstr "Пошук"
 
-#~ msgid "Delete"
-#~ msgstr "Видалити"
-
 #~ msgid "Close audio player"
 #~ msgstr "Закрити аудіопрогравач"
 
@@ -722,9 +737,6 @@ msgstr ""
 #~ msgid "Recording voice messages has standard behavior"
 #~ msgstr "Запис голосових повідомлень має стандартну поведінку"
 
-#~ msgid "Recording canceled"
-#~ msgstr "Запис скасовано"
-
 #~ msgid "Answer options"
 #~ msgstr "Варіанти відповідей"
 
@@ -739,9 +751,6 @@ msgstr ""
 
 #~ msgid "there are replies for you"
 #~ msgstr "є відповіді для вас"
-
-#~ msgid "Toggle progress bar announcements"
-#~ msgstr "Змінити рівень озвучування індикаторів виконання"
 
 #~ msgid "Editing"
 #~ msgstr "Редагування"
@@ -769,9 +778,6 @@ msgstr ""
 
 #~ msgid "Inline results not detected"
 #~ msgstr "Інлайн результатів не виявлено"
-
-#~ msgid "Switch to selection mode"
-#~ msgstr "Перейти у режим вибору"
 
 #~ msgid "Message deleted on both sides"
 #~ msgstr "Повідомлення видалено для обох співрозмовників"
@@ -812,31 +818,23 @@ msgstr ""
 #~ msgid "Right answer"
 #~ msgstr "Правильна відповідь"
 
-#~ msgid "Selected"
-#~ msgstr "Виділено"
-
 #, fuzzy
-#~| msgid "Croatian"
 #~ msgid "Croata"
 #~ msgstr "Хорватська"
 
 #, fuzzy
-#~| msgid "Italian"
 #~ msgid "Italiano"
 #~ msgstr "Італійська"
 
 #, fuzzy
-#~| msgid "Portuguese"
 #~ msgid "Portugués"
 #~ msgstr "Португальська"
 
 #, fuzzy
-#~| msgid "Ukrainian"
 #~ msgid "Ucraniano"
 #~ msgstr "Українська"
 
 #, fuzzy
-#~| msgid "Accept call"
 #~ msgid "&Aceptar"
 #~ msgstr "Відповісти на дзвінок"
 
@@ -865,3 +863,33 @@ msgstr ""
 
 #~ msgid "Announce the presence of reaction in the messages"
 #~ msgstr "Повідомляти про наявність реакції в повідомленнях"
+
+#~ msgid ""
+#~ "It will not be possible to record a voice message until the edit field is "
+#~ "empty"
+#~ msgstr "لا يمكن تسجيل رسالة صوتية حتى يصبح حقل الكتابة  فارغًا"
+
+#~ msgid "unmuted"
+#~ msgstr "تم إلغاء الكتم"
+
+#~ msgid ""
+#~ "Decline call\" button  if there is an incoming call or \"End call\" button "
+#~ "if a call is in progress`), gesture="
+#~ msgstr ""
+#~ "زر رفض المكالمة \"إذا كانت هناك مكالمة واردة أو زر\" إنهاء المكالمة \"إذا "
+#~ "كانت هناك مكالمة بالفعل`), gesture="
+
+#~ msgid "Copy the message if it contains text."
+#~ msgstr "إنسخ الرسالة إذا كانت تحتوي على نص"
+
+#~ msgid "Make a voice call "
+#~ msgstr "إجراء مكالمة صوتية"
+
+#~ msgid "Do not announce any progress bars"
+#~ msgstr "Не озвучувати жодних індикаторів виконання"
+
+#~ msgid "Recording canceled"
+#~ msgstr "Запис скасовано"
+
+#~ msgid "Toggle progress bar announcements"
+#~ msgstr "Змінити рівень озвучування індикаторів виконання"

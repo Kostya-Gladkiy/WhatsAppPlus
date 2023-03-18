@@ -31,13 +31,14 @@ icon_from_context_menu = {
 	"reply to message": "\ue97a",
 	"react": "\ue76e",
 	"forward message": "\uee35",
-	"Delete": "\ue74d",
+	"delete": "\ue74d",
 	"mark as read": "\ue8bd",
 	"mark as unread": "\ue668",
 	"leave the group": "\ue89b",
 	"star message": "\ue734",
 	"remove from starred messages": "\ue735",
-	"save as": "\ue74e"
+	"save as": "\ue74e",
+	"select message": "",
 }
 
 lang = languageHandler.getLanguage().split("_")[0]
@@ -61,54 +62,108 @@ SPEC = {
 	'displayPhoneNumberInUsername': 'boolean(default=True)',
 	'automaticReadingOfNewMessages': 'boolean(default=False)',
 	'automatically_report_progress_indicators': 'boolean(default=False)',
+	'automatically announce activity in chats': 'boolean(default=True)',
 }
+
+
+class Title_change_tracking:
+	app = False
+	active = False
+	pouse = False
+	interval = .5
+	last_value = None
+	@classmethod
+	def tick(cls):
+		if not cls.active or cls.pouse: return
+		try:
+			title = Chat_update.app.get_title_element()
+			chat_name = title.firstChild.name
+			sub_title = title.lastChild.name
+		except Exception as e: title = None
+		if not title or not title.isInForeground:
+			cls.pouse = True
+			return False
+		last_value = cls.last_value or ("", "")
+		if sub_title != last_value[1]:
+			if chat_name == last_value[0] and sub_title:
+				# Announce changes only if these changes are not related to switching to another chat
+				queueHandler.queueFunction(queueHandler.eventQueue, message, sub_title)
+			cls.last_value = (chat_name, sub_title)
+		Timer(cls.interval, cls.tick).start()
+	@classmethod
+	def toggle(cls, app):
+		if not config.conf["WhatsAppPlus"]["automatically announce activity in chats"]:
+			cls.app = app
+			cls.pouse = False
+			cls.active = True
+			config.conf["WhatsAppPlus"]["automatically announce activity in chats"] = True
+			Timer(cls.interval, cls.tick).start()
+			return True
+		else:
+			cls.active = False
+			config.conf["WhatsAppPlus"]["automatically announce activity in chats"] = False
+			return False
+	@classmethod
+	def restore(cls, app):
+		cls.pouse = False
+		cls.active = True
+		cls.app = app
+		cls.last_value = None
+		Timer(cls.interval, cls.tick).start()
+
 
 class Chat_update:
 	active = False
-	interval = .3
+	pouse = False
+	interval = .4
 	app = False
-	last_message = ("", "")
-	def tick():
-		if not Chat_update.active: return
-		try : last_message = Chat_update.app.get_messages_element().lastChild
-		except: last_message = False
-		# The first item is the name of the chat in which the last message was recorded
-		# The second item is the index of the message
-		last_saved_message = Chat_update.last_message
-		# If there is a problem getting the message index, end the function and call the next iteration
-		try:
-			last_message.positionInfo["indexInGroup"]
-			last_message.positionInfo["similarItemsInGroup"]
-		except:
-			Timer(Chat_update.interval, Chat_update.tick).start()
-			return
-		if last_message.isInForeground and last_message and last_message.positionInfo["indexInGroup"] != last_saved_message[1] and last_message.positionInfo["indexInGroup"] == last_message.positionInfo["similarItemsInGroup"]:
+	last_message = None
+	@classmethod
+	def tick(cls):
+		if not cls.active or cls.pouse: return
+		try : last_message = cls.app.get_messages_element().lastChild
+		except: last_message = None
+		if not last_message or not last_message.isInForeground:
+			cls.pouse = True
+			return True
+		# The first element is the name of the chat in which the last message was received
+		# The second item is the text of message
+		last_saved_message = cls.last_message or ("", "")
+		if last_message.name != last_saved_message[1]:
 			try:
-				title = Chat_update.app.get_title_element().firstChild.next.name
+				title = cls.app.get_title_element().firstChild.name
 			except:
-				Timer(Chat_update.interval, Chat_update.tick).start()
+				Timer(cls.interval, cls.tick).start()
 				return False
-			parent = Chat_update.app.get_messages_element()
-			is_message_received = True if last_message.location.left - parent.location.left < 40 else False
+			is_message_received = True if last_message.name[-1] == " " else False
+			original_name = last_message.name
 			if (title == last_saved_message[0]) and is_message_received:
-				Chat_update.app.action_message_focus(last_message)
+				cls.app.action_message_focus(last_message)
 				text = last_message.name
 				playWaveFile(baseDir+"whatsapp_incoming.wav")
 				queueHandler.queueFunction(queueHandler.eventQueue, message, text)
-			try:
-				new_message = (title, last_message.positionInfo["indexInGroup"])
-				Chat_update.last_message = new_message
-			except: pass
-		Timer(Chat_update.interval, Chat_update.tick).start()
-	def toggle(app, active=None):
-		if not Chat_update.active and (active or active == None):
-			Chat_update.active = True
-			Chat_update.app = app
-			Timer(Chat_update.interval, Chat_update.tick).start()
+			cls.last_message = (title, original_name)
+		Timer(cls.interval, cls.tick).start()
+	@classmethod
+	def toggle(cls, app):
+		if not config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"]:
+			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = True
+			cls.active = True
+			cls.pouse = False
+			cls.app = app
+			Timer(cls.interval, cls.tick).start()
 			return True
 		else:
-			Chat_update.active = False
+			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = False
+			cls.active = False
 			return False
+	@classmethod
+	def restore(cls, app):
+		cls.pouse = False
+		cls.active = True
+		cls.app = app
+		cls.last_message = None
+		Timer(cls.interval, cls.tick).start()
 
 
 class FileDownloadIndicator:
@@ -145,10 +200,12 @@ class AppModule(appModuleHandler.AppModule):
 		self.is_old_interface = False
 		if int(str(self.app_version).replace(".", "")) < 2224010:
 			self.is_old_interface = True
-		# Launching the function of automatic announcement of new messages in an open chat
 		config.conf.spec['WhatsAppPlus'] = SPEC
-		if not Chat_update.active:
-			Chat_update.toggle(self, config.conf['WhatsAppPlus']['automaticReadingOfNewMessages'])
+		# Launching the function of automatic announcement of new messages in an open chat
+		if config.conf['WhatsAppPlus']['automaticReadingOfNewMessages'] and not Chat_update.active:
+			Chat_update.restore(self)
+		if config.conf['WhatsAppPlus']['automatically announce activity in chats'] and not Title_change_tracking.active:
+			Title_change_tracking.restore(self)
 	
 	message_list_element = None
 	last_focus_message_element = None
@@ -172,7 +229,7 @@ class AppModule(appModuleHandler.AppModule):
 	
 	def get_messages_element(self):
 		obj = self.message_list_element
-		if not obj:
+		if not obj or not obj.location:
 			obj = next((item for item in self.get_elements() if item.UIAAutomationId == "ListView"), None)
 			if obj: self.message_list_element = obj
 		if obj and controlTypes.State.UNAVAILABLE not in obj.states: return obj
@@ -226,7 +283,7 @@ class AppModule(appModuleHandler.AppModule):
 		return targetList
 
 	def get_title_element(self):
-		self.title_chat_element = self.title_chat_element or next((item for item in self.get_elements() if controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId == "TitleButton"), None)
+		self.title_chat_element = self.title_chat_element if self.title_chat_element and self.title_chat_element.location else next((item for item in self.get_elements() if controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId == "TitleButton"), None)
 		return self.title_chat_element
 
 	# Go to the last message in the chat
@@ -312,6 +369,10 @@ class AppModule(appModuleHandler.AppModule):
 	# Read profile name and status in open chat
 	@script(description=_("Announce the name and status of an open chat"), gesture="kb:ALT+T")
 	def script_read_profile_name(self, gesture):
+		if scriptHandler.getLastScriptRepeatCount() == 1:
+			if Title_change_tracking.toggle(self): message(_("Chat activity tracking is enabled"))
+			else: message(_("Chat activity tracking is disabled"))
+			return
 		title = self.get_title_element()
 		if title and controlTypes.State.FOCUSABLE in title.states:
 			title = "\n".join([item.name for item in title.children])
@@ -547,16 +608,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	@script(description=_("Enable automatic reading of new messages in the current chat"), gesture="kb:ALT+L")
 	def script_toggle_live_chat(self, gesture):
-		if config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"]:
-			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = False
-			Chat_update.toggle(self, False)
-			message(_("Automatic reading of new messages is disabled"))
-		elif not Chat_update.active and not config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"]:
-			Chat_update.toggle(self, True)
-			message(_("Automatic reading of new messages is enabled until the NVDA is restarted"))
-		elif Chat_update.active and not config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"]:
-			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = True
-			message(_("Automatic reading of messages is enabled"))
+		if Chat_update.toggle(self): message(_("Automatic reading of messages is enabled"))
+		else: message(_("Automatic reading of new messages is disabled"))
 
 	@script(description=_("Announce the current value of the progress bar. When double-pressed, turns on/off the automatic sounding of performance indicators."), gesture="kb:ALT+U")
 	def script_announce_progress_bar(self, gesture):
@@ -571,6 +624,10 @@ class AppModule(appModuleHandler.AppModule):
 			if progress: message(progress.value or progress.name)
 			else: message(_("This message does not include a progress bar"))
 		else: message(_("This element is not a message"))
+
+	@script(description=_("Switch to selection mode"), gesture="kb:control+space")
+	def script_selectMessage(self, gesture):
+		self.activate_option_for_menu(icon_from_context_menu["select message"])
 
 	# Processing the message that got into focus
 	def action_message_focus(self, obj):
@@ -616,7 +673,8 @@ class AppModule(appModuleHandler.AppModule):
 
 		# Remove phone number from usernames
 		if not config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"]: obj.name = sub(reg_for_delete_phon_number, '', obj.name)
-	
+
+		if controlTypes.State.SELECTED in obj.states: message(_("Selected"))
 	
 	__gestures = {
 		"kb:space": "action_space",
@@ -625,6 +683,10 @@ class AppModule(appModuleHandler.AppModule):
 
 
 	def event_gainFocus(self, obj, nextHandler):
+		if config.conf['WhatsAppPlus']['automaticReadingOfNewMessages'] and Chat_update.pouse:
+			Chat_update.restore(self)
+		if config.conf['WhatsAppPlus']['automatically announce activity in chats'] and Title_change_tracking.pouse:
+			Title_change_tracking.restore(self)
 		if self.is_skip_name:
 			speech.cancelSpeech()
 			self.is_skip_name -= 1
@@ -697,6 +759,9 @@ class AppModule(appModuleHandler.AppModule):
 				elif obj.name == "\ue767": obj.name = _("Unmute")
 				elif obj.name == "\ue769": obj.name = _("Pause")
 				elif obj.name == "\uf5b0": obj.name = _("Play")
+				elif obj.UIAAutomationId == "CopyButton": obj.name = _("Copy")
+				elif obj.UIAAutomationId == "ForwardButton": obj.name = _("Forward")
+				elif obj.UIAAutomationId == "DeleteButton": obj.name = _("Delete")
 			elif obj.role == controlTypes.Role.TOGGLEBUTTON:
 				if obj.UIAAutomationId in ("WhenWAClosedSwitch", "NewMessagesNotificationSwitch"): obj.name = obj.previous.name
 			elif obj.role == controlTypes.Role.GROUPING:

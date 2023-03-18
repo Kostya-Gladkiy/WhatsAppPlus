@@ -1,0 +1,10 @@
+* El complemento se probó para asegurar la compatibilidad con NVDA-2023.
+* Se añadió un atajo de teclado para seleccionar mensajes. Para entrar al modo de selección, pulsa control+espacio, y luego  usa espacio para seleccionar el siguiente mensaje.
+* Se añadió una función para anunciar automáticamente la actividad de un chat. Esta función se activa presionando dos veces la combinación ALT+T. Esto ayuda a los usuarios a obtener actualizaciones sobre nuevos mensajes y otra actividad del chat.
+* La función que anuncia automáticamente nuevos mensajes en el chat se ha revisado sustancialmente para un funcionamiento más estable. Esto garantiza que los usuarios reciban alertas de nuevos mensajes de manera precisa y confiable.
+* Se agregaron etiquetas para algunos botones sin etiquetar.
+
+Si realmente te gusta este complemento y lo deseas, Y lo más importante, tienes la oportunidad de apoyar financieramente al desarrollador Y por ende motivarlo a seguir desarrollándolo, puedes hacerlo transfiriendo un pequeño monto usando los siguientes detalles bancarios:
+* PeyPal: gladkiy.kostya@gmail.com.
+* Sistema de donación ucraniano: https://unigramplus.diaka.ua/donate.
+* Número de tarjeta: 5169360009004502 (Gladkiy Constantine).

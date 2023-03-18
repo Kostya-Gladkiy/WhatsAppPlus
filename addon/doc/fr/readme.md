@@ -49,7 +49,16 @@ Ajout d'un grand nombre de raccourcis clavier pour une utilisation fluide et con
 * ALT+L - activer la lecture automatique des nouveaux messages dans la discussion en cours.
 * Ctrl+s - Accélèrer ou ralentir la vitesse de lecture d'un message vocal
 * Alt+P -  Mettre en pause ou reprendre la lecture du message vocal en cours de lecture
+* Alt+U : Annonce la valeur actuelle de la barre de progression. En cas de double pression, active/désactive la vocalisation automatique des indicateurs de performance.
+
 ##Historique des changements
+
+###Version 1.7.0
+
+* Ajout d'une fonction qui annonce automatiquement la barre de progression si le focus est sur un message.
+* Ajout d'un raccourci clavier pour annoncer la valeur de la barre de progression si le focus est sur un message. Par défaut, la combinaison de touches ALT+U est affectée à cette fonction. Si cette combinaison est pressée deux fois, la fonction d'annonce automatique des indicateurs de performance sera activée.
+* Correction d'un problème où le focus ne pouvait pas être déplacé vers la liste des discussions.
+* Ajout d'étiquettes à certains éléments.
 
 ##Version 1.6.0
 * Ajout de la possibilité de répondre rapidement aux membres d'un groupe. Pour saisir un message, il suffit d'écrire le symbole "@" dans le champ de saisie du message, d'utiliser les flèches haut et bas pour sélectionner la personne à laquelle vous souhaitez répondre, puis d'appuyer sur la touche Entrée.
