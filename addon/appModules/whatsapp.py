@@ -730,7 +730,7 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self,obj):
 		try:
 			if obj.role == controlTypes.Role.LISTITEM:
-				if obj.name in ('WhatsApp.CallParticipantVm', 'WhatsApp.SelfStreamVm', 'WhatsApp.RecipientItem', 'WhatsApp.ReceiptViewModel'):
+				if obj.name in ('WhatsApp.CallParticipantVm', 'WhatsApp.SelfStreamVm', 'WhatsApp.RecipientItem', 'WhatsApp.ReceiptViewModel', 'WhatsApp.CleanViewModels.LightBox.ItemVm.LightBoxExtendedTextItemVm', 'WhatsApp.PollDetailsOptionItemVm'):
 					obj.name = ", ".join([m.name for m in obj.children])
 				elif obj.name == 'WhatsApp.Design.LightBoxExtendedTextItemVm':
 					obj.name = obj.firstChild.name
