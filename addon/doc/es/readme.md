@@ -26,8 +26,8 @@ Se agrega un gran número de atajos para un trabajo productivo y cómodo con el 
 * ALT+T - Anunciar el nombre y estado del chat actual.
 * ALT+shift+C - Llamar a un grupo o contacto, o unirse a una llamada grupal en curso.
 * ALT+shift+V - Videollamar a un contacto o grupo.
-* ALT+Y - Aceptar llamada.
-* ALT+N - Presionar el botón "Rechazar llamada" si hay una llamada entrante, "o el botón "Llamar" si hay una llamada en curso.
+* ALT+shift+Y - Aceptar llamada.
+* ALT+shift+N - Presionar el botón "Rechazar llamada" si hay una llamada entrante, "o el botón "Llamar" si hay una llamada en curso.
 * ALT+A - Silenciar y desilenciar micrófono.
 * ALT+V - Activar y desactivar la cámara.
 * ALT+O - Presionar el botón "Más opciones".
@@ -37,7 +37,6 @@ Se agrega un gran número de atajos para un trabajo productivo y cómodo con el 
 * ALT+suprimir - Eliminar mensaje o chat.
 * control+shift+P - Abrir el perfil del chat actual.
 * control+shift+E - Alterna el modo que quita la lectura del número de usuario al leer mensajes que no están en la lista de contactos.
-* ALT+Q - Reaccionar al mensaje.
 * ALT+S - Destacar mensaje.
 * ALT+F - Reenviar mensaje.
 * ALT+R - Responder al mensaje.
@@ -54,6 +53,18 @@ Se agrega un gran número de atajos para un trabajo productivo y cómodo con el 
 * Control+Espacio: Cambiar al modo de selección.
 
 ##Historial de cambios
+
+### Versión 1.9.0
+
+* Se añadió un atajo de teclado que abre una lista de todos los atajos de WhatsApp Plus. De forma predeterminada, esta función se asigna al gesto ALT+h.
+* Se corrigió un error por el que los gestos ALT+2 y ALT+3 no funcionavan.
+* Se corrigió un error por el que era imposible activar algunas funciones del menú contextual utilizando gestos.
+* Se corrigió un error por el que el cambio de velocidad de los mensajes de voz y pausar los mensajes de voz no funcionava siempre.
+* Se corrigió un error por el cuál al enfocarse en tus mensajes enviados en los chats, en lugar de la palabra "tú", el lector de pantalla anunciava un número personal. Para esquivar esto, debes especificar el número de teléfono en las opciones de WhatsApp Plus y después de eso, el complemento no lo anunciará en tus mensajes.
+* Se corrigió un error por el que WhatsApp Plus solicitaba actualizarse en pantallas seguras. Para prevenir que suceda de nuevo, debes hacer click en el botón "Utilizar opciones actualmente guardadas durante el inicio de sesión y en pantallas seguras (requiere privilegios de administrador)" en las opciones generales de NVDA.
+* El gesto para aceptar una llamada se cambió a ALT+shift+Y, y el gesto para rechazar una llamada se cambió a ALT+shift+N. Esto es para asegurarse de que estos gestos no estén en conflicto con los gestos de Unigram Plus.
+* Los gestos para activar o desactivar la cámara y el micrófono durante una llamada ahora funcionan correctamente.
+* Se eliminó el gesto para reaccionar a los mensajes, ya que en las últimas versiones de WhatsApp, las reacciones están disponibles directamente en el menú contextual.
 
 ### Versión 1.8.0
 

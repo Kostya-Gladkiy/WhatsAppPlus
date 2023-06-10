@@ -1,8 +1,12 @@
-* Suplimentul a fost testat pentru a asigura compatibilitatea cu NVDA-2023.
-* A fost adăugată o comandă rapidă de la tastatură pentru selectarea mesajelor. Pentru a intra în modul de selecție, apăsați Ctrl+Spațiu, apoi utilizați Spațiu pentru a selecta următorul mesaj.
-* A fost adăugată o nouă funcție pentru a anunța automat activitatea într-un chat deschis. În mod implicit, această funcție este activată prin apăsarea dublă a combinației ALT+T. Acest lucru îi ajută pe utilizatori să fie la curent cu mesajele noi și cu alte activități de chat.
-* Funcția care anunță automat mesajele noi din chat a fost revizuită substanțial pentru o funcționare mai stabilă. Astfel, se asigură că utilizatorii sunt anunțați de mesajele noi cu acuratețe și fiabilitate.
-* Au fost adăugate etichete la unele butoane neetichetate.
+* A fost adăugată o comandă rapidă care deschide o listă cu toate scurtăturile WhatsAppPlus. În mod implicit, această funcție este atribuită gestului ALT+H.
+* A fost reparată o eroare prin care gesturile ALT+2 și ALT+3 nu funcționau.
+* A fost rezolvată o eroare prin care era imposibil să activezi unele funcții din meniul contextual folosind gesturi.
+* S-a remediat o problemă în care modificarea vitezei de redare a mesajelor vocale și întreruperea redării mesajelor vocale nu funcționa întotdeauna.
+* A fost reparată o eroare în care, în chat-uri, atunci când te focalizai pe mesajele trimise, în loc de cuvântul "You", cititorul de ecran anunța un număr personal. Pentru a evita acest lucru, trebuie să specifici numărul de telefon în setările WhatsAppPlus și, după aceea, add-on-ul nu îl va mai anunța în mesaje.
+* A fost rezolvată o problemă în care WhatsAppPlus cerea actualizarea pe ecrane securizate. Pentru a evita ca acest lucru să se întâmple din nou, trebuie să faci clic pe butonul "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" (Utilizați setările salvate în prezent în timpul conectării și pe ecrane securizate (necesită privilegii de administrator)" din setările generale NVDA.
+* Gestul de acceptare a unui apel a fost schimbat în ALT+shift+Y, iar gestul de refuz al unui apel a fost schimbat în ALT+shift+N pentru a se asigura că aceste gesturi nu intră în conflict cu gesturile UnigramPlus.
+* Gesturile de activare/dezactivare a microfonului și a camerei în timpul unui apel funcționează acum corect.
+* A fost eliminat gestul de a seta reacția la mesaje, deoarece în cele mai recente versiuni de WhatsApp, reacțiile sunt disponibile direct din meniul contextual.
 
 Dacă ai dorința și, mai ales, posibilitatea de a sprijini dezvoltatorul acestui add-on, o poți face folosind următoarele detalii:
 * PayPal: gladkiy.kostya@gmail.com.

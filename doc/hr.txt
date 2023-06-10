@@ -1,8 +1,12 @@
-* Dodatak je testiran kako bi se osigurala kompatibilnost s NVDA-2023.
-* Dodan je tipkovnički prečac za odabir poruka. Za ulazak u način odabira pritisnite Control+Razmaknica, a zatim koristite Razmaknicu za odabir sljedeće poruke.
-* Dodana je nova funkcija za automatso najavljivanje aktivnosti otvorenog razgovora. Prema zadanim postavkama, ova je značajka omogućena dvostrukim pritiskom kombinacije Alt+T. To pomaže korisnicima da ostanu u tijeku s novim porukama i drugim aktivnostima razgovora.
-* Funkcija koja automatski najavljuje nove poruke u razgovoru znatno je revidirana radi stabilnijeg rada. Ovo osigurava da su korisnici točno i pouzdano upozoreni na nove poruke.
-* Dodane oznake nekim neoznačenim gumbima.
+* Dodan je tipkovnički prečac koji otvara popis svih tipkovničkih prečaca WhatsAppPlus. Prema zadanim postavkama, ova je funkcija dodijeljena gesti Alt+H.
+* Ispravljena je greška u kojoj geste Alt+2 i Alt+3 nisu radile.
+* Ispravljena je greška zbog koje je bilo nemoguće aktivirati neke funkcije iz kontekstnog izbornika pomoću geste.
+* Riješen je problem pri kojem funkcija promjene brzine reprodukcije glasovne poruke i pauziranje reprodukcije glasovne poruke nisu uvijek funkcionirale.
+* Ispravljena je greška gdje je u razgovorima kada se fokusirate na vaše poslane poruke, umjesto riječi "vi", čitač zaslona izgovarao osobni broj. Kako biste to izbjegli, potrebno je navesti broj telefona u postavkama WhatsAppPlusa i nakon toga ga dodatak neće javljati na vašim porukama.
+* Riješen je problem zbog kojeg je WhatsAppPlus tražio ažuriranje na sigurnim zaslonima. Kako biste spriječili da se ovo više dogodi, trebate kliknuti na gumb "Koristi trenutačno spremljene postavke na zaslonu za prijavu te na sigurnim zaslonima (zahtijeva administratorska prava)" u općim postavkama NVDA-a.
+* Gesta za prihvaćanje poziva promijenjena je u Alt+Shift+Y, a gesta za odbijanje poziva promijenjena je u Alt+Shift+N. Time se osigurava da te geste nisu u sukobu s UnigramPlus gestama.
+* Geste za uključivanje/isključivanje mikrofona i kamere tijekom poziva sada rade ispravno.
+* Uklonjena je gesta za reagiranje na poruke, budući da su u najnovijim verzijama WhatsAppa reakcije dostupne izravno iz kontekstnog izbornika.
 
 Ako imate želju, i što je najvažnije priliku, podržati programera ovog dodatka, možete to učiniti pomoću sljedećih podataka:
 * PayPal: gladkiy.kostya@gmail.com

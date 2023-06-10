@@ -1,8 +1,12 @@
-* The add-on has been tested to ensure compatibility with NVDA-2023.
-* Added a keyboard shortcut for selecting messages. To enter selection mode, press Ctrl+Space, and then use Space to select the next message.
-* A new function has been added to automatically announce activity in an open chat. By default, this feature is enabled by double-pressing the ALT+T combination. This helps users stay up-to-date on new messages and other chat activity.
-* The function that automatically announces new messages in the chat has been substantially revised for more stable operation. This ensures that users are alerted to new messages accurately and reliably.
-* Added labels to some unsigned buttons.
+* Added a keyboard shortcut that opens a list of all WhatsAppPlus keyboard shortcuts. By default, this function is assigned to ALT+H gesture.
+* Fixed a bug where ALT+2 and ALT+3 gestures didn't work.
+* Fixed a bug where it was impossible to activate some functions from the context menu using gestures.
+* Fixed an issue where changing voice message playback speed and pausing voice message playback did not always work.
+* Fixed a bug where in chats when focusing on your sent messages, instead of the word "you", the screen reader announced a personal number. To avoid this, you need to specify the phone number in the WhatsAppPlus settings and after that the add-on will not report it on your messages.
+* Fixed an issue where WhatsAppPlus prompted to update on secure screens. To prevent this from happening again, you need to click on the "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" button in the NVDA general settings.
+* The gesture to accept a call has been changed to ALT+shift+Y, and the gesture to decline a call has been changed to ALT+shift+N. This is to ensure that these gestures do not conflict with UnigramPlus gestures.
+* Microphone and camera on/off gestures during a call now work correctly.
+*Removed gesture to set reaction to messages, since in the latest versions of WhatsApp, reactions are available directly from the context menu.
 
 If you have the desire, and most importantly the opportunity, to support the developer of this add-on, you can do so using the following details:
 * PeyPal: gladkiy.kostya@gmail.com.

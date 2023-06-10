@@ -26,8 +26,8 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * ALT+T - Announce the name and status of an open chat.
 * ALT+shift+C - Make a voice call to a group or contact, or join an ongoing voice call in a group.
 * ALT+shift+V - Make a video call to a contact or group.
-* ALT+Y - Accept call.
-* ALT+N - Press "Decline call" button  if there is an incoming call, "or call" button if a call is in progress.
+* ALT+shift+Y - Accept call.
+* ALT+shift+N - Press "Decline call" button  if there is an incoming call, "or call" button if a call is in progress.
 * ALT+A - Turn the camera microphone and off.l
 * ALT+V - Turn the camera on and off.l
 * ALT+O - Press "More Options" button.
@@ -37,7 +37,6 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * ALT+delete - Delete a message or chat.
 * control+shift+P - Open current chat profile.
 * control+shift+E - Toggles the mode that removes the reading of the user number when reading messages that are not in the contact list.
-* ALT+Q - React to message.
 * ALT+S - Star message.
 * ALT+F - Forward message.
 * ALT+R - Reply to message.
@@ -54,6 +53,18 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * control+space: Switch to selection mode.
 
 ## History of changes
+
+### Version 1.9.0
+
+* Added a keyboard shortcut that opens a list of all WhatsAppPlus keyboard shortcuts. By default, this function is assigned to ALT+H gesture.
+* Fixed a bug where ALT+2 and ALT+3 gestures didn't work.
+* Fixed a bug where it was impossible to activate some functions from the context menu using gestures.
+* Fixed an issue where changing voice message playback speed and pausing voice message playback did not always work.
+* Fixed a bug where in chats when focusing on your sent messages, instead of the word "you", the screen reader announced a personal number. To avoid this, you need to specify the phone number in the WhatsAppPlus settings and after that the add-on will not report it on your messages.
+* Fixed an issue where WhatsAppPlus prompted to update on secure screens. To prevent this from happening again, you need to click on the "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" button in the NVDA general settings.
+* The gesture to accept a call has been changed to ALT+shift+Y, and the gesture to decline a call has been changed to ALT+shift+N. This is to ensure that these gestures do not conflict with UnigramPlus gestures.
+* Microphone and camera on/off gestures during a call now work correctly.
+*Removed gesture to set reaction to messages, since in the latest versions of WhatsApp, reactions are available directly from the context menu.
 
 ### Version 1.8.0
 

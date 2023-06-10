@@ -26,8 +26,8 @@ Dodan veliki broj tipkovničkih prečaca za produktivan i ugodan rad u programu,
 * Alt+T: Najavljuje naziv i status otvorenog razgovora.
 * Alt+Shift+C: Upućuje glasovni poziv grupi ili kontaktu ili se pridružite glasovnom pozivu koji je u tijeku u grupi.
 * Alt+Shift+V: Upućuje videopoziv kontaktu ili grupi.
-* Alt+Y: Prihvaća poziv.
-* Alt+N: Pritišće gumb "Odbij poziv" ako postoji dolazni poziv ili gumb "Završi poziv" ako je poziv u tijeku.
+* Alt+Shift+Y: Prihvaća poziv.
+* Alt+Shift+N: Pritišće gumb "Odbij poziv" ako postoji dolazni poziv ili gumb "Završi poziv" ako je poziv u tijeku.
 * Alt+A: Uključuje ili isključuje mikrofon.
 * Alt+V: Uključuje i isključuje kameru.
 * Alt+O: Pritišće gumb "Više opcija".
@@ -37,7 +37,6 @@ Dodan veliki broj tipkovničkih prečaca za produktivan i ugodan rad u programu,
 * Alt+Delete: Briše poruku ili razgovor.
 * Control+Shift+P: Otvara profil trenutnog razgovora.
 * Control+Shift+E: Uključuje i isključuje način rada koji uklanja čitanje korisničkog broja prilikom čitanja poruka kontakata koji nisu na popisu kontakata.
-* Alt+Q: Reagira na poruku.
 * Alt+S: Označava poruku zvjezdicom.
 * Alt+F: Prosljeđuje poruku.
 * Alt+R: Odgovara na poruku.
@@ -55,18 +54,30 @@ Dodan veliki broj tipkovničkih prečaca za produktivan i ugodan rad u programu,
 
 ## Povijest promjena
 
+### Verzija 1.9.0
+
+* Dodan je tipkovnički prečac koji otvara popis svih tipkovničkih prečaca WhatsAppPlus. Prema zadanim postavkama, ova je funkcija dodijeljena gesti Alt+H.
+* Ispravljena je greška u kojoj geste Alt+2 i Alt+3 nisu radile.
+* Ispravljena je greška zbog koje je bilo nemoguće aktivirati neke funkcije iz kontekstnog izbornika pomoću geste.
+* Riješen je problem pri kojem funkcija promjene brzine reprodukcije glasovne poruke i pauziranje reprodukcije glasovne poruke nisu uvijek funkcionirale.
+* Ispravljena je greška gdje je u razgovorima kada se fokusirate na vaše poslane poruke, umjesto riječi "vi", čitač zaslona izgovarao osobni broj. Kako biste to izbjegli, potrebno je navesti broj telefona u postavkama WhatsAppPlusa i nakon toga ga dodatak neće javljati na vašim porukama.
+* Riješen je problem zbog kojeg je WhatsAppPlus tražio ažuriranje na sigurnim zaslonima. Kako biste spriječili da se ovo više dogodi, trebate kliknuti na gumb "Koristi trenutačno spremljene postavke na zaslonu za prijavu te na sigurnim zaslonima (zahtijeva administratorska prava)" u općim postavkama NVDA-a.
+* Gesta za prihvaćanje poziva promijenjena je u Alt+Shift+Y, a gesta za odbijanje poziva promijenjena je u Alt+Shift+N. Time se osigurava da te geste nisu u sukobu s UnigramPlus gestama.
+* Geste za uključivanje/isključivanje mikrofona i kamere tijekom poziva sada rade ispravno.
+* Uklonjena je gesta za reagiranje na poruke, budući da su u najnovijim verzijama WhatsAppa reakcije dostupne izravno iz kontekstnog izbornika.
+
 ### Verzija 1.8.0
 
-* Dodatak je testiran kako bi se osigurala kompatibilnost s NVDA-2023.
+* Dodatak je testiran kako bi se osigurala kompatibilnost s NVDA 2023.
 * Dodan je tipkovnički prečac za odabir poruka. Za ulazak u način odabira pritisnite Control+Razmaknica, a zatim koristite Razmaknicu za odabir sljedeće poruke.
-* Dodana je nova funkcija za automatso najavljivanje aktivnosti otvorenog razgovora. Prema zadanim postavkama, ova je značajka omogućena dvostrukim pritiskom kombinacije Alt+T. To pomaže korisnicima da ostanu u tijeku s novim porukama i drugim aktivnostima razgovora.
+* Dodana je nova funkcija za automatsko najavljivanje aktivnosti otvorenog razgovora. Prema zadanim postavkama, ova je značajka omogućena dvostrukim pritiskom kombinacije Alt+T. To pomaže korisnicima da ostanu u tijeku s novim porukama i drugim aktivnostima razgovora.
 * Funkcija koja automatski najavljuje nove poruke u razgovoru znatno je revidirana radi stabilnijeg rada. Ovo osigurava da su korisnici točno i pouzdano upozoreni na nove poruke.
-* Dodane oznake nekim neoznačenim gumbima.
+* Dodane su oznake nekim neoznačenim gumbima.
 
 ### Verzija 1.7.0
 
-* Dodana funkcija koja automatski najavljuje traku napretka ako je fokus na poruci.
-* Dodan tipkovnički prečac za prijavljivanje vrijednosti trake napretka ako je fokus na poruci. Prema zadanim postavkama ovoj funkciji dodijeljena je kombinacija tipki Alt+U. Ako ovu kombinaciju pritisnete dvaput, aktivirat će se funkcija automatskog najavljivanja indikatora performansi.
+* Dodana je funkcija koja automatski najavljuje traku napretka ako je fokus na poruci.
+* Dodan je tipkovnički prečac za prijavljivanje vrijednosti trake napretka ako je fokus na poruci. Prema zadanim postavkama ovoj funkciji dodijeljena je kombinacija tipki Alt+U. Ako ovu kombinaciju pritisnete dvaput, aktivirat će se funkcija automatskog najavljivanja indikatora performansi.
 * Riješen je problem zbog kojeg se fokus nije mogao premjestiti na popis razgovora.
 * Dodane su oznake nekim elementima.
 
@@ -87,37 +98,37 @@ Dodan veliki broj tipkovničkih prečaca za produktivan i ugodan rad u programu,
 
 ###Verzija 1.4.0
 
-* Prilagođeno najnovijoj verziji WhatsAppa.
-* Dodana je funkcija automatske najave novih poruka u razgovoru. Prema zadanim postavkama, ova se funkcija aktivira pritiskom na ALT+L. Značajka ostaje aktivna samo dok se NVDA ponovno ne pokrene. Može doći do problema sa stabilnošću ako ima previše novih poruka.
-* Dodana francuska lokalizacija.
+* Prilagođen najnovijoj verziji WhatsAppa.
+* Dodana je funkcija automatske najave novih poruka u razgovoru. Prema zadanim postavkama, ova se funkcija aktivira pritiskom na Alt+L. Značajka ostaje aktivna samo dok se NVDA ponovno ne pokrene. Može doći do problema sa stabilnošću ako ima previše novih poruka.
+* Dodana je francuska lokalizacija.
 
 ###Verzija 1.3.0
 
 * Sada će se pročitati opis poveznica priloženih poruci.
-* Sada će biti objavljeno trajanje glasovnih poruka.
+* Sada će biti najavljeno trajanje glasovnih poruka.
 * Sada možete otvoriti poveznice priložene porukama pomoću razmaknice
-* Dodane oznake za neke elemente sučelja
+* Dodane su oznake za neke elemente sučelja
 * Prilagođen najnovijoj verziji WhatsAppa tako da sve funkcije rade ispravno.
-* Ispravljene neke greške.
+* Ispravljene su neke greške.
 
 ###Verzija 1.2.0
 
 * Sada, kada se fokusirate na poruku napisanu kao odgovor na drugu poruku, prvo će se izgovoriti tekst te poruke, a zatim tekst poruke na koju je poslana.
 * Naziv i vrsta datoteka poslanih u razgovoru sada će se izgovoriti.
-* ALT+1 sada radi čak i kada je otvorena arhiva razgovora ili odjeljak odabranih poruka.
-* ALT + Strelica lijevo pomaže zatvoriti arhivu razgovora ili popis odabranih poruka ako su otvoreni.
-* Sada pritiskom na control+D, osim poništavanja glasovnih poruka, poništava se i odgovor na poruku.
-* Informacije o nemogućnosti snimanja glasovne poruke sada će se prikazivati kada polje za unos poruke nije prazno. Ovo će riješiti problem gdje bi se pritiskom na control+R poslala tekstualna poruka umjesto pokretanja snimanja glasovne poruke.
+* Alt+1 sada radi čak i kada je otvorena arhiva razgovora ili odjeljak odabranih poruka.
+* Alt+Strelica lijevo pomaže zatvoriti arhivu razgovora ili popis odabranih poruka ako su otvoreni.
+* Sada pritiskom na Control+D, osim poništavanja glasovnih poruka, poništava se i odgovor na poruku.
+* Informacije o nemogućnosti snimanja glasovne poruke sada će se prikazivati kada polje za unos poruke nije prazno. Ovo će riješiti problem gdje bi se pritiskom na Control+R poslala tekstualna poruka umjesto pokretanja snimanja glasovne poruke.
 * Označene su neke stavke koje već nisu imale oznake.
 
 ###Verzija 1.1.0
 
-* Dodan tipkovnički prečac za navigaciju do nepročitanih poruka. Budući da ova značajka ovisi o jeziku, ova se značajka može konfigurirati u postavkama WhatsAppPlusa.
-* Dodan tipkovnički prečac za pritiskanje gumba "Novi razgovor".
-* Dodan tipkovnički prečac za pritiskanje gumba "Priloži".
+* Dodan je tipkovnički prečac za navigaciju do nepročitanih poruka. Budući da ova značajka ovisi o jeziku, ova se značajka može konfigurirati u postavkama WhatsAppPlusa.
+* Dodan je tipkovnički prečac za pritiskanje gumba "Novi razgovor".
+* Dodan je tipkovnički prečac za pritiskanje gumba "Priloži".
 * Sada, prilikom snimanja glasovne poruke, govorna sinteza neće objaviti nazive tipki za kontrolu snimanja.
-* Dodana arapska, talijanska, rumunjska, srpska, hrvatska, španjolska i turska lokalizacija.
-* Dodane oznake za neke elemente koji nisu imali oznake čitača zaslona.
+* Dodana je arapska, talijanska, rumunjska, srpska, hrvatska, španjolska i turska lokalizacija.
+* Dodane su oznake za neke elemente koji nisu imali oznake čitača zaslona.
 * Sada će informacije o reakcijama na poruku biti objavljene kada se fokusirate na poruku.
 * Sada kada reproducirate vlastite glasovne poruke pomoću razmaknice, skočni prozor se neće pojaviti.
-* Ispravljene manje pogreške.
+* Ispravljene su manje pogreške.

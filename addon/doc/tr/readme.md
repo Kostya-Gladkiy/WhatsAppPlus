@@ -26,8 +26,8 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT+T - Açık bir sohbetin adını ve durumunu duyurun.
 * ALT+shift+C - Sesli arama yap.
 * ALT+shift+V - Görüntülü arama yap.
-* ALT+Y - Çağrıyı kabul edin.
-* ALT+N - Gelen bir arama 	varsa "aramayı reddet" düğmesine veya arama sürüyorsa "aramayı sonlandır" düğmesine basın.
+* ALT+ shift+Y - Çağrıyı kabul edin.
+* ALT+ shift+N - Gelen bir arama 	varsa "aramayı reddet" düğmesine veya arama sürüyorsa "aramayı sonlandır" düğmesine basın.
 * ALT+A - Mikrofon Açma/Kapatma düğmesine tıklar.
 * ALT+V - Kamerayı açar ve kapatır.
 * ALT+O - "Diğer Seçenekler" düğmesine basın.
@@ -37,7 +37,6 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT+delete - Bir mesajı veya sohbeti sil.
 * control+shift+P - Mevcut sohbet profilini açın.
 * control+shift+E - Mesajlar arasında gezinirken, kişi listesinde olmayan kullanıcı numaralarının okunmasını kaldıran ayarı açıp/kapatır.
-* ALT+Q - Mesaja tepki bırak.
 * ALT+S - Yıldız ekle.
 * ALT+ F - Mesajı ilet.
 * ALT+R - mesajı yanıtla.
@@ -54,6 +53,19 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ctrl +boşluk: Seçim moduna geçin.
 
 ##Değişiklik listesi:
+
+### Sürüm 1.9.0
+
+* Tüm whatsAppPlus tuş kombinasyonlarının listesini açan bir klavye kısayolu eklendi. Bu işlev standart olarak ALT + H tuş kombinasyonudur 
+* ALT + 2 ve ALT + 3 tuş kombinasyonlarının çalışmadığı bir sorun düzeltildi.
+* Kısayol tuşlarıyla  içerik menüsünden işlevlerin etkinleştirilememesi sorunu düzeltildi.
+* Sesli mesajların hızlandırılması ve duraklatılması işlevinin her zaman tetiklenmediği bir sorun düzeltildi.
+* Gönderilen  mesajlar'da kendi telefon numaranızın bildirildiği bir sorun giderildi. Bunu önlemek için, WhatsAppPlus ayarlarında  kendi telefon numaranızı  belirtmeniz gerekir ve bundan sonra eklenti mesajlarınızda  bu bilgiyi     seslendirmeyecek.
+* WhatsappPlus'ın güvenli ekranlarda güncellemeyi önerdiği bir sorun düzeltildi. Bunun bir daha olmasını önlemek için, genel NVDA ayarlarında  Oturum açma sırasında ve güvenli ekranlarda geçerli konfigürasyonu kullan düğmesine tıklamanız gerekir.
+* Aramayı cevaplamak için kombinasyon ALT+ shift+Y olarak değiştirildi ve çağrıyı reddetmek için kombinasyon ALT+ shift+ N olarak değiştirildi. Bu, bu tuş kombinasyonlarının UnigramPlus kombinasyonlarıyla çakışmamasını sağlamak için yapıldı.
+* Şimdi arama sırasında mikrofonu ve kamerayı açma/kapama kombinasyonları düzgün çalışıyor.
+* Mesajlara tepki bırakmak için klavye kısayolu kaldırıldı, çünkü 
+WhatsApp'ın son sürümlerinde, tepkiler doğrudan içerik menüsünden erişilebilir.
 
 ### Sürüm 1.8.0
 

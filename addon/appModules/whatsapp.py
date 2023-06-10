@@ -38,7 +38,7 @@ icon_from_context_menu = {
 	"star message": "\ue734",
 	"remove from starred messages": "\ue735",
 	"save as": "\ue74e",
-	"select message": "",
+	"select message": "\ue73a",
 }
 
 lang = languageHandler.getLanguage().split("_")[0]
@@ -58,6 +58,7 @@ phrases_of_unread_messages = {
 SPEC = {
 	'playSoundWhenRecordingVoiceMessage': 'boolean(default=False)',
 	'phrasesOfUnreadMessages': 'string(default="'+phrases_of_unread_messages.get(lang, "en")+'")',
+	'number_phone': 'string(default="")',
 	'isAutomaticallyCheckForUpdates': 'boolean(default=True)',
 	'displayPhoneNumberInUsername': 'boolean(default=True)',
 	'automaticReadingOfNewMessages': 'boolean(default=False)',
@@ -230,7 +231,7 @@ class AppModule(appModuleHandler.AppModule):
 	def get_messages_element(self):
 		obj = self.message_list_element
 		if not obj or not obj.location:
-			obj = next((item for item in self.get_elements() if item.UIAAutomationId == "ListView"), None)
+			obj = next((item for item in self.get_elements() if item.UIAAutomationId == "MessagesList"), None)
 			if obj: self.message_list_element = obj
 		if obj and controlTypes.State.UNAVAILABLE not in obj.states: return obj
 		else: return None
@@ -349,7 +350,8 @@ class AppModule(appModuleHandler.AppModule):
 			last_focus = api.getFocusObject()
 			button.doAction()
 			last_focus.setFocus()
-		else: message(_("Nothing is playing right now"))
+		else:
+			message(_("Nothing is playing right now"))
 
 	# Play/pause voice message
 	@script(description=_("Play/pause the voice message currently playing"), gesture="kb:ALT+P")
@@ -443,14 +445,14 @@ class AppModule(appModuleHandler.AppModule):
 		else: message(_("Video call not available"))
 
 	# Accept call
-	@script(description=_("Accept call"), gesture="kb:ALT+Y")
+	@script(description=_("Accept call"), gesture="kb:ALT+shift+Y")
 	def script_answeringCall(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
 		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue717"), None)
 		if button: button.doAction()
 
 	# End or decline call
-	@script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:ALT+N")
+	@script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:ALT+shift+N")
 	def script_callCancellation(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
 		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue65a"), None)
@@ -460,25 +462,25 @@ class AppModule(appModuleHandler.AppModule):
 	@script(description=_("Mute or unmute the microphone"), gesture="kb:ALT+A")
 	def script_microphone(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
-		button = next((item for item in elements if item.role == controlTypes.Role.CHECKBOX and item.UIAAutomationId == "MicMuteButton"), None)
+		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.UIAAutomationId == "MicMuteButton"), None)
 		if not button: return
 		focus = api.getFocusObject()
-		if controlTypes.State.CHECKED in button.states: message(_("Microphone on"))
-		else: message(_("Microphone off"))
 		button.doAction()
 		focus.setFocus()
+		def announce_name_button(): message(button.name)
+		Timer(.2, announce_name_button).start()
 
 	# Turn on/off the camera
 	@script(description=_("Turn the camera on and off"), gesture="kb:ALT+V")
 	def script_video(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
-		button = next((item for item in elements if item.role == controlTypes.Role.CHECKBOX and item.UIAAutomationId == "VideoMuteButton"), None)
+		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.UIAAutomationId == "ActivateVideoButton"), None)
 		if not button: return
 		focus = api.getFocusObject()
-		if controlTypes.State.CHECKED in button.states: message(_("Camera on"))
-		else: message(_("Camera off"))
 		button.doAction()
 		focus.setFocus()
+		def announce_name_button(): message(button.name)
+		Timer(.2, announce_name_button).start()
 
 	# Press the "Attach media" button
 	@script(description=_("Press \"Attach file\" button"), gesture="kb:control+shift+A")
@@ -558,9 +560,9 @@ class AppModule(appModuleHandler.AppModule):
 	@script(description=_("Forward message"), gesture="kb:ALT+F")
 	def script_forwardMessage(self, gesture):
 		self.activate_option_for_menu(icon_from_context_menu["forward message"])
-	@script(description=_("React to message"), gesture="kb:ALT+Q")
-	def script_set_reaction(self, gesture):
-		self.activate_option_for_menu(icon_from_context_menu["react"])
+	# @script(description=_("React to message"), gesture="kb:ALT+Q")
+	# def script_set_reaction(self, gesture):
+		# self.activate_option_for_menu(icon_from_context_menu["react"])
 	@script(description=_("Delete a message or chat"), gesture="kb:ALT+delete")
 	def script_deletion(self, gesture):
 		self.activate_option_for_menu(icon_from_context_menu["delete"])
@@ -629,8 +631,38 @@ class AppModule(appModuleHandler.AppModule):
 	def script_selectMessage(self, gesture):
 		self.activate_option_for_menu(icon_from_context_menu["select message"])
 
+	@script(description=_("Show a list of all whatsAppPlus shortcuts"), gesture="kb:ALT+H")
+	def script_help(self, gesture):
+		a = next((item for item in list(addonHandler.getAvailableAddons()) if item.name == "whatsAppPlus"), None)
+		a = a.getDocFilePath()
+		# We replace the file extension, because we need an md file
+		a = a[:-4]+"md"
+		with open(a, "r", encoding="utf-8") as file:
+			text = file.read()
+		blocks = text.split("\n\n")
+		count_rows = [len(item.split("\n")) for item in blocks]
+		index = count_rows.index(max(count_rows))
+		text = blocks[index]
+		text = text.replace("* ", "")
+		text = text.replace("## ", "")
+		TextWindow(text.strip(), _("List of shortcuts"), readOnly=True)
+
+	def is_message_contains_phone_number(self, number_in_message):
+		if not config.conf["WhatsAppPlus"]["number_phone"]: return False
+		cleaned_phone = sub(r"[^\d+]", "", number_in_message)
+		number_phome = config.conf["WhatsAppPlus"]["number_phone"]
+		numbers = number_phome.split("|")
+		for number in numbers:
+			if number in cleaned_phone:
+				return True
+				break
+		else:
+			return False
+
 	# Processing the message that got into focus
 	def action_message_focus(self, obj):
+		number_in_message = obj.name.split(", ")[0]
+		is_my_message = self.is_message_contains_phone_number(number_in_message)
 		reactions = ""
 		answer = False
 		duration = False
@@ -670,6 +702,8 @@ class AppModule(appModuleHandler.AppModule):
 			obj.name = sub(r" (\w{2,12}) {1,3}(\d\d:\d\d)", r" \1 %s \2"%new_name, obj.name)
 		if duration: obj.name = obj.name.replace("   ", " "+duration+", ")
 		if reactions: obj.name += ".\n"+reactions
+		if is_my_message:
+			obj.name = obj.name.replace(number_in_message, _("You")+", ")
 
 		# Remove phone number from usernames
 		if not config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"]: obj.name = sub(reg_for_delete_phon_number, '', obj.name)
@@ -697,6 +731,7 @@ class AppModule(appModuleHandler.AppModule):
 			self.is_skip_name = True
 			return
 		elif self.execute_context_menu_option:
+			if obj.parent.UIAAutomationId == "EmojiList": obj = obj.parent.parent
 			try: targetButton = next((item for item in obj.parent.children if item.firstChild.name in self.execute_context_menu_option), None)
 			except: targetButton = None
 			self.execute_context_menu_option = False
@@ -769,14 +804,15 @@ class AppModule(appModuleHandler.AppModule):
 					# obj.name = obj.children[0].name
 				if obj.name in ('WhatsApp.ViewModels.EmojiPickerCategoryViewModel', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.Pages.Recipients.NewChatVm+IItem]', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.Pages.Recipients.ForwardMessageVm+IItem]', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.AddCallParticipantsVm+IItem]', 'WhatsApp.Pages.Recipients.UserRecipientItemVm'):
 					obj.name = obj.firstChild.name
-			elif obj.role == controlTypes.Role.SLIDER:
-				if obj.UIAAutomationId == "Scrubber" and obj.value != "0": self.rewind_slider = obj
+			# elif obj.role == controlTypes.Role.SLIDER:
 			elif obj.role == controlTypes.Role.CHECKBOX:
+				# if obj.UIAAutomationId == "Scrubber" and obj.value != "0" and obj.location.left: self.rewind_slider = obj
 				if obj.name == "" and obj.childCount == 3 and obj.parent.UIAAutomationId == "BubbleListItem":
 					# We sign the answer options in the surveys
 					obj.name = obj.firstChild.name+", "+obj.children[1].name+" votes"+obj.lastChild.value
 		except: pass
 
 	def event_valueChange(self, obj, nextHandler):
-		if obj.UIAAutomationId == "Scrubber": self.rewind_slider = obj
+		if obj.UIAAutomationId == "Scrubber" and obj.value != "0" and obj.location.left:
+			self.rewind_slider = obj
 		nextHandler()

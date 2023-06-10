@@ -20,8 +20,8 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * ALT+T - Ime i status otvorenog ćaskanja.
 * ALT+shift+C - Upućivanje glasovnog poziva grupi ili kontaktu ili se pridružite tekućem glasovnom pozivu u grupi.
 * ALT+shift+V - upućivanje video poziva kontaktu ili grupi.
-* ALT+Y - Prihvati poziv.
-* ALT+N - Pritisnite dugme "Odbij poziv" ako postoji dolazni poziv,  dugme "ili poziv" ako je poziv u toku.
+* ALT+shiftY - Prihvati poziv.
+* ALT+shiftN - Pritisnite dugme "Odbij poziv" ako postoji dolazni poziv,  dugme "ili poziv" ako je poziv u toku.
 * ALT+A - Privremeno isključite ili uključite mikrofon.
 * ALT+V - Uključite ili isključite kameru.
 * ALT+O - Pritisnite dugme još opcija.
@@ -31,7 +31,6 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * ALT+delete - Izbrišite poruku ili ćaskanje.
 * control+shift+P - Otvori trenutni profil za ćaskanje.
 * control+shift+E - Prebacuje režim koji uklanja čitanje korisničkog broja prilikom čitanja poruka koje nisu na listi kontakata.
-* ALT+Q - Reagovanje na poruku.
 * ALT+S - Poruka sa zvezdicom.
 * ALT+F - Prosledi poruku.
 * ALT+R - Odgovori na poruku.
@@ -40,7 +39,6 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * ALT+C - Prikaži tekst poruke u iskačućem prozoru.
 * NVDA+control+W - otvara se prozor sa podešavanjima WhatsApPlus-a.
 * ALT3 – Premesti fokus na oznaku nepročitane poruke.
-* control+N - Pritisnite dugme "Novo ćaskanje".
 * control+shift+A - Pritisnite dugme "Priloži datoteku":
 * Alt+L: Omogući automatsko čitanje novih poruka u trenutnom ćaskanju.
 * control+S: Povećanje/smanjivanje brzine reprodukcije glasovnih poruka.
@@ -48,6 +46,17 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 ALT+U: Najavljivanje trenutne vrednosti trake napredka. Kada se dvaput pritisne uključivanje/isključivanje automatsko ozvučenje indikatora performansi.
 Control+space: Prebacivanje na režim izbora.
 ##Istorija promena
+Verzija 1.9.0
+* Dodata je prečica na tastaturi koja otvara listu svih WhatsAppPlus prečica na tastaturi. Ova funkcija je podrazumevano dodeljena ALT+H pokretu.
+* Ispravljena greška gde ALT+2 i ALT+3 pokreti nisu radili.
+* Ispravljena greška gde je bilo nemoguće aktivirati neke funkcije iz kontekstnog menija pomoću pokreta.
+* Rešen je problem gde promena brzine reprodukcije glasovne poruke i pauziranje reprodukcije glasovne poruke nisu uvek radili.
+* Ispravljena je greška gde je u ćaskanju kada se fokusirate na vaše poslate poruke u mesto reči „vi“ čitač ekrana najavljuje lični broj. Da biste to izbegli, potrebno je da navedete broj telefona u podešavanjima WhatsAppPlusa i nakon toga, dodatak ga neće prijaviti u vašim porukama.
+* Rešen je problem gde je WhatsAppPlus tražio ažuriranje na bezbednim ekranima. Da se ovo ne bi ponovilo, potrebno je da kliknete na dugme koristi trenutno sačuvana podešavanja tokom prijavljivanja i na bezbednim ekranima zahteva administratorske privilegije u opštim podešavanjima nvda.
+* pokret za prihvatanje poziva je promenjen u ALT+shift Y, a pokret za odbijanje poziva je promenjen u ALT+shift+N. Ovo je da bi se osiguralo da ovi pokreti nisu u sukobu sa Unigramplus pokretima.
+* Pokreti za uključivanje-isključivanje mikrofona i kamere tokom poziva sada rade ispravno.
+* Uklonjen pokret za podešavanje reakcije na poruke, pošto su u najnovijim verzijama WhatsApp-a reakcije dostupne direktno iz kontekstnog menija.
+
 
 ###Verzija 1.8.0
 * Dodatak je testiran da bi se obezbedila kompatibilnost sa NVDA 2023.

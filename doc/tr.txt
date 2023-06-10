@@ -1,8 +1,13 @@
-* NVDA-2023 ile uyumluluk sağlandı.
-* Mesajları seçmek için bir klavye kısayolu eklendi. Seçim moduna girmek için Ctrl +Boşluk tuşlarına basın ve ardından bir sonraki mesajı seçmek için Boşluk tuşunu kullanın.
-* Açık bir sohbetteki etkinliği otomatik olarak  seslendirmek için yeni bir işlev eklendi. Varsayılan olarak, bu özellik ALT + T kombinasyonuna çift basılarak etkinleştirilir. Bu, kullanıcıların yeni mesajlar ve diğer sohbet etkinlikleri hakkında güncel  bilgi almasına yardımcı olur.
-* Yeni sohbet mesajlarını otomatik olarak  seslendiren özellik, daha  düzgün çalışması  için büyük ölçüde yeniden tasarlandı. Bu, kullanıcıların yeni mesajların bildirimlerini doğru bir şekilde almasını sağlar.
-* Bazı imzasız düğmelere etiketler eklendi.
+* Tüm whatsAppPlus tuş kombinasyonlarının listesini açan bir klavye kısayolu eklendi. Bu işlev standart olarak ALT + H tuş kombinasyonudur 
+* ALT + 2 ve ALT + 3 tuş kombinasyonlarının çalışmadığı bir sorun düzeltildi.
+* Kısayol tuşlarıyla  içerik menüsünden işlevlerin etkinleştirilememesi sorunu düzeltildi.
+* Sesli mesajların hızlandırılması ve duraklatılması işlevinin her zaman tetiklenmediği bir sorun düzeltildi.
+* Gönderilen  mesajlar'da kendi telefon numaranızın bildirildiği bir sorun giderildi. Bunu önlemek için, WhatsAppPlus ayarlarında  kendi telefon numaranızı  belirtmeniz gerekir ve bundan sonra eklenti mesajlarınızda  bu bilgiyi     seslendirmeyecek.
+* WhatsappPlus'ın güvenli ekranlarda güncellemeyi önerdiği bir sorun düzeltildi. Bunun bir daha olmasını önlemek için, genel NVDA ayarlarında  Oturum açma sırasında ve güvenli ekranlarda geçerli konfigürasyonu kullan düğmesine tıklamanız gerekir.
+* Aramayı cevaplamak için kombinasyon ALT+ shift+Y olarak değiştirildi ve çağrıyı reddetmek için kombinasyon ALT+ shift+ N olarak değiştirildi. Bu, bu tuş kombinasyonlarının UnigramPlus kombinasyonlarıyla çakışmamasını sağlamak için yapıldı.
+* Şimdi arama sırasında mikrofonu ve kamerayı açma/kapama kombinasyonları düzgün çalışıyor.
+* Mesajlara tepki bırakmak için klavye kısayolu kaldırıldı, çünkü 
+WhatsApp'ın son sürümlerinde, tepkiler doğrudan içerik menüsünden erişilebilir.
 
 Bu eklentinin geliştiricisini destekleme isteğiniz ve en önemlisi fırsatınız varsa, aşağıdaki ayrıntıları kullanarak bunu yapabilirsiniz:
 * PeyPal: gladkiy.kostya@gmail.com.

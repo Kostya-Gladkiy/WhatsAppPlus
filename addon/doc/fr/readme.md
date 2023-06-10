@@ -50,8 +50,17 @@ Ajout d'un grand nombre de raccourcis clavier pour une utilisation fluide et con
 * Ctrl+s - Accélèrer ou ralentir la vitesse de lecture d'un message vocal
 * Alt+P -  Mettre en pause ou reprendre la lecture du message vocal en cours de lecture
 * Alt+U : Annonce la valeur actuelle de la barre de progression. En cas de double pression, active/désactive la vocalisation automatique des indicateurs de performance.
+* Ctrl+Espace : Passage en mode sélection.
 
 ##Historique des changements
+
+###Version 1.8.0
+
+* L'extension a été testée pour assurer la compatibilité avec NVDA-2023.
+* Ajout d'un raccourci clavier pour la sélection des messages. Pour passer en mode sélection, appuyez sur Ctrl+Espace, puis utilisez Espace pour sélectionner le message suivant.
+* Une nouvelle fonction a été ajoutée pour annoncer automatiquement l'activité dans une discussion ouverte. Par défaut, cette fonction est activée en appuyant deux fois sur la combinaison ALT+T. Cela permet aux utilisateurs d'être informés des nouveaux messages et des autres activités de la discussion.
+* La fonction qui annonce automatiquement les nouveaux messages dans la discussion a été considérablement révisée pour un fonctionnement plus stable. Cela garantit que les utilisateurs sont alertés des nouveaux messages de manière précise et fiable.
+* Ajout d'étiquettes à certains boutons.
 
 ###Version 1.7.0
 

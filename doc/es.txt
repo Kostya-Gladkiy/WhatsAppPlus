@@ -1,8 +1,12 @@
-* El complemento se probó para asegurar la compatibilidad con NVDA-2023.
-* Se añadió un atajo de teclado para seleccionar mensajes. Para entrar al modo de selección, pulsa control+espacio, y luego  usa espacio para seleccionar el siguiente mensaje.
-* Se añadió una función para anunciar automáticamente la actividad de un chat. Esta función se activa presionando dos veces la combinación ALT+T. Esto ayuda a los usuarios a obtener actualizaciones sobre nuevos mensajes y otra actividad del chat.
-* La función que anuncia automáticamente nuevos mensajes en el chat se ha revisado sustancialmente para un funcionamiento más estable. Esto garantiza que los usuarios reciban alertas de nuevos mensajes de manera precisa y confiable.
-* Se agregaron etiquetas para algunos botones sin etiquetar.
+* Se añadió un atajo de teclado que abre una lista de todos los atajos de WhatsApp Plus. De forma predeterminada, esta función se asigna al gesto ALT+h.
+* Se corrigió un error por el que los gestos ALT+2 y ALT+3 no funcionavan.
+* Se corrigió un error por el que era imposible activar algunas funciones del menú contextual utilizando gestos.
+* Se corrigió un error por el que el cambio de velocidad de los mensajes de voz y pausar los mensajes de voz no funcionava siempre.
+* Se corrigió un error por el cuál al enfocarse en tus mensajes enviados en los chats, en lugar de la palabra "tú", el lector de pantalla anunciava un número personal. Para esquivar esto, debes especificar el número de teléfono en las opciones de WhatsApp Plus y después de eso, el complemento no lo anunciará en tus mensajes.
+* Se corrigió un error por el que WhatsApp Plus solicitaba actualizarse en pantallas seguras. Para prevenir que suceda de nuevo, debes hacer click en el botón "Utilizar opciones actualmente guardadas durante el inicio de sesión y en pantallas seguras (requiere privilegios de administrador)" en las opciones generales de NVDA.
+* El gesto para aceptar una llamada se cambió a ALT+shift+Y, y el gesto para rechazar una llamada se cambió a ALT+shift+N. Esto es para asegurarse de que estos gestos no estén en conflicto con los gestos de Unigram Plus.
+* Los gestos para activar o desactivar la cámara y el micrófono durante una llamada ahora funcionan correctamente.
+* Se eliminó el gesto para reaccionar a los mensajes, ya que en las últimas versiones de WhatsApp, las reacciones están disponibles directamente en el menú contextual.
 
 Si realmente te gusta este complemento y lo deseas, Y lo más importante, tienes la oportunidad de apoyar financieramente al desarrollador Y por ende motivarlo a seguir desarrollándolo, puedes hacerlo transfiriendo un pequeño monto usando los siguientes detalles bancarios:
 * PeyPal: gladkiy.kostya@gmail.com.

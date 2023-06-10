@@ -26,7 +26,9 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * ALT+T - Anunță numele și starea unui chat deschis.
 * ALT+shift+C - Efectuează un apel vocal către un grup sau un contact sau alătură-te unui apel vocal în curs de desfășurare într-un grup.
 * ALT+shift+V - Efectuează un apel video către un contact sau un grup.
-* ALT+Y - Răspunde apelului.
+* ALT+Shift+Y - Răspunde apelului.
+* ALT+shift+N - Refuză un apel dacă te sună cineva, sau alătură-te unui apel dacă este în desfășurare.
+* ALT+A - Pornește și oprește microfonul camerei.
 * ALT+V - Pornește și oprește camera.
 * ALT+O - Apasă butonul "Mai multe opțiuni".
 * control+R - Înregistrează și trimite un mesaj vocal.
@@ -36,7 +38,6 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * control+Shift+P - Deschide profilul de chat curent.
 * ALT+shift+A - Apasă butonul "Atașați un fișier".
 * control+shift+E - Comută modul care elimină citirea numărului de utilizator atunci când se citesc mesajele utilizatorilor care nu se află în lista de contacte.
-* ALT+Q - Reacționează la mesaj.
 * ALT+S - Marchează mesajul cu stea.
 * ALT+F - Redirecționează mesajul.
 * ALT+R - Răspunde la mesaj.
@@ -54,6 +55,18 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * control+spațiu: Treci la modul de selecție.
 
 ##Istoricul modificărilor
+
+### Versiunea 1.9.0
+
+* A fost adăugată o comandă rapidă care deschide o listă cu toate scurtăturile WhatsAppPlus. În mod implicit, această funcție este atribuită gestului ALT+H.
+* A fost reparată o eroare prin care gesturile ALT+2 și ALT+3 nu funcționau.
+* A fost rezolvată o eroare prin care era imposibil să activezi unele funcții din meniul contextual folosind gesturi.
+* S-a remediat o problemă în care modificarea vitezei de redare a mesajelor vocale și întreruperea redării mesajelor vocale nu funcționa întotdeauna.
+* A fost reparată o eroare în care, în chat-uri, atunci când te focalizai pe mesajele trimise, în loc de cuvântul "You", cititorul de ecran anunța un număr personal. Pentru a evita acest lucru, trebuie să specifici numărul de telefon în setările WhatsAppPlus și, după aceea, add-on-ul nu îl va mai anunța în mesaje.
+* A fost rezolvată o problemă în care WhatsAppPlus cerea actualizarea pe ecrane securizate. Pentru a evita ca acest lucru să se întâmple din nou, trebuie să faci clic pe butonul "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" (Utilizați setările salvate în prezent în timpul conectării și pe ecrane securizate (necesită privilegii de administrator)" din setările generale NVDA.
+* Gestul de acceptare a unui apel a fost schimbat în ALT+shift+Y, iar gestul de refuz al unui apel a fost schimbat în ALT+shift+N pentru a se asigura că aceste gesturi nu intră în conflict cu gesturile UnigramPlus.
+* Gesturile de activare/dezactivare a microfonului și a camerei în timpul unui apel funcționează acum corect.
+* A fost eliminat gestul de a seta reacția la mesaje, deoarece în cele mai recente versiuni de WhatsApp, reacțiile sunt disponibile direct din meniul contextual.
 
 ### Versiunea 1.8.0
 

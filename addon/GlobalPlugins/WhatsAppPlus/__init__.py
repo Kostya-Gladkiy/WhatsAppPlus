@@ -1,4 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
+import api
+import IAccessibleHandler
 import globalPluginHandler
 import addonHandler
 from scriptHandler import script
@@ -139,7 +141,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		fp = os.path.join(globalVars.appArgs.configPath, "whatsappplus.nvda-addon")
 		if os.path.exists(fp): os.remove(fp)
 		# Checking for updates
-		if config.conf["WhatsAppPlus"]["isAutomaticallyCheckForUpdates"]:
+		obj = api.getFocusObject()
+		if config.conf["WhatsAppPlus"]["isAutomaticallyCheckForUpdates"] and not isinstance(obj, IAccessibleHandler.SecureDesktopNVDAObject):
 			threading.Thread(target=onCheckForUpdates, args=(False, True,)).start()
 
 	@script(description=_("Open WhatsAppPlus settings window"), gesture="kb:NVDA+control+W")
@@ -150,6 +153,9 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 	title = "WhatsAppPlus"
 	def makeSettings(self, settingsSizer):
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# A field for entering a phone number so that the application can replace the phone number with the phrase "You" in messages
+		self.number_phone = settingsSizerHelper.addLabeledControl(_("Enter a phone number. This is to prevent the app from displaying your phone number on messages sent by you."), wx.TextCtrl)
+		self.number_phone.Value = getConfig("number_phone")
 		# Field for setting the function of moving focus to unread messages
 		self.phrases_of_unread_messages = settingsSizerHelper.addLabeledControl(_('In this field, separate by commas, write all the matching phrases of the "Unread messages" element in your language. You need to write phrases without a number.'), wx.TextCtrl)
 		self.phrases_of_unread_messages.Value = getConfig("phrasesOfUnreadMessages")
@@ -173,6 +179,7 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 			if v == value: return k
 
 	def onSave(self):
+		setConfig("number_phone", self.number_phone.Value)
 		phrases_of_unread_messages = self.phrases_of_unread_messages.Value.split(",")
 		phrases_of_unread_messages = [item.lower().strip() for item in phrases_of_unread_messages]
 		self.phrases_of_unread_messages.Value = ",".join(phrases_of_unread_messages)

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WhatsAppPlus\n"
-"POT-Creation-Date: 2023-03-18 09:35+0200\n"
-"PO-Revision-Date: 2023-03-18 09:36+0200\n"
+"POT-Creation-Date: 2023-06-09 22:51+0300\n"
+"PO-Revision-Date: 2023-06-10 11:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: Kostya Gladkiy\n"
 "Language: uk\n"
@@ -11,53 +11,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: appModules\n"
 "X-Poedit-SearchPath-1: GlobalPlugins\n"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:37
+#: GlobalPlugins/WhatsAppPlus/__init__.py:39
 msgid "No updates available"
 msgstr "Немає доступних оновлень"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:38
-#: GlobalPlugins/WhatsAppPlus/__init__.py:64
+#: GlobalPlugins/WhatsAppPlus/__init__.py:40
+#: GlobalPlugins/WhatsAppPlus/__init__.py:66
 msgid "WhatsAppPlus update"
 msgstr "Оновлення WhatsApPlus"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:65
+#: GlobalPlugins/WhatsAppPlus/__init__.py:67
 msgid ""
 "A new version of the add-on is available. Do you want to update WhatsAppPlus "
 "to version %version?"
 msgstr ""
 "Доступна нова версія додатку. Хочете оновити WhatsAppPlus до версії %version?"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:76
+#: GlobalPlugins/WhatsAppPlus/__init__.py:78
 msgid "Yes, update"
 msgstr "Так, оновити"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:77
+#: GlobalPlugins/WhatsAppPlus/__init__.py:79
 msgid "No, not now"
 msgstr "Ні, не зараз"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:92
+#: GlobalPlugins/WhatsAppPlus/__init__.py:94
 msgid "Download in progress"
 msgstr "Триває завантаження"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:118
+#: GlobalPlugins/WhatsAppPlus/__init__.py:120
 msgid "Changes in this version:"
 msgstr "Зміни в цій версії:"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:119
+#: GlobalPlugins/WhatsAppPlus/__init__.py:121
 msgid "No update information"
 msgstr "Відсутня інформація про оновлення"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:145
+#: GlobalPlugins/WhatsAppPlus/__init__.py:148
 msgid "Open WhatsAppPlus settings window"
 msgstr "Відкрити вікно налаштувань WhatsAppPlus"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:154
+#: GlobalPlugins/WhatsAppPlus/__init__.py:157
+msgid ""
+"Enter a phone number. This is to prevent the app from displaying your phone "
+"number on messages sent by you."
+msgstr ""
+"Введіть свій номер телефону. Це потрібно для того, щоб програма не відображала "
+"ваш номер телефону в надісланих вами повідомленнях."
+
+#: GlobalPlugins/WhatsAppPlus/__init__.py:160
 msgid ""
 "In this field, separate by commas, write all the matching phrases of the "
 "\"Unread messages\" element in your language. You need to write phrases "
@@ -66,88 +74,88 @@ msgstr ""
 "У цьому полі, розділяючи комами, впишіть всі відповідні фрази елемента "
 "«Непрочитані повідомлення» вашою мовою. Писати треба словосполучення без цифри."
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:157
+#: GlobalPlugins/WhatsAppPlus/__init__.py:163
 msgid "Play sounds when starting, pausing and sending a voice message"
 msgstr ""
 "Відтворювати звуки під час запуску, паузи та надсилання голосового повідомлення"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:161
+#: GlobalPlugins/WhatsAppPlus/__init__.py:167
 msgid "Automatically report progress bar updates when focus is on a message"
 msgstr ""
 "Автоматично повідомляти про оновлення індикаторів виконання, коли фокус "
 "перебуває на повідомленні"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:165
+#: GlobalPlugins/WhatsAppPlus/__init__.py:171
 msgid "Check for WhatsAppPlus updates on NVDA startup"
 msgstr "Перевіряти наявність оновлень WhatsAppPlus під час запуску NVDA"
 
-#: GlobalPlugins/WhatsAppPlus/__init__.py:168
+#: GlobalPlugins/WhatsAppPlus/__init__.py:174
 msgid "Check for &updates"
 msgstr "Перевірити наявність &оновлень"
 
-#: appModules/whatsapp.py:252 appModules/whatsapp.py:279
+#: appModules/whatsapp.py:253 appModules/whatsapp.py:280
 msgid "Chat list not found"
 msgstr "Списку з бесідами не знайдено"
 
-#: appModules/whatsapp.py:290
+#: appModules/whatsapp.py:291
 msgid "Move focus to the last message in an open chat"
 msgstr "Перенести фокус на останнє повідомлення в бесіді"
 
-#: appModules/whatsapp.py:301 appModules/whatsapp.py:330
-#: appModules/whatsapp.py:380 appModules/whatsapp.py:387
+#: appModules/whatsapp.py:302 appModules/whatsapp.py:331
+#: appModules/whatsapp.py:382 appModules/whatsapp.py:389
 msgid "No open chat"
 msgstr "Немає відкритої бесіди"
 
-#: appModules/whatsapp.py:302 appModules/whatsapp.py:331
+#: appModules/whatsapp.py:303 appModules/whatsapp.py:332
 msgid "This chat is empty"
 msgstr "Ця бесіда порожня"
 
-#: appModules/whatsapp.py:305
+#: appModules/whatsapp.py:306
 msgid "Move focus to chat list"
 msgstr "Перенести фокус в список бесід"
 
-#: appModules/whatsapp.py:321
+#: appModules/whatsapp.py:322
 msgid "Chat list is empty"
 msgstr "Список бесід порожній"
 
-#: appModules/whatsapp.py:324
+#: appModules/whatsapp.py:325
 msgid "Move focus to 'unread messages' label"
 msgstr "Перенести фокус на мітку \"непрочитані повідомлення\""
 
-#: appModules/whatsapp.py:338
+#: appModules/whatsapp.py:339
 msgid "There are no unread messages in this chat"
 msgstr "В цій бесіді немає непрочитаних повідомлень"
 
-#: appModules/whatsapp.py:341
+#: appModules/whatsapp.py:342
 msgid "Increase/decrease the playback speed of voice messages"
 msgstr "Пришвидшити/уповільнити швидкість відтворення голосового повідомлення"
 
-#: appModules/whatsapp.py:344 appModules/whatsapp.py:352
-#: appModules/whatsapp.py:358 appModules/whatsapp.py:367
+#: appModules/whatsapp.py:345 appModules/whatsapp.py:354
+#: appModules/whatsapp.py:360 appModules/whatsapp.py:369
 msgid "Nothing is playing right now"
 msgstr "Зараз нічого не відтворюється"
 
-#: appModules/whatsapp.py:355
+#: appModules/whatsapp.py:357
 msgid "Play/pause the voice message currently playing"
 msgstr "Відтворити/призупинити голосове повідомлення, яке зараз відтворюється"
 
-#: appModules/whatsapp.py:370
+#: appModules/whatsapp.py:372
 msgid "Announce the name and status of an open chat"
 msgstr "Повідомити назву та статус відкритої бесіди"
 
-#: appModules/whatsapp.py:373
+#: appModules/whatsapp.py:375
 msgid "Chat activity tracking is enabled"
 msgstr "Відстеження активності в чаті увімкнено"
 
-#: appModules/whatsapp.py:374
+#: appModules/whatsapp.py:376
 msgid "Chat activity tracking is disabled"
 msgstr "Відстеження активності в чаті вимкнено"
 
-#: appModules/whatsapp.py:382
+#: appModules/whatsapp.py:384
 msgid "Open current chat profile"
 msgstr "Відкрити профіль відкритої бесіди"
 
-#: appModules/whatsapp.py:390
+#: appModules/whatsapp.py:392
 msgid ""
 "Move the focus to the edit field. If the focus is already in the edit field, "
 "then after pressing the hotkey, it will move to where it was before"
@@ -156,143 +164,123 @@ msgstr ""
 "цьому полі, при натисканні він повернеться на останній елемент який був у "
 "фокусі"
 
-#: appModules/whatsapp.py:407
+#: appModules/whatsapp.py:409
 msgid "Copy the message if it contains text"
 msgstr "Скопіювати вміст повідомлення"
 
-#: appModules/whatsapp.py:417
+#: appModules/whatsapp.py:419
 msgid "Message copied"
 msgstr "Повідомлення скопійовано"
 
-#: appModules/whatsapp.py:418 appModules/whatsapp.py:429
+#: appModules/whatsapp.py:420 appModules/whatsapp.py:431
 msgid "This message contains no text"
 msgstr "Дане повідомлення не містить тексту"
 
-#: appModules/whatsapp.py:421
+#: appModules/whatsapp.py:423
 msgid "Show message text in popup window"
 msgstr "Показати текст повідомлення у спливаючому вікні"
 
-#: appModules/whatsapp.py:428
+#: appModules/whatsapp.py:430
 msgid "message text"
 msgstr "текст повідомлення"
 
-#: appModules/whatsapp.py:432
+#: appModules/whatsapp.py:434
 msgid "Make a voice call"
 msgstr "Здійснити голосовий дзвінок"
 
-#: appModules/whatsapp.py:436
+#: appModules/whatsapp.py:438
 msgid "Call unavailable"
 msgstr "Дзвінок недоступний"
 
-#: appModules/whatsapp.py:439
+#: appModules/whatsapp.py:441
 msgid "Make a video call"
 msgstr "Здійснити відео дзвінок"
 
-#: appModules/whatsapp.py:443
+#: appModules/whatsapp.py:445
 msgid "Video call not available"
 msgstr "Відео дзвінок недоступний"
 
-#: appModules/whatsapp.py:446
+#: appModules/whatsapp.py:448
 msgid "Accept call"
 msgstr "Відповісти на дзвінок"
 
-#: appModules/whatsapp.py:453
+#: appModules/whatsapp.py:455
 msgid ""
 "Press \"Decline call\" button  if there is an incoming call or \"End call\" "
 "button if a call is in progress"
 msgstr "Відхилити або завершити дзвінок"
 
-#: appModules/whatsapp.py:460
+#: appModules/whatsapp.py:462
 msgid "Mute or unmute the microphone"
 msgstr "Увімкнути/вимкнути мікрофон"
 
-#: appModules/whatsapp.py:466
-msgid "Microphone on"
-msgstr "Мікрофон увімкнено"
-
-#: appModules/whatsapp.py:467
-msgid "Microphone off"
-msgstr "Мікрофон вимкнено"
-
-#: appModules/whatsapp.py:472
+#: appModules/whatsapp.py:474
 msgid "Turn the camera on and off"
 msgstr "Увімкнути/вимкнути камеру"
 
-#: appModules/whatsapp.py:478
-msgid "Camera on"
-msgstr "Камеру увімкнено"
-
-#: appModules/whatsapp.py:479
-msgid "Camera off"
-msgstr "Камеру вимкнено"
-
-#: appModules/whatsapp.py:484
+#: appModules/whatsapp.py:486
 msgid "Press \"Attach file\" button"
 msgstr "Натиснути кнопку «Додати вкладення»"
 
-#: appModules/whatsapp.py:488 appModules/whatsapp.py:497
-#: appModules/whatsapp.py:600
+#: appModules/whatsapp.py:490 appModules/whatsapp.py:499
+#: appModules/whatsapp.py:602
 msgid "Button not found"
 msgstr "Кнопку не знайдено"
 
-#: appModules/whatsapp.py:493
+#: appModules/whatsapp.py:495
 msgid "Press \"More Options\" button"
 msgstr "Натиснути кнопку «Додаткові параметри»"
 
-#: appModules/whatsapp.py:500
+#: appModules/whatsapp.py:502
 msgid "Record and send a voice message"
 msgstr "ПОчати запис або надіслати голосове повідомлення"
 
-#: appModules/whatsapp.py:507
+#: appModules/whatsapp.py:509
 msgid ""
 "Recording a voice message will not be available until the edit field is empty"
 msgstr "Запис голосового повідомлення неможливий, поки поле вводу не є порожнім"
 
-#: appModules/whatsapp.py:520
+#: appModules/whatsapp.py:522
 msgid "Discard voice message"
 msgstr "Скасувати запис голосового повідомлення"
 
-#: appModules/whatsapp.py:533
+#: appModules/whatsapp.py:535
 msgid "Reply canceled"
 msgstr "Відповідь скасовано"
 
-#: appModules/whatsapp.py:536
+#: appModules/whatsapp.py:538
 msgid "Pause/resume voice message recording"
 msgstr "Призупинити/відновити запис голосового повідомлення"
 
-#: appModules/whatsapp.py:558
+#: appModules/whatsapp.py:560
 msgid "Forward message"
 msgstr "Переслати повідомлення"
 
-#: appModules/whatsapp.py:561 appModules/whatsapp.py:755
-msgid "React to message"
-msgstr "Встановити реакцію на повідомлення"
-
-#: appModules/whatsapp.py:564
+#: appModules/whatsapp.py:566
 msgid "Delete a message or chat"
 msgstr "Видалити повідомлення або бесіду"
 
-#: appModules/whatsapp.py:567
+#: appModules/whatsapp.py:569
 msgid "Reply to message"
 msgstr "Відповісти на повідомлення"
 
-#: appModules/whatsapp.py:570
+#: appModules/whatsapp.py:572
 msgid "Mark a chat as read"
 msgstr "Позначити бесіду як прочитану"
 
-#: appModules/whatsapp.py:573
+#: appModules/whatsapp.py:575
 msgid "Star message"
 msgstr "Помітити повідомлення зірочкою"
 
-#: appModules/whatsapp.py:576
+#: appModules/whatsapp.py:578
 msgid "Save file as..."
 msgstr "Зберегти файл як..."
 
-#: appModules/whatsapp.py:598
+#: appModules/whatsapp.py:600
 msgid "Back"
 msgstr "Назад"
 
-#: appModules/whatsapp.py:603
+#: appModules/whatsapp.py:605
 msgid ""
 "Toggles the mode that removes the reading of the user number when reading "
 "messages that are not in the contact list"
@@ -300,28 +288,28 @@ msgstr ""
 "Перемикає режим, який при навігації по повідомленнях, прибирає читання номера "
 "користувача, яких немає в списку контактів"
 
-#: appModules/whatsapp.py:606
+#: appModules/whatsapp.py:608
 msgid "User numbers will be read"
 msgstr "Номери користувачів будуть прочитані"
 
-#: appModules/whatsapp.py:607
+#: appModules/whatsapp.py:609
 msgid "User numbers will not be read"
 msgstr "Номери користувачів не будуть прочитані"
 
-#: appModules/whatsapp.py:609
+#: appModules/whatsapp.py:611
 msgid "Enable automatic reading of new messages in the current chat"
 msgstr ""
 "Увімкнути/вимкнути автоматичне читання нових повідомлень у відкритій розмові"
 
-#: appModules/whatsapp.py:611
+#: appModules/whatsapp.py:613
 msgid "Automatic reading of messages is enabled"
 msgstr "Автоматичне читання повідомлень увімкнено"
 
-#: appModules/whatsapp.py:612
+#: appModules/whatsapp.py:614
 msgid "Automatic reading of new messages is disabled"
 msgstr "Автоматичне читання повідомлень вимкнено"
 
-#: appModules/whatsapp.py:614
+#: appModules/whatsapp.py:616
 msgid ""
 "Announce the current value of the progress bar. When double-pressed, turns on/"
 "off the automatic sounding of performance indicators."
@@ -330,95 +318,123 @@ msgstr ""
 "повідомленні, яке завантажується/відвантажується. При подвійному натисканні "
 "вмикає/вимикає автоматичне озвучення індикаторів виконання."
 
-#: appModules/whatsapp.py:618
+#: appModules/whatsapp.py:620
 msgid ""
 "Now the values ​​of the performance indicators will be announced automatically"
 msgstr "Тепер значення індикаторів виконання буде озвучуватись автоматично"
 
-#: appModules/whatsapp.py:619
+#: appModules/whatsapp.py:621
 msgid ""
 "Now the values ​​of the progress indicators will not be announced automatically"
 msgstr "Тепер значення індикаторів виконання не буде озвучуватись автоматично"
 
-#: appModules/whatsapp.py:625
+#: appModules/whatsapp.py:627
 msgid "This message does not include a progress bar"
 msgstr "Це повідомлення не містить індикатора виконання"
 
-#: appModules/whatsapp.py:626
+#: appModules/whatsapp.py:628
 msgid "This element is not a message"
 msgstr "Цей елемент не є повідомленням"
 
-#: appModules/whatsapp.py:628
+#: appModules/whatsapp.py:630
 msgid "Switch to selection mode"
 msgstr "Перейти у режим вибору"
 
-#: appModules/whatsapp.py:665
+#: appModules/whatsapp.py:634
+msgid "Show a list of all whatsAppPlus shortcuts"
+msgstr "Показати список усіх комбінацій клавіш WhatsAppPlus"
+
+#: appModules/whatsapp.py:648
+msgid "List of shortcuts"
+msgstr "Список комбінацій клавіш"
+
+#: appModules/whatsapp.py:697
 msgid "In response to"
 msgstr "У відповідь на"
 
-#: appModules/whatsapp.py:677
+#: appModules/whatsapp.py:706
+msgid "You"
+msgstr "Ви"
+
+#: appModules/whatsapp.py:711
 msgid "Selected"
 msgstr "Виділено"
 
-#: appModules/whatsapp.py:721
+#: appModules/whatsapp.py:756
 msgid "Answer to"
 msgstr "Відповідь"
 
-#: appModules/whatsapp.py:746
+#: appModules/whatsapp.py:781
 msgid "Cancel reply"
 msgstr "Скасувати відповідь"
 
-#: appModules/whatsapp.py:747
+#: appModules/whatsapp.py:782
 msgid "Close"
 msgstr "Закрити"
 
-#: appModules/whatsapp.py:752
+#: appModules/whatsapp.py:787
 msgid "Add"
 msgstr "Додати"
 
-#: appModules/whatsapp.py:753
+#: appModules/whatsapp.py:788
 msgid "Star"
 msgstr "Зірка"
 
-#: appModules/whatsapp.py:754
+#: appModules/whatsapp.py:789
 msgid "Unstar"
 msgstr "Зняти зірочку"
 
-#: appModules/whatsapp.py:756
+#: appModules/whatsapp.py:790
+msgid "React to message"
+msgstr "Встановити реакцію на повідомлення"
+
+#: appModules/whatsapp.py:791
 msgid "Next"
 msgstr "Далі"
 
-#: appModules/whatsapp.py:757
+#: appModules/whatsapp.py:792
 msgid "Previous"
 msgstr "Попередній"
 
-#: appModules/whatsapp.py:758
+#: appModules/whatsapp.py:793
 msgid "Mute"
 msgstr "Вимкнути звук"
 
-#: appModules/whatsapp.py:759
+#: appModules/whatsapp.py:794
 msgid "Unmute"
 msgstr "Звук увімкнено"
 
-#: appModules/whatsapp.py:760
+#: appModules/whatsapp.py:795
 msgid "Pause"
 msgstr "Пауза"
 
-#: appModules/whatsapp.py:761
+#: appModules/whatsapp.py:796
 msgid "Play"
 msgstr "Відтворити"
 
-#: appModules/whatsapp.py:762
+#: appModules/whatsapp.py:797
 msgid "Copy"
 msgstr "Копіювати"
 
-#: appModules/whatsapp.py:763
+#: appModules/whatsapp.py:798
 msgid "Forward"
 msgstr "Переслати"
 
-#: appModules/whatsapp.py:764
+#: appModules/whatsapp.py:799
 msgid "Delete"
 msgstr "Видалити"
+
+#~ msgid "Microphone on"
+#~ msgstr "Мікрофон увімкнено"
+
+#~ msgid "Microphone off"
+#~ msgstr "Мікрофон вимкнено"
+
+#~ msgid "Camera on"
+#~ msgstr "Камеру увімкнено"
+
+#~ msgid "Camera off"
+#~ msgstr "Камеру вимкнено"
 
 #~ msgid ""
 #~ "Automatic reading of new messages is enabled until the NVDA is restarted"
@@ -693,9 +709,6 @@ msgstr "Видалити"
 
 #~ msgid "Answer options"
 #~ msgstr "Варіанти відповідей"
-
-#~ msgid "You"
-#~ msgstr "Ви"
 
 #~ msgid "Not sent"
 #~ msgstr "Не надіслано"
