@@ -6,6 +6,10 @@
 
 ## About ##
 
+This add-on makes it easy to use the UWP version of the WhatsApp app, allowing users to easily interact with chats, messages, context menu items, and more.
+
+### General features ###
+
 * Now the message input field will change its name when we reply to a message.
 * Added labels for some program elements that are read by screen readers.
 * Added a large number of keyboard shortcuts for productive and comfortable work in the program, which can be found below.
