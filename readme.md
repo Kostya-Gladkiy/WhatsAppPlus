@@ -133,8 +133,8 @@ If you have a desire, and most importantly, the opportunity to support the devel
 * NVDA will no longer announce the recording control buttons when recording a voice message.
 * Added Arabic, Italian, Romanian, Serbian, Croatian, Spanish and Turkish localizations.
 * Added labels for some unlabeled elements.
-* Now information about reactions to a message will be announced when focusing on a message.
-* Now when playing your own voice messages with the spacebar, a pop-up window will not appear.
+* Now information about the reaction to the message will be announced when focusing on the message.
+* Now, when playing your own voice messages using the spacebar, a pop-up window will not appear.
 * Fixed minor bugs.
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=whatsAppPlus
