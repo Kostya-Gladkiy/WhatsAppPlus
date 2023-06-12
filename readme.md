@@ -12,7 +12,7 @@ This add-on makes it easy to use the UWP version of the WhatsApp app, allowing u
 
 * Now the message input field will change its name when we reply to a message.
 * Added labels for some program elements that are read by screen readers.
-* Added a large number of keyboard shortcuts for productive and comfortable work in the program, which can be found below.
+* A large number of keyboard shortcuts have been added to work productively and comfortably in WhatsApp, which can be found below.
 
 ## Hotkey list: ##
 
