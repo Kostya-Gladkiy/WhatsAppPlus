@@ -1,60 +1,60 @@
-# WhatsAppPlus
+# WhatsAppPlus #
 
 * Author: Kostya Gladkiy (Ukrain)
-* [Telegram channel](https://t.me/unigramPlus)
+* Download [stable version][1] (Compatible with NVDA 2021.2 to 2023.1)
+* [Telegram channel][2]
 
-##Information about the opportunity to donate to the developer:
-
-If you have the desire, and most importantly the opportyunity, to support the developer of this add-on, you can do so using the following details:
-
-* PayPal: gladkiy.kostya@gmail.com.
-* Ukrainian donation system: https://unigramplus.diaka.ua/donate.
-* Card number: 5169360009004502 (Gladkiy Constantine).
-
-Added a large number of keyboard shortcuts for productive and comfortable work in the program, which can be found below.
-
-### General add-on features
+## About ##
 
 * Now the message input field will change its name when we reply to a message.
 * Added labels for some program elements that are read by screen readers.
+* Added a large number of keyboard shortcuts for productive and comfortable work in the program, which can be found below.
 
-## Hotkey list:
+## Hotkey list: ##
 
-* ALT+1 - Move focus to chat list.
-* ALT+2 - Move focus to the last message in an open chat.
-* ALT+D - Move the focus to the edit field. If the focus is already in the edit field, then after pressing the hotkey, it will move to where it was before.
-* ALT+T - Announce the name and status of an open chat.
-* ALT+shift+C - Make a voice call to a group or contact, or join an ongoing voice call in a group.
-* ALT+shift+V - Make a video call to a contact or group.
-* ALT+shift+Y - Accept call.
-* ALT+shift+N - Press "Decline call" button  if there is an incoming call, "or call" button if a call is in progress.
-* ALT+A - Turn the camera microphone and off.l
-* ALT+V - Turn the camera on and off.l
-* ALT+O - Press "More Options" button.
-* control+R - Record and send a voice message.
-* control+D - Discard voice message.
-* control+shift+D - Pause/resume voice message recording.
-* ALT+delete - Delete a message or chat.
-* control+shift+P - Open current chat profile.
-* control+shift+E - Toggles the mode that removes the reading of the user number when reading messages that are not in the contact list.
-* ALT+S - Star message.
-* ALT+F - Forward message.
-* ALT+R - Reply to message.
-* ALT+shift+R - Mark a chat as read.
-* control+C - Copy the message if it contains text.
-* ALT+C - Show message text in popup window.
-* NVDA+control+W - Open WhatsAppPlus settings window.
-* ALT+3 - Move focus to "unread messages" label.
-* control+shift+A - Press "Attach file" button.
+* ALT+1: Move focus to chat list.
+* ALT+2: Move focus to the last message in an open chat.
+* ALT+D: Move the focus to the edit field. If the focus is already in the edit field, then after pressing the hotkey, it will move to where it was before.
+* ALT+T: Announce the name and status of an open chat.
+* ALT+shift+C: Make a voice call to a group or contact, or join an ongoing voice call in a group.
+* ALT+shift+V: Make a video call to a contact or group.
+* ALT+shift+Y: Accept call.
+* ALT+shift+N: Decline an incoming call or leave the current call.
+* ALT+A: Turn the microphone on/off.
+* ALT+V: Turn video on/off.
+* ALT+O: Press more options button.
+* control+R: Record and send a voice message.
+* control+D: Discard reply to a message or currently recorded voice message.
+* control+shift+D: Pause/resume voice message recording.
+* ALT+delete: Delete a message or chat.
+* control+shift+P: Open current chat profile.
+* control+shift+E: Toggles the feature that removes the reading of the user number in messages from users whose number is not saved in the contact list.
+* ALT+S: Star message.
+* ALT+F: Forward message.
+* ALT+R: Reply to message.
+* ALT+shift+R: Mark a chat as read.
+* control+C: Copy the message if it contains text.
+* ALT+C: Show message text in popup window.
+* NVDA+control+W: Open WhatsAppPlus settings window.
+* ALT+3: Move focus to "unread messages" label.
+* control+shift+A: Press the attach file button.
 * ALT+L: Enable automatic reading of new messages in the current chat.
 * control+S: Increase/decrease the playback speed of voice messages.
-* ALT+P: Play/pause the voice message currently playing.
-* ALT+U: Announce the current value of the progress bar. When double-pressed, turns on/off the automatic sounding of performance indicators.
+* ALT+P: Play/pause a voice message that is playing.
+* ALT+U: announce the current value of a progress bar. If pressed twice, turns on/off the automatic announcement of progress bars.
 * control+space: Switch to selection mode.
 
-## History of changes
+### Information about the opportunity to donate to the developer: ###
 
-### Version 1.9.0
+If you have a desire, and most importantly, the opportunity to support the developer of this add-on, you can do it using the following details:
+
+* PayPal: gladkiy.kostya@gmail.com.
+* [Ukrainian donation system][3]
+* Card number: 5169360009004502 (Gladkiy Constantine).
+
+## Changelog ##
+
+### Version 1.9.0 ###
 
 * Added a keyboard shortcut that opens a list of all WhatsAppPlus keyboard shortcuts. By default, this function is assigned to ALT+H gesture.
 * Fixed a bug where ALT+2 and ALT+3 gestures didn't work.
@@ -64,24 +64,24 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * Fixed an issue where WhatsAppPlus prompted to update on secure screens. To prevent this from happening again, you need to click on the "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" button in the NVDA general settings.
 * The gesture to accept a call has been changed to ALT+shift+Y, and the gesture to decline a call has been changed to ALT+shift+N. This is to ensure that these gestures do not conflict with UnigramPlus gestures.
 * Microphone and camera on/off gestures during a call now work correctly.
-*Removed gesture to set reaction to messages, since in the latest versions of WhatsApp, reactions are available directly from the context menu.
+* Removed gesture to set reaction to messages, since in the latest versions of WhatsApp, reactions are available directly from the context menu.
 
-### Version 1.8.0
+### Version 1.8.0 ###
 
 * The add-on has been tested to ensure compatibility with NVDA-2023.
 * Added a keyboard shortcut for selecting messages. To enter selection mode, press Ctrl+Space, and then use Space to select the next message.
-* A new function has been added to automatically announce activity in an open chat. By default, this feature is enabled by double-pressing the ALT+T combination. This helps users stay up-to-date on new messages and other chat activity.
-* The function that automatically announces new messages in the chat has been substantially revised for more stable operation. This ensures that users are alerted to new messages accurately and reliably.
-* Added labels to some unsigned buttons.
+* A new function has been added to automatically announce activity in an open chat. By default, this feature is enabled by double-pressing the ALT+T gesture. This helps users stay up to date with new messages and other chat activities.
+* The automatic reading of new chat messages has been significantly redesigned to be more stable. This ensures that users are alerted to new messages accurately and reliably.
+* Added labels for some unlabeled buttons.
 
-### Version 1.7.0
+### Version 1.7.0 ###
 
 * Added a function that automatically announces the progress bar if the focus is on a message.
-* Added keyboard shortcut to report progress bar value if focus is on a message. By default, the ALT+U key combination is assigned to this function. If this combination is pressed twice, the function of automatic announcing of performance indicators will be enabled.
+* Added a keyboard shortcut to report the value of the progress bar when the focus is on a message. By default, the ALT+U gesture is assigned to this feature. If the gesture is pressed twice, the automatic announcement of the progress bar values will be enabled.
 * Fixed an issue where focus could not be moved to the chat list.
 * Added labels to some elements.
 
-### Version 1.6.0
+### Version 1.6.0 ###
 
 * Added ability to quickly reply to group members. To enter a message, it is enough to write the symbol "@" in the message entry field, use the up and down arrows to select who you want to reply to, and then press the Enter key.
 * Added ability to quickly insert emoticons. To do this, you must write a colon and the name of the emoticon you want to find in the message input field. Later, use the left and right arrow keys to find the desired emoticon and use the Enter key to insert it into the message input field.
@@ -90,19 +90,19 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * Added Nepali localization.
 * Fixed several bugs, including an issue where automatic reading of new messages in an open conversation was not working for some users.
 
-### Version 1.5.0
+### Version 1.5.0 ###
 
-*Added a keyboard shortcut to change the speed of the voice message being played. The default gesture is ctrl+s. The gesture will only work when a voice message is playing in an open chat.
+* Added a keyboard shortcut to change the speed of the voice message being played. The default gesture is ctrl+s. The gesture will only work when a voice message is playing in an open chat.
 * Added a keyboard shortcut to pause a voice message that is playing. The default gesture is alt+p. The function will only work when a voice message is playing in an open chat.
 * Now the announcement of a new message in an open chat can be enabled not only until NVDA is restarted, but also forever.
 
-### Version 1.4.0
+### Version 1.4.0 ###
 
 * Adapted to the latest version of WhatsApp.
-* The function of automatic announcements of new messages in the chat has been added. By default, this function is activated by pressing ALT+L. The feature remains active only until NVDA is restarted. There may be stability issues if too many new messages.
+* Added automatic reading of new messages in open chat. By default, this feature is activated by pressing ALT+L. The feature remains active only until NVDA is restarted. May have stability issues if there are too many new messages.
 * Added French localization.
 
-### Version 1.3.0
+### Version 1.3.0 ###
 
 * The description of the links attached to the message will now be read.
 * Now the duration of voice messages will be announced.
@@ -111,24 +111,30 @@ Added a large number of keyboard shortcuts for productive and comfortable work i
 * Adapted to the latest version of WhatsApp so that all functions work properly.
 * Fixed some bugs
 
-### Version 1.2.0
+### Version 1.2.0 ###
 
 * Now, when you focus on a message written in reply to another message, the text of that message will be spoken first and then the text of the message to which it was sent.
 * The name and type of files sent in the conversation will now be spoken.
 * ALT+1 now works even when the chat archive or the selected messages section is open.
 * ALT + left arrow helps to close the chat archive or the selected messages list if they are open.
 * Now, pressing control+D, in addition to cancelling voice messages, also cancels the reply to the message.
-* Information about the inability to record a voice message will now be reported when the message input field is not empty. This will fix a problem where pressing control+R would send a text message instead of starting a voice message recording.
-* Labeled some items that didn't have labels already.
+* Information about the impossibility of recording a voice message will now be reported when the message input field is not empty. This will fix an issue where pressing Ctrl+R would send a text message instead of starting to record a voice message.
+* Added labels for unlabeled elements.
 
-### Version 1.1.0
+### Version 1.1.0 ###
 
 * Added keyboard shortcut to navigate to unread messages. Since this feature is language dependent, this feature can be configured in the WhatsAppPlus settings.
-* Added a keyboard shortcut for pressing the "New Chat" button.
-* Added a keyboard shortcut for pressing the "Attach file" button.
-* Now, when recording a voice message, the synthesizer will not announce the names of the recording control buttons.
+* Added keyboard shortcut for pressing the new chat button.
+* Added keyboard shortcut for pressing the attach file button.
+* NVDA will no longer announce the recording control buttons when recording a voice message.
 * Added Arabic, Italian, Romanian, Serbian, Croatian, Spanish and Turkish localizations.
-* Added labels for some elements that didn't have screen reader labels.
+* Added labels for some unlabeled elements.
 * Now information about reactions to a message will be announced when focusing on a message.
 * Now when playing your own voice messages with the spacebar, a pop-up window will not appear.
 * Fixed minor bugs.
+
+[1]: https://www.nvaccess.org/addonStore/legacy?file=whatsAppPlus
+
+[2]: https://t.me/unigramPlus
+
+[3]: https://unigramplus.diaka.ua/donate
