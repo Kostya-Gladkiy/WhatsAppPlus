@@ -53,18 +53,28 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 * ALT+P: Redați/opriți mesajul vocal.
 * ALT+U: Anunță valoarea curentă a barei de progres. Atunci când este apăsat de două ori, activează/dezactivează sonorizarea automată a indicatorilor de performanță.
 * control+spațiu: Treci la modul de selecție.
+* ALT+backspace: Editează mesajul pe care ești focalizat.
 
 ##Istoricul modificărilor
 
-### Versiunea 1.9.0
+### Versiunea 2.0.0 ###
 
-* A fost adăugată o comandă rapidă care deschide o listă cu toate scurtăturile WhatsAppPlus. În mod implicit, această funcție este atribuită gestului ALT+H.
+* A fost Adăugată o comandă rapidă de la tastatură pentru editarea mesajelor. În mod implicit, această funcție este atribuită combinației ALT+backspace.
+* Focalizarea pe un mesaj care conține un fișier va citi acum numele, tipul și dimensiunea fișierului.
+* Acum funcția de citire automată a mesajelor noi în chat-ul deschis funcționează corect. Reține totuși că pentru o funcționare corectă trebuie să specifici numărul de telefon și numele tău în setările WhatsAppPlus.
+* Acum, funcția de citire automată a activității în chat-urile deschise va funcționa mai stabil.
+* ALT+D funcționează acum corect.
+* A fost rezolvat conflictul unor funcții cu add-on-ul "BluetoothAudio".
+
+### Versiunea 1.9.0 ###
+
+* A fost adăugată o comandă rapidă de la tastatură care deschide o listă cu toate scurtăturile WhatsAppPlus. În mod implicit, această funcție este atribuită gestului ALT+H.
 * A fost reparată o eroare prin care gesturile ALT+2 și ALT+3 nu funcționau.
 * A fost rezolvată o eroare prin care era imposibil să activezi unele funcții din meniul contextual folosind gesturi.
 * S-a remediat o problemă în care modificarea vitezei de redare a mesajelor vocale și întreruperea redării mesajelor vocale nu funcționa întotdeauna.
-* A fost reparată o eroare în care, în chat-uri, atunci când te focalizai pe mesajele trimise, în loc de cuvântul "You", cititorul de ecran anunța un număr personal. Pentru a evita acest lucru, trebuie să specifici numărul de telefon în setările WhatsAppPlus și, după aceea, add-on-ul nu îl va mai anunța în mesaje.
-* A fost rezolvată o problemă în care WhatsAppPlus cerea actualizarea pe ecrane securizate. Pentru a evita ca acest lucru să se întâmple din nou, trebuie să faci clic pe butonul "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" (Utilizați setările salvate în prezent în timpul conectării și pe ecrane securizate (necesită privilegii de administrator)" din setările generale NVDA.
-* Gestul de acceptare a unui apel a fost schimbat în ALT+shift+Y, iar gestul de refuz al unui apel a fost schimbat în ALT+shift+N pentru a se asigura că aceste gesturi nu intră în conflict cu gesturile UnigramPlus.
+* A fost reparată o eroare în care, în chat-uri, atunci când te focalizai pe mesajele trimise, în loc de cuvântul "tu", cititorul de ecran anunța un număr personal. Pentru a evita acest lucru, trebuie să specifici numărul de telefon în setările WhatsAppPlus și, după aceea, add-on-ul nu îl va mai enunța în mesaje.
+* A fost rezolvată o problemă în care WhatsAppPlus cerea actualizarea pe ecrane securizate. Pentru a evita ca acest lucru să se întâmple din nou, trebuie să faceți clic pe butonul "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" (Utilizați setările salvate în prezent în timpul conectării și pe ecrane securizate (necesită privilegii de administrator)" din setările generale NVDA.
+* Gestul de acceptare a unui apel a fost schimbat în ALT+shift+Y, iar gestul de refuz al unui apel a fost schimbat în ALT+shift+N. Această modificare a fost făcută pentru a se asigura că aceste gesturi nu intră în conflict cu gesturile UnigramPlus.
 * Gesturile de activare/dezactivare a microfonului și a camerei în timpul unui apel funcționează acum corect.
 * A fost eliminat gestul de a seta reacția la mesaje, deoarece în cele mai recente versiuni de WhatsApp, reacțiile sunt disponibile direct din meniul contextual.
 

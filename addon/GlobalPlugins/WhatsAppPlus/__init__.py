@@ -153,6 +153,9 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 	title = "WhatsAppPlus"
 	def makeSettings(self, settingsSizer):
 		settingsSizerHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# A field for entering a user name so that the application can replace the phone number with the phrase "You" in messages
+		self.user_name = settingsSizerHelper.addLabeledControl(_("Enter the name that you have provided in your WhatsApp account. This is so that WhatsAppPlus can distinguish your messages from other messages."), wx.TextCtrl)
+		self.user_name.Value = getConfig("user_name")
 		# A field for entering a phone number so that the application can replace the phone number with the phrase "You" in messages
 		self.number_phone = settingsSizerHelper.addLabeledControl(_("Enter a phone number. This is to prevent the app from displaying your phone number on messages sent by you."), wx.TextCtrl)
 		self.number_phone.Value = getConfig("number_phone")
@@ -179,6 +182,7 @@ class WhatsAppPlusSettings(gui.SettingsPanel):
 			if v == value: return k
 
 	def onSave(self):
+		setConfig("user_name", self.user_name.Value)
 		setConfig("number_phone", self.number_phone.Value)
 		phrases_of_unread_messages = self.phrases_of_unread_messages.Value.split(",")
 		phrases_of_unread_messages = [item.lower().strip() for item in phrases_of_unread_messages]

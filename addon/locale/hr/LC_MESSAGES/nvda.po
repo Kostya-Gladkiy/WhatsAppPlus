@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'WhatsAppPlus' '1.9.0'\n"
+"Project-Id-Version: 'WhatsAppPlus' '2.0.0'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-06-09 22:57+0300\n"
-"PO-Revision-Date: 2023-06-10 16:51+0200\n"
+"POT-Creation-Date: 2023-08-17 16:46+0300\n"
+"PO-Revision-Date: 2023-08-17 16:37+0200\n"
 "Last-Translator: Tarik Hadžirović <tarik.hadzirovic.official@gmail.com>\n"
 "Language-Team: Tarik Hadžirović <tarik.hadzirovic.official@gmail.com>\n"
 "Language: hr\n"
@@ -17,78 +17,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
-#: addon\appModules\whatsapp.py:253 addon\appModules\whatsapp.py:280
+#: addon\appModules\whatsapp.py:258 addon\appModules\whatsapp.py:285
 msgid "Chat list not found"
 msgstr "Popis razgovora nije pronađen"
 
 #. Go to the last message in the chat
-#: addon\appModules\whatsapp.py:291
+#: addon\appModules\whatsapp.py:296
 msgid "Move focus to the last message in an open chat"
 msgstr "Premješta fokus na posljednju poruku u otvorenom razgovoru"
 
-#: addon\appModules\whatsapp.py:302 addon\appModules\whatsapp.py:331
-#: addon\appModules\whatsapp.py:382 addon\appModules\whatsapp.py:389
+#: addon\appModules\whatsapp.py:307 addon\appModules\whatsapp.py:336
+#: addon\appModules\whatsapp.py:389 addon\appModules\whatsapp.py:396
 msgid "No open chat"
 msgstr "Nema otvorenog razgovora"
 
-#: addon\appModules\whatsapp.py:303 addon\appModules\whatsapp.py:332
+#: addon\appModules\whatsapp.py:308 addon\appModules\whatsapp.py:337
 msgid "This chat is empty"
 msgstr "Ovaj razgovor je prazan"
 
 #. Go to chat list
-#: addon\appModules\whatsapp.py:306
+#: addon\appModules\whatsapp.py:311
 msgid "Move focus to chat list"
 msgstr "Premješta fokus na popis razgovora"
 
-#: addon\appModules\whatsapp.py:322
+#: addon\appModules\whatsapp.py:327
 msgid "Chat list is empty"
 msgstr "Popis razgovora je prazan"
 
 #. Go to "unread messages" label
-#: addon\appModules\whatsapp.py:325
+#: addon\appModules\whatsapp.py:330
 msgid "Move focus to 'unread messages' label"
-msgstr "Premješta fokus na oznaku \"nepročitane poruke\""
+msgstr "Premješta fokus na oznaku \"Nepročitane poruke\""
 
-#: addon\appModules\whatsapp.py:339
+#: addon\appModules\whatsapp.py:344
 msgid "There are no unread messages in this chat"
 msgstr "Nema nepročitanih poruka u ovom razgovoru"
 
 #. Changing the playback speed of a voice message
-#: addon\appModules\whatsapp.py:342
+#: addon\appModules\whatsapp.py:347
 msgid "Increase/decrease the playback speed of voice messages"
 msgstr "Povećava/smanjuje reprodukciju glasovnih poruka"
 
-#: addon\appModules\whatsapp.py:345 addon\appModules\whatsapp.py:354
-#: addon\appModules\whatsapp.py:360 addon\appModules\whatsapp.py:369
+#: addon\appModules\whatsapp.py:350 addon\appModules\whatsapp.py:359
+#: addon\appModules\whatsapp.py:365 addon\appModules\whatsapp.py:374
 msgid "Nothing is playing right now"
 msgstr "Trenutno se ništa ne reproducira"
 
 #. Play/pause voice message
-#: addon\appModules\whatsapp.py:357
+#: addon\appModules\whatsapp.py:362
 msgid "Play/pause the voice message currently playing"
 msgstr "Reproducira/pauzira glasovnu poruku koja se trenutno reproducira"
 
 #. Read profile name and status in open chat
-#: addon\appModules\whatsapp.py:372
+#: addon\appModules\whatsapp.py:377
 msgid "Announce the name and status of an open chat"
 msgstr "Najavljuje naziv i status otvorenog razgovora"
 
-#: addon\appModules\whatsapp.py:375
+#: addon\appModules\whatsapp.py:380
 msgid "Chat activity tracking is enabled"
 msgstr "Praćenje aktivnosti razgovora je omogućeno"
 
-#: addon\appModules\whatsapp.py:376
+#: addon\appModules\whatsapp.py:381
 msgid "Chat activity tracking is disabled"
 msgstr "Praćenje aktivnosti razgovora je onemogućeno"
 
-#: addon\appModules\whatsapp.py:384
+#: addon\appModules\whatsapp.py:391
 msgid "Open current chat profile"
 msgstr "Otvara profil trenutnog razgovora"
 
 #. Перенести фокус в поле вводу повідомлення. Якщо фокус вже знаходиться в цьому полі, тоді перенести його на останній елемент який був в фокусі перед цим полемMove the focus to the edit field. If the focus is already in this field, then move it to the last element that had focus before this field
-#: addon\appModules\whatsapp.py:392
+#: addon\appModules\whatsapp.py:399
 msgid ""
 "Move the focus to the edit field. If the focus is already in the edit field, "
 "then after pressing the hotkey, it will move to where it was before"
@@ -98,52 +98,52 @@ msgstr ""
 "je bio prije"
 
 #. Copy current message to clipboard
-#: addon\appModules\whatsapp.py:409
+#: addon\appModules\whatsapp.py:416
 msgid "Copy the message if it contains text"
 msgstr "Kopira poruku ako sadrži tekst"
 
-#: addon\appModules\whatsapp.py:419
+#: addon\appModules\whatsapp.py:426
 msgid "Message copied"
-msgstr "Poruka kopirana"
+msgstr "Poruka je kopirana"
 
-#: addon\appModules\whatsapp.py:420 addon\appModules\whatsapp.py:431
+#: addon\appModules\whatsapp.py:427 addon\appModules\whatsapp.py:438
 msgid "This message contains no text"
 msgstr "Ova poruka ne sadrži tekst"
 
 #. Show message text in popup window
-#: addon\appModules\whatsapp.py:423
+#: addon\appModules\whatsapp.py:430
 msgid "Show message text in popup window"
 msgstr "Prikazuje tekst poruke u skočnom prozoru"
 
-#: addon\appModules\whatsapp.py:430
+#: addon\appModules\whatsapp.py:437
 msgid "message text"
 msgstr "Tekst poruke"
 
 #. Call if it's a contact, or enter a voice chat if it's a group
-#: addon\appModules\whatsapp.py:434
+#: addon\appModules\whatsapp.py:441
 msgid "Make a voice call"
 msgstr "Upućuje glasovni poziv"
 
-#: addon\appModules\whatsapp.py:438
+#: addon\appModules\whatsapp.py:445
 msgid "Call unavailable"
-msgstr "Poziv nedostupan"
+msgstr "Poziv je nedostupan"
 
 #. Make a video call if it's a contact
-#: addon\appModules\whatsapp.py:441
+#: addon\appModules\whatsapp.py:448
 msgid "Make a video call"
 msgstr "Upućuje videopoziv"
 
-#: addon\appModules\whatsapp.py:445
+#: addon\appModules\whatsapp.py:452
 msgid "Video call not available"
-msgstr "Videopoziv nedostupan"
+msgstr "Videopoziv je nedostupan"
 
 #. Accept call
-#: addon\appModules\whatsapp.py:448
+#: addon\appModules\whatsapp.py:455
 msgid "Accept call"
 msgstr "Prihvaća poziv"
 
 #. End or decline call
-#: addon\appModules\whatsapp.py:455
+#: addon\appModules\whatsapp.py:462
 msgid ""
 "Press \"Decline call\" button  if there is an incoming call or \"End call\" "
 "button if a call is in progress"
@@ -152,38 +152,38 @@ msgstr ""
 "poziv\" ako je poziv u tijeku"
 
 #. Mute/unmute the microphone
-#: addon\appModules\whatsapp.py:462
+#: addon\appModules\whatsapp.py:469
 msgid "Mute or unmute the microphone"
-msgstr "Uključuje ili isključuje mikrofon"
+msgstr "Uključuje/isključuje mikrofon"
 
 #. Turn on/off the camera
-#: addon\appModules\whatsapp.py:474
+#: addon\appModules\whatsapp.py:481
 msgid "Turn the camera on and off"
-msgstr "Uključuje i isključuje kameru"
+msgstr "Uključuje/ isključuje kameru"
 
 #. Press the "Attach media" button
-#: addon\appModules\whatsapp.py:486
+#: addon\appModules\whatsapp.py:493
 msgid "Press \"Attach file\" button"
 msgstr "Pritišće gumb \"Priloži\""
 
-#: addon\appModules\whatsapp.py:490 addon\appModules\whatsapp.py:499
-#: addon\appModules\whatsapp.py:602
+#: addon\appModules\whatsapp.py:497 addon\appModules\whatsapp.py:506
+#: addon\appModules\whatsapp.py:612
 msgid "Button not found"
 msgstr "Gumb nije pronađen"
 
 #. Press the "New conversation" button
 #. Press the "More options" button
-#: addon\appModules\whatsapp.py:495
+#: addon\appModules\whatsapp.py:502
 msgid "Press \"More Options\" button"
 msgstr "Pritišće gumb \"Više opcija\""
 
 #. Function of recording and sending a voice message
-#: addon\appModules\whatsapp.py:502
+#: addon\appModules\whatsapp.py:509
 msgid "Record and send a voice message"
 msgstr "Snimanje i slanje glasovne poruke"
 
 #. If the edit field is not empty
-#: addon\appModules\whatsapp.py:509
+#: addon\appModules\whatsapp.py:516
 #, fuzzy
 #| msgid ""
 #| "It will not be possible to record a voice message until the edit field is "
@@ -194,192 +194,194 @@ msgstr ""
 "Neće biti moguće snimiti glasovnu poruku dok polje za uređivanje nije prazno"
 
 #. Voice message discard function
-#: addon\appModules\whatsapp.py:522
+#: addon\appModules\whatsapp.py:529
 msgid "Discard voice message"
 msgstr "Odbacuje glasovnu poruku"
 
-#: addon\appModules\whatsapp.py:535
+#: addon\appModules\whatsapp.py:542
 msgid "Reply canceled"
 msgstr "Odgovaranje otkazano"
 
 #. Voice message recording pause function
-#: addon\appModules\whatsapp.py:538
+#: addon\appModules\whatsapp.py:545
 msgid "Pause/resume voice message recording"
 msgstr "Pauziranje/nastavljanje snimanja glasovne poruke"
 
-#: addon\appModules\whatsapp.py:560
+#: addon\appModules\whatsapp.py:567
 msgid "Forward message"
 msgstr "Prosljeđuje poruku"
 
 #. @script(description=_("React to message"), gesture="kb:ALT+Q")
 #. def script_set_reaction(self, gesture):
 #. self.activate_option_for_menu(icon_from_context_menu["react"])
-#: addon\appModules\whatsapp.py:566
+#: addon\appModules\whatsapp.py:573
 msgid "Delete a message or chat"
 msgstr "Briše poruku ili razgovor"
 
-#: addon\appModules\whatsapp.py:569
+#: addon\appModules\whatsapp.py:576
 msgid "Reply to message"
 msgstr "Odgovara na poruku"
 
-#: addon\appModules\whatsapp.py:572
+#: addon\appModules\whatsapp.py:579
+msgid "Edit message"
+msgstr "Uređuje poruku"
+
+#: addon\appModules\whatsapp.py:582
 msgid "Mark a chat as read"
 msgstr "Označava razgovor kao pročitan"
 
-#: addon\appModules\whatsapp.py:575
+#: addon\appModules\whatsapp.py:585
 msgid "Star message"
 msgstr "Označava poruku zvjezdicom"
 
-#: addon\appModules\whatsapp.py:578
+#: addon\appModules\whatsapp.py:588
 msgid "Save file as..."
 msgstr "Spremi datoteku kao..."
 
-#: addon\appModules\whatsapp.py:600
+#: addon\appModules\whatsapp.py:610
 msgid "Back"
 msgstr "Natrag"
 
 #. Switching the mode of deleting a phone number in contact names
-#: addon\appModules\whatsapp.py:605
+#: addon\appModules\whatsapp.py:615
 msgid ""
 "Toggles the mode that removes the reading of the user number when reading "
 "messages that are not in the contact list"
 msgstr ""
-"Uključuje i isključuje način rada koji uklanja čitanje korisničkog broja "
+"Uključuje/isključuje način rada koji uklanja čitanje korisničkog broja "
 "prilikom čitanja poruka kontakata koji nisu na popisu kontakata."
 
-#: addon\appModules\whatsapp.py:608
+#: addon\appModules\whatsapp.py:618
 msgid "User numbers will be read"
 msgstr "Korisnički brojevi će se čitati"
 
-#: addon\appModules\whatsapp.py:609
+#: addon\appModules\whatsapp.py:619
 msgid "User numbers will not be read"
 msgstr "Korisnički brojevi se neće čitati"
 
-#: addon\appModules\whatsapp.py:611
+#: addon\appModules\whatsapp.py:621
 msgid "Enable automatic reading of new messages in the current chat"
 msgstr "Omogućava automatsko čitanje novih poruka u otvorenom razgovoru"
 
-#: addon\appModules\whatsapp.py:613
+#: addon\appModules\whatsapp.py:623
 msgid "Automatic reading of messages is enabled"
 msgstr "Automatsko čitanje novih poruka je omogućeno"
 
-#: addon\appModules\whatsapp.py:614
+#: addon\appModules\whatsapp.py:624
 msgid "Automatic reading of new messages is disabled"
 msgstr "Automatsko čitanje novih poruka je onemogućeno"
 
-#: addon\appModules\whatsapp.py:616
+#: addon\appModules\whatsapp.py:626
 msgid ""
 "Announce the current value of the progress bar. When double-pressed, turns on/"
 "off the automatic sounding of performance indicators."
 msgstr ""
 "Najavljuje trenutnu vrijednost trake napretka. Kada se dvaput pritisne, "
-"uključuje/isključuje automatsko oglašavanje indikatora performansi."
+"uključuje/isključuje automatsko čitanje indikatora performansi."
 
-#: addon\appModules\whatsapp.py:620
+#: addon\appModules\whatsapp.py:630
 msgid ""
 "Now the values ​​of the performance indicators will be announced automatically"
-msgstr "Sada će se vrijednosti indikatora performansi objaviti automatski"
+msgstr "Sada će se vrijednosti indikatora performansi automatski čitati"
 
-#: addon\appModules\whatsapp.py:621
+#: addon\appModules\whatsapp.py:631
 msgid ""
 "Now the values ​​of the progress indicators will not be announced automatically"
-msgstr "Sada se vrijednosti indikatora performansi neće automatski objavljivati"
+msgstr "Sada se vrijednosti indikatora performansi neće automatski čitati"
 
-#: addon\appModules\whatsapp.py:627
+#: addon\appModules\whatsapp.py:637
 msgid "This message does not include a progress bar"
-msgstr "Ova poruka ne uključuje traku napretka"
+msgstr "Ova poruka ne sadrži traku napretka"
 
-#: addon\appModules\whatsapp.py:628
+#: addon\appModules\whatsapp.py:638
 msgid "This element is not a message"
 msgstr "Ovaj element nije poruka"
 
-#: addon\appModules\whatsapp.py:630
+#: addon\appModules\whatsapp.py:640
 msgid "Switch to selection mode"
 msgstr "Prebacuje na način odabira"
 
-#: addon\appModules\whatsapp.py:634
+#: addon\appModules\whatsapp.py:644
 msgid "Show a list of all whatsAppPlus shortcuts"
 msgstr "Prikazuje popis svih whatsAppPlus prečaca"
 
-#: addon\appModules\whatsapp.py:648
+#: addon\appModules\whatsapp.py:658
 msgid "List of shortcuts"
 msgstr "Popis prečaca"
 
-#: addon\appModules\whatsapp.py:697
+#: addon\appModules\whatsapp.py:714
 msgid "In response to"
 msgstr "Kao odgovor na"
 
-#: addon\appModules\whatsapp.py:706
+#: addon\appModules\whatsapp.py:724
 msgid "You"
 msgstr "Vi"
 
-#: addon\appModules\whatsapp.py:711
+#: addon\appModules\whatsapp.py:734
 msgid "Selected"
 msgstr "Odabrano"
 
-#: addon\appModules\whatsapp.py:756
+#: addon\appModules\whatsapp.py:779
 msgid "Answer to"
 msgstr "Odgovori"
 
-#: addon\appModules\whatsapp.py:781
+#: addon\appModules\whatsapp.py:804
 msgid "Cancel reply"
 msgstr "Otkaži odgovaranje"
 
-#: addon\appModules\whatsapp.py:782
+#: addon\appModules\whatsapp.py:805
 msgid "Close"
 msgstr "Zatvori"
 
-#: addon\appModules\whatsapp.py:787
+#: addon\appModules\whatsapp.py:810
 msgid "Add"
 msgstr "Dodaj"
 
-#: addon\appModules\whatsapp.py:788
+#: addon\appModules\whatsapp.py:811
 msgid "Star"
 msgstr "Označi zvjezdicom"
 
-#: addon\appModules\whatsapp.py:789
+#: addon\appModules\whatsapp.py:812
 msgid "Unstar"
-msgstr "Odznači zvjezdicom"
+msgstr "Ukloni oznaku zvjezdice"
 
-#: addon\appModules\whatsapp.py:790
+#: addon\appModules\whatsapp.py:813
 msgid "React to message"
 msgstr "Reagira na poruku"
 
-#: addon\appModules\whatsapp.py:791
+#: addon\appModules\whatsapp.py:814
 msgid "Next"
 msgstr "Sljedeće"
 
-#: addon\appModules\whatsapp.py:792
+#: addon\appModules\whatsapp.py:815
 msgid "Previous"
 msgstr "Prethodno"
 
-#: addon\appModules\whatsapp.py:793
+#: addon\appModules\whatsapp.py:816
 msgid "Mute"
 msgstr "Isključi zvuk"
 
-#: addon\appModules\whatsapp.py:794
+#: addon\appModules\whatsapp.py:817
 msgid "Unmute"
 msgstr "Uključi zvuk"
 
-#: addon\appModules\whatsapp.py:795
+#: addon\appModules\whatsapp.py:818
 msgid "Pause"
 msgstr "Pauziraj"
 
-#: addon\appModules\whatsapp.py:796
+#: addon\appModules\whatsapp.py:819
 msgid "Play"
 msgstr "Reproduciraj"
 
-#: addon\appModules\whatsapp.py:797
+#: addon\appModules\whatsapp.py:820
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: addon\appModules\whatsapp.py:798
-#, fuzzy
-#| msgid "Forward message"
+#: addon\appModules\whatsapp.py:821
 msgid "Forward"
-msgstr "Prosljeđuje poruku"
+msgstr "Proslijedi"
 
-#: addon\appModules\whatsapp.py:799
+#: addon\appModules\whatsapp.py:822
 msgid "Delete"
 msgstr "Izbriši"
 
@@ -424,8 +426,17 @@ msgstr "Nema informacija o ažuriranju"
 msgid "Open WhatsAppPlus settings window"
 msgstr "Otvara prozor postavki WhatsAppPlusa"
 
-#. A field for entering a phone number so that the application can replace the phone number with the phrase "You" in messages
+#. A field for entering a user name so that the application can replace the phone number with the phrase "You" in messages
 #: addon\GlobalPlugins\WhatsAppPlus\__init__.py:157
+msgid ""
+"Enter the name that you have provided in your WhatsApp account. This is so "
+"that WhatsAppPlus can distinguish your messages from other messages."
+msgstr ""
+"Unesite ime koje ste unijeli u svoj WhatsApp račun. To omogućava dodatku "
+"WhatsAppPlus razlikovanje vaših poruka od drugih poruka."
+
+#. A field for entering a phone number so that the application can replace the phone number with the phrase "You" in messages
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:160
 msgid ""
 "Enter a phone number. This is to prevent the app from displaying your phone "
 "number on messages sent by you."
@@ -434,7 +445,7 @@ msgstr ""
 "telefonski broj u porukama koje šaljete."
 
 #. Field for setting the function of moving focus to unread messages
-#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:160
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:163
 msgid ""
 "In this field, separate by commas, write all the matching phrases of the "
 "\"Unread messages\" element in your language. You need to write phrases "
@@ -444,22 +455,22 @@ msgstr ""
 "\"Nepročitane poruke\" na svom jeziku. Morate pisati izraze bez broja."
 
 #. Turn on sounds when recording voice messages
-#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:163
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:166
 msgid "Play sounds when starting, pausing and sending a voice message"
 msgstr ""
 "Reproduciraj zvukove prilikom snimanja, pauziranja i slanja glasovne poruke"
 
-#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:167
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:170
 msgid "Automatically report progress bar updates when focus is on a message"
 msgstr "Automatski prijavi ažuriranja trake napretka kada je fokus na poruci"
 
 #. Checking for Updates on NVDA Startup
-#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:171
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:174
 msgid "Check for WhatsAppPlus updates on NVDA startup"
-msgstr "Provjeri ima li ažuriranja WhatsAppPlusa pri pokretanju NVDA"
+msgstr "Provjeri ima li ažuriranja WhatsAppPlusa pri pokretanju NVDA-a"
 
 #. Button to check for updates
-#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:174
+#: addon\GlobalPlugins\WhatsAppPlus\__init__.py:177
 msgid "Check for &updates"
 msgstr "Provjerite ima li ažuriranja"
 

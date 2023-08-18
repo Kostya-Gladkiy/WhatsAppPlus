@@ -1,12 +1,9 @@
-* Added a keyboard shortcut that opens a list of all WhatsAppPlus keyboard shortcuts. By default, this function is assigned to ALT+H gesture.
-* Fixed a bug where ALT+2 and ALT+3 gestures didn't work.
-* Fixed a bug where it was impossible to activate some functions from the context menu using gestures.
-* Fixed an issue where changing voice message playback speed and pausing voice message playback did not always work.
-* Fixed a bug where in chats when focusing on your sent messages, instead of the word "you", the screen reader announced a personal number. To avoid this, you need to specify the phone number in the WhatsAppPlus settings and after that the add-on will not report it on your messages.
-* Fixed an issue where WhatsAppPlus prompted to update on secure screens. To prevent this from happening again, you need to click on the "Use currently saved settings during sign-in and on secure screens (requires administrator privileges)" button in the NVDA general settings.
-* The gesture to accept a call has been changed to ALT+shift+Y, and the gesture to decline a call has been changed to ALT+shift+N. This is to ensure that these gestures do not conflict with UnigramPlus gestures.
-* Microphone and camera on/off gestures during a call now work correctly.
-*Removed gesture to set reaction to messages, since in the latest versions of WhatsApp, reactions are available directly from the context menu.
+* Added keyboard shortcut for editing messages. By default, this function is assigned to the ALT+backspace combination.
+* Focusing on a message containing a file will now speak the name, type, and size of the file.
+* Now the function of automatically reading new messages in open chat works correctly. Note though that for correct operation you need to specify your phone number and your name in the WhatsAppPlus settings.that for correct operation you need to specify your phone number in the WhatsAppPlus settings.
+* Now the function of automatic reading of activity in open chats will work more stably.
+* ALT+D now works correctly.
+* Fixed conflict of some functions with "BluetoothAudio" add-on.
 
 If you have the desire, and most importantly the opportunity, to support the developer of this add-on, you can do so using the following details:
 * PeyPal: gladkiy.kostya@gmail.com.

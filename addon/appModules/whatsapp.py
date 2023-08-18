@@ -29,6 +29,7 @@ addonHandler.initTranslation()
 
 icon_from_context_menu = {
 	"reply to message": "\ue97a",
+	"edit message": "\ue70f",
 	"react": "\ue76e",
 	"forward message": "\uee35",
 	"delete": "\ue74d",
@@ -59,6 +60,7 @@ SPEC = {
 	'playSoundWhenRecordingVoiceMessage': 'boolean(default=False)',
 	'phrasesOfUnreadMessages': 'string(default="'+phrases_of_unread_messages.get(lang, "en")+'")',
 	'number_phone': 'string(default="")',
+	'user_name': 'string(default="")',
 	'isAutomaticallyCheckForUpdates': 'boolean(default=True)',
 	'displayPhoneNumberInUsername': 'boolean(default=True)',
 	'automaticReadingOfNewMessages': 'boolean(default=False)',
@@ -78,17 +80,20 @@ class Title_change_tracking:
 		if not cls.active or cls.pouse: return
 		try:
 			title = Chat_update.app.get_title_element()
-			chat_name = title.firstChild.name
-			sub_title = title.lastChild.name
-		except Exception as e: title = None
+			chat_name = title.children[2].name
+			sub_title = title.children[3].name if len(title.children) == 4 else ""
+		except Exception as e:
+			title = None
 		if not title or not title.isInForeground:
 			cls.pouse = True
 			return False
 		last_value = cls.last_value or ("", "")
 		if sub_title != last_value[1]:
+			# Announce changes only if these changes are not related to switching to another chat
 			if chat_name == last_value[0] and sub_title:
-				# Announce changes only if these changes are not related to switching to another chat
-				queueHandler.queueFunction(queueHandler.eventQueue, message, sub_title)
+				# Replacing the symbol that interferes with the sounding of this element
+				sub_title_name = sub_title.replace("‎∶‎", "‎:‎")
+				queueHandler.queueFunction(queueHandler.eventQueue, message, sub_title_name)
 			cls.last_value = (chat_name, sub_title)
 		Timer(cls.interval, cls.tick).start()
 	@classmethod
@@ -132,13 +137,13 @@ class Chat_update:
 		last_saved_message = cls.last_message or ("", "")
 		if last_message.name != last_saved_message[1]:
 			try:
-				title = cls.app.get_title_element().firstChild.name
+				title = cls.app.get_title_element().children[2].name
 			except:
 				Timer(cls.interval, cls.tick).start()
 				return False
-			is_message_received = True if last_message.name[-1] == " " else False
+			is_my_message = cls.app.is_message_contains_user_name(last_message.name) or cls.app.is_message_contains_phone_number(last_message.name)
 			original_name = last_message.name
-			if (title == last_saved_message[0]) and is_message_received:
+			if title == last_saved_message[0] and not is_my_message:
 				cls.app.action_message_focus(last_message)
 				text = last_message.name
 				playWaveFile(baseDir+"whatsapp_incoming.wav")
@@ -378,6 +383,8 @@ class AppModule(appModuleHandler.AppModule):
 		title = self.get_title_element()
 		if title and controlTypes.State.FOCUSABLE in title.states:
 			title = "\n".join([item.name for item in title.children])
+			# Replacing the symbol that interferes with the sounding of this element
+			title = title.replace("‎∶‎", "‎:‎")
 			message(title)
 		else: message(_("No open chat"))
 
@@ -392,12 +399,12 @@ class AppModule(appModuleHandler.AppModule):
 	@script(description=_("Move the focus to the edit field. If the focus is already in the edit field, then after pressing the hotkey, it will move to where it was before"), gesture="kb:ALT+D")
 	def script_to_message_box(self, gesture, arg = False):
 		obj = api.getFocusObject()
-		if obj.UIAAutomationId == "TextBox" and self.last_focus_message_element:
+		if obj.UIAAutomationId == "InputBarTextBox" and self.last_focus_message_element:
 			self.last_focus_message_element.setFocus()
 			return
 		message_box = self.message_box_element
 		if not message_box:
-			message_box = next((item for item in self.get_elements() if item.UIAAutomationId == "TextBox"), None)
+			message_box = next((item for item in self.get_elements() if item.UIAAutomationId == "InputBarTextBox"), None)
 			if message_box: self.message_box_element = message_box
 		try:
 			if message_box: message_box.setFocus()
@@ -569,6 +576,9 @@ class AppModule(appModuleHandler.AppModule):
 	@script(description=_("Reply to message"), gesture="kb:ALT+R")
 	def script_reply_to_message(self, gesture):
 		self.activate_option_for_menu(icon_from_context_menu["reply to message"])
+	@script(description=_("Edit message"), gesture="kb:ALT+backspace")
+	def script_edit_message(self, gesture):
+		self.activate_option_for_menu(icon_from_context_menu["edit message"])
 	@script(description=_("Mark a chat as read"), gesture="kb:ALT+shift+R")
 	def script_read_chat(self, gesture):
 		self.activate_option_for_menu((icon_from_context_menu["mark as read"], icon_from_context_menu["mark as unread"]))
@@ -647,22 +657,29 @@ class AppModule(appModuleHandler.AppModule):
 		text = text.replace("## ", "")
 		TextWindow(text.strip(), _("List of shortcuts"), readOnly=True)
 
-	def is_message_contains_phone_number(self, number_in_message):
-		if not config.conf["WhatsAppPlus"]["number_phone"]: return False
-		cleaned_phone = sub(r"[^\d+]", "", number_in_message)
-		number_phome = config.conf["WhatsAppPlus"]["number_phone"]
-		numbers = number_phome.split("|")
-		for number in numbers:
-			if number in cleaned_phone:
-				return True
-				break
-		else:
-			return False
+	def is_message_contains_user_name(self, text_message):
+		if config.conf["WhatsAppPlus"]["user_name"]:
+			if text_message.startswith(config.conf["WhatsAppPlus"]["user_name"]):
+				return config.conf["WhatsAppPlus"]["user_name"]
+		else: return False
+	
+	def is_message_contains_phone_number(self, text_message):
+		if config.conf["WhatsAppPlus"]["number_phone"]:
+			number_in_message = text_message.split(" ")[0]
+			cleaned_phone = sub(r"[^\d+]", "", number_in_message)
+			number_phome = config.conf["WhatsAppPlus"]["number_phone"]
+			numbers = number_phome.split("|")
+			for number in numbers:
+				if number in cleaned_phone:
+					return number_in_message
+					break
+			else:
+				return False
+		else: return False
 
 	# Processing the message that got into focus
 	def action_message_focus(self, obj):
-		number_in_message = obj.name.split(", ")[0]
-		is_my_message = self.is_message_contains_phone_number(number_in_message)
+		number_in_message = self.is_message_contains_user_name(obj.name) or self.is_message_contains_phone_number(obj.name)
 		reactions = ""
 		answer = False
 		duration = False
@@ -702,11 +719,17 @@ class AppModule(appModuleHandler.AppModule):
 			obj.name = sub(r" (\w{2,12}) {1,3}(\d\d:\d\d)", r" \1 %s \2"%new_name, obj.name)
 		if duration: obj.name = obj.name.replace("   ", " "+duration+", ")
 		if reactions: obj.name += ".\n"+reactions
-		if is_my_message:
-			obj.name = obj.name.replace(number_in_message, _("You")+", ")
-
+		# Remove my phone number from my messages
+		if number_in_message:
+			obj.name = obj.name.replace(number_in_message, _("You"), 1)
+		# Add a file name to the message
+		if obj.firstChild.UIAAutomationId == "Icon" and obj.firstChild.next.UIAAutomationId == "NameTextBlock":
+			file_name = f"{obj.firstChild.next.name}, {obj.firstChild.next.next.name}"
+			obj.name = sub(" (‎\d\d?‎∶‎\d\d?)", f"{file_name}, \g<1>", obj.name)
 		# Remove phone number from usernames
 		if not config.conf["WhatsAppPlus"]["displayPhoneNumberInUsername"]: obj.name = sub(reg_for_delete_phon_number, '', obj.name)
+		# Replacing the symbol that interferes with the sounding of this element
+		obj.name = obj.name.replace("‎∶‎", "‎:‎")
 
 		if controlTypes.State.SELECTED in obj.states: message(_("Selected"))
 	
@@ -747,7 +770,7 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.UIAAutomationId == "ChatsListItem":
 				speech.cancelSpeech()
 				self.last_focus_chat_element = obj
-		elif obj.role == controlTypes.Role.EDITABLETEXT and obj.UIAAutomationId == "TextBox":
+		elif obj.role == controlTypes.Role.EDITABLETEXT and obj.UIAAutomationId == "InputBarTextBox":
 			obj.description = ""
 			try:
 				if obj.previous.previous.previous.firstChild.name == "\ue8bb":
@@ -773,7 +796,7 @@ class AppModule(appModuleHandler.AppModule):
 					obj.name = obj.children[1].name
 				elif controlTypes.State.SELECTED in obj.states and obj.parent.UIAAutomationId in ("EmojiList", "MentionsList"):
 					# Reading the name of the selected user in the list with hints when typing the @ symbol
-					message(obj.name)
+					queueHandler.queueFunction(queueHandler.eventQueue, message, obj.name)
 				elif obj.name == "WhatsApp.Design.CallHistoryListCellVm":
 					# We sign the list items in the "Calls" section
 					obj.name = ", ".join([item.name for item in obj.firstChild.children if item.name])
@@ -800,11 +823,8 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.role == controlTypes.Role.TOGGLEBUTTON:
 				if obj.UIAAutomationId in ("WhenWAClosedSwitch", "NewMessagesNotificationSwitch"): obj.name = obj.previous.name
 			elif obj.role == controlTypes.Role.GROUPING:
-				# if obj.name in ('WhatsApp.WaCollections.KeyedObservableCollection`2[WhatsApp.GroupItem,WhatsApp.RecipientItem]'):
-					# obj.name = obj.children[0].name
 				if obj.name in ('WhatsApp.ViewModels.EmojiPickerCategoryViewModel', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.Pages.Recipients.NewChatVm+IItem]', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.Pages.Recipients.ForwardMessageVm+IItem]', 'WhatsApp.Pages.Recipients.RecipientGroupingVm`1[WhatsApp.AddCallParticipantsVm+IItem]', 'WhatsApp.Pages.Recipients.UserRecipientItemVm'):
 					obj.name = obj.firstChild.name
-			# elif obj.role == controlTypes.Role.SLIDER:
 			elif obj.role == controlTypes.Role.CHECKBOX:
 				# if obj.UIAAutomationId == "Scrubber" and obj.value != "0" and obj.location.left: self.rewind_slider = obj
 				if obj.name == "" and obj.childCount == 3 and obj.parent.UIAAutomationId == "BubbleListItem":

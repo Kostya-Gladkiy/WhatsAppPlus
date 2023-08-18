@@ -1,9 +1,55 @@
-# WhatsAppPlus
+# WhatsAppPlus#
 
 * Authore: Kostya Gladkiy (Ucraina)
-* [Canale Telegram](https://t.me/unigramPlus)
+* Scarica [la versione stabile][1] (compatibile con NVDA da 2021.2 a 2023.1)
+* [Canale Telegram][2]
 
-##Informazioni sull'opportunità di donare allo sviluppatore:
+## Scopo di questo add-on ##
+
+Questo componente aggiuntivo semplifica l'utilizzo della versione UWP dell'app WhatsApp, consentendo di interagire facilmente con chat, messaggi, voci del menu contestuale e altro ancora.
+
+### Funzionalità aggiuntive generali
+
+* Ora il campo di immissione del messaggio cambierà nome quando si risponde ad un messaggio.
+* Aggiunte etichette per alcuni elementi del programma letti dallo screen reader.
+* Sono state aggiunte molte scorciatoie da tastiera che puoi trovare di seguito.
+
+## Scorciatoie da tastiera: ##
+
+* ALT+1: Sposta il focus sull'elenco delle chat.
+* ALT+2: Sposta il focus sull'ultimo messaggio della chat corrente.
+* ALT+D: Sposta il focus sul campo di modifica. Se è già in detta posizione, dopo aver premuto il tasto di scelta rapida, si sposterà dov'era prima.
+* ALT+T: Annuncia il nome e lo stato della chat aperta.
+* ALT+shift+C: Effettua una chiamata vocale a un contatto o gruppo, o partecipa ad una chiamata vocale in corso in un gruppo.
+* ALT+shift+V: Effettua una videochiamata a un contatto o gruppo.
+* ALT+shift+Y: Accetta una chiamata.
+* ALT+shift+N: rifiuta la chiamata in arrivo o abbandona quella in corso.
+* ALT+A: Attiva o disattiva il microfono.
+* ALT+V: Attiva o disattiva la videocamera.
+* ALT+O: Preme il pulsante Altre opzioni.
+* control+R: Registra e invia un messaggio vocale.
+* control+D: Elimina la risposta a un messaggio o un messaggio vocale attualmente in registrazione.
+* control+shift+D: Mette in pausa o riprende la registrazione di un messaggio vocale.
+* ALT+delete: Cancella un messagio o una chat.
+* control+shift+P: Apre il profilo della chat corrente.
+* control+shift+E: Attiva o disattiva la modalità che rimuove la lettura del numero del mittente durante la lettura di messaggi inviati da numeri non presenti nell'elenco dei contatti.
+* ALT+S: Segna un messaggio come importante.
+* ALT+F: Inoltra il messaggio.
+* ALT+R: Rispondi al messaggio.
+* ALT+shift+R: Segna la chat come letta.
+* control+C: Copia il messaggio negli appunti, se contiene testo.
+* ALT+C: Mostra il testo del messaggio in una finestra popup.
+* NVDA+control+W: Apri la finestra delle impostazioni di WhatsAppPlus.
+* ALT+3: Sposta il focus sull'etichetta "messaggi non letti"..
+* control+shift+A: Preme il pulsante Allega file.
+* ALT+L: Abilita la lettura automatica dei nuovi messaggi nella chat corrente.
+* control+S: Aumenta/diminuisce la velocità di riproduzione dei messaggi vocali.
+* ALT+P: Riproduce/mette in pausa il messaggio vocale in riproduzione.
+* ALT+U: annuncia il valore corrente di una barra di progresso. Se premuto due volte, attiva o disattiva l'annuncio automatico delle barre di progresso.
+* control+space: Passa alla modalità di selezione.
+* ALT+backspace: Modifica un messaggio.
+
+## Informazioni sull'opportunità di donare allo sviluppatore: ##
 
 Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore di questo componente aggiuntivo, puoi farlo utilizzando i seguenti metodi:
 
@@ -11,49 +57,28 @@ Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore
 * Sistema di donazione Ucraino: https://unigramplus.diaka.ua/donate.
 * Numero carta di credito: 5169360009004502 (Gladkiy Constantine).
 
-Aggiunto un gran numero di scorciatoie da tastiera per un lavoro produttivo e confortevole nel programma, che puoi trovare di seguito.
+## Storico dei cambiamenti ##
 
-### Funzionalità aggiuntive generali
+### Versione 2.0.0 ###
 
-* Ora il campo di immissione del messaggio cambierà nome quando rispondiamo a un messaggio.
-* Aggiunte etichette per alcuni elementi del programma letti dagli screen reader.
+* Aggiunta una scorciatoia da tastiera per modificare i messaggi. Di default, questa funzione è assegnata alla combinazione ALT+backspace.
+* Posizionarsi su un messaggio che contiene un allegato provocherà da parte di NVDA la pronuncia del nome e della dimensione dello stesso.
+* Ora la funzione di lettura automatica dei nuovi messaggi nella chat aperta funziona correttamente. Nota però che per un corretto funzionamento è necessario specificare il tuo numero di telefono e il tuo nome nelle impostazioni di WhatsAppPlus.
+* Ora la funzione di lettura automatica dell'attività nelle chat aperte funzionerà in modo più stabile.
+* ALT+D Ora funziona correttamente.
+* Risolto il conflitto di alcune funzioni con l'add-on "BluetoothAudio"..
 
-## Lista di combinazioni di tasti:
+### Versione 1.9.0
 
-* ALT+1 - Sposta il focus sull'elenco delle chat.
-* ALT+2 - Sposta il focus sull'ultimo messaggio in una chat aperta.
-* ALT+D - Sposta il focus sul campo di modifica. Se è già in detta posizione, dopo aver premuto il tasto di scelta rapida, si sposterà dov'era prima.
-* ALT+T - Annuncia il nome e lo stato di una chat aperta.
-* ALT+shift+C - Effettua una chiamata vocale a un gruppo o contatto o partecipa ad una chiamata vocale in corso in un gruppo.
-* ALT+shift+V - Effettua una videochiamata a un contatto o un gruppo.
-* ALT+Y - Accetta la chiamata.
-* ALT+N - Preme il pulsante Rifiuta chiamata" se è presente una chiamata in arrivo o il pulsante "Termina chiamata" se è in corso una chiamata), stessa combinazione.
-* ALT+A - Attiva o disattiva il microfono.
-* ALT+V - Accende o spegne la fotocamera.
-* ALT+O - Preme il pulsante altre opzioni.
-* control+R - Registra ed invia un messaggio vocale.
-* control+D - Elimina il messaggio vocale.
-* control+shift+D - Sospendi o riprendi la registrazione di un messaggio vocale.
-* ALT+delete - Elimina un messaggio o una chat.
-* control+shift+P - Apre le informazioni della chat corrente.
-* control+shift+E - Attiva o disattiva la modalità che rimuove la lettura del numero del mittente durante la lettura di messaggi inviati da numeri non presenti nell'elenco dei contatti..
-* ALT+Q - Reagisce al messaggio.
-* ALT+S - Messaggio importante.
-* ALT+F - Inoltra il messaggio.
-* ALT+R - Rispondi al messaggio.
-* ALT+shift+R - Contrassegna una chat come letta.
-* control+C - Copia il messaggio se contiene del testo.
-* ALT+C - Mostra il testo del messaggio in una finestra popup.
-* NVDA+control+W - Apre la finestra delle impostazioni di WhatsAppPlus.
-* ALT+3 - Sposta il focus sull'etichetta "messaggi non letti"..
-* control+N - Preme il pulsante nuova chat.
-* control+shift+A - Preme il pulsante allega file.
-* ALT+L Abilita la lettura automatica dei nuovi messaggi nella chat corrente.
-* control+S: Aumenta/diminuisce la velocità dei messaggi vocali.
-* ALT+P: Riproduce o mette in pausa il messaggio vocale che si sta ascoltando.
-* ALT+U: annuncia il valore corrente della barra di avanzamento. Se premuto due volte, attiva/disattiva il suono automatico degli indicatori di performance.
-
-##Storico dei cambiamenti
+* Aggiunta una scorciatoia da tastiera che apre un elenco di tutte le combinazioni di WhatsAppPlus, per impostazione predefinita assegnata ad alt+y.
+* Risolto un bug per cui i gesti ALT+2 e ALT+3 non funzionavano.
+* Risolto un bug per cui era impossibile attivare alcune funzioni dal menu contestuale utilizzando i comandi ta tastiera.
+* Risolto un problema per cui la modifica della velocità di riproduzione dei messaggi vocali, la loro sospensione o riproduzione potevano non funzionare sempre.
+* Risolto un bug per cui nelle chat, quando ci si posizionava sui messaggi inviati, invece della parola "tu", lo screen reader annunciava il numero personale. Per evitare ciò, è necessario specificare il proprio numero di telefono nelle impostazioni di WhatsAppPlus e successivamente l'add-on non lo riporterà sui propri messaggi.
+* Risolto un problema per cui WhatsAppPlus chiedeva di eseguire l'aggiornamento su schermate sicure. Per evitare che ciò accada di nuovo, è necessario fare clic sul pulsante "Utilizza le impostazioni di configurazione salvate nella finestra di accesso a Windows e nelle schermate di sicurezza (richiede privilegi di amministratore)" nelle impostazioni generali di NVDA.
+* La combinazione per accettare una chiamata è stata modificata in ALT+shift+Y, e quella per rifiutarla in ALT+shift+N. Questo per garantire che le combinazioni non siano in conflitto con quelle di UnigramPlus.
+* Le combinazioni di attivazione/disattivazione della videocamera e del microfono durante una chiamata ora funzionano correttamente.
+* Rimossa la combinazione di tasti per aggiungere una reazione ai messaggi, in quanto con l'ultima versione di WhatsApp esse sono disponibili nel menu contestuale.
 
 ### Versione 1.8.0
 

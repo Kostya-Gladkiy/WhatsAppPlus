@@ -51,8 +51,18 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT+P: Şu anda çalınan sesli mesajı oynat / duraklat 
 * ALT +U: İlerleme çubuğunun geçerli değerini - seslendir.. Çift basıldığında,  İlerleme çubuğunun - otomatik  seslendirmesini  açar / kapatır.
 * ctrl +boşluk: Seçim moduna geçin.
+* ALT+backspace: Mesajı düzenle.
 
 ##Değişiklik listesi:
+
+### Sürüm 2.0.0
+
+Mesajları düzenlemek için klavye kısayolu eklendi. Varsayılan olarak, bu işlev ALT + backspace kombinasyonuna atanır.
+* Şimdi dosyayı içeren bir mesaja odaklanırken dosyanın adı, türü ve boyutu açıklanacak.
+* Artık açık sohbette yeni mesajların otomatik olarak seslendirilmesi işlevi doğru şekilde çalışıyor. Doğru çalışması için telefon numaranızı ve adınızı  Whatsapplus ayarlarında belirtmeniz gerikiyor. 
+* Artık sohbetlerdeki etkinliğin otomatik olarak seslendirilmesi işlevi daha doğru şekilde çalışıyor.
+* artıkALT + D tuş kombinasyonu düzgün çalışıyor.
+* "BluetoothAudio" eklentisiyle bazı işlevlerin çakışması düzeltildi.
 
 ### Sürüm 1.9.0
 
