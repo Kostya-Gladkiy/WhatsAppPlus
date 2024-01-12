@@ -508,7 +508,7 @@ class AppModule(appModuleHandler.AppModule):
 	# Function of recording and sending a voice message
 	@script(description=_("Record and send a voice message"), gesture="kb:control+R")
 	def script_recordingVoiceMessage(self, gesture):
-		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("RightButton", "PttSendButton")), None)
+		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("RightButton", "PttSendButton", "SendVoiceMessageButton")), None)
 		if not button: return
 		if button.UIAAutomationId == "RightButton":
 			if button.firstChild.name == "\ue724":
@@ -524,6 +524,12 @@ class AppModule(appModuleHandler.AppModule):
 			button.doAction()
 			if config.conf["WhatsAppPlus"]['playSoundWhenRecordingVoiceMessage']:
 				playWaveFile(baseDir+"wa_ptt_sent.wav")
+		elif button.UIAAutomationId == "SendVoiceMessageButton":
+			self.is_skip_name = 2
+			button.doAction()
+			if config.conf["WhatsAppPlus"]['playSoundWhenRecordingVoiceMessage']:
+				playWaveFile(baseDir+"wa_ptt_sent.wav")
+
 
 	# Voice message discard function
 	@script(description=_("Discard voice message"), gesture="kb:control+D")
