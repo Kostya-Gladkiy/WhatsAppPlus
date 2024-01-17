@@ -61,7 +61,6 @@ SPEC = {
 	'phrasesOfUnreadMessages': 'string(default="'+phrases_of_unread_messages.get(lang, "en")+'")',
 	'number_phone': 'string(default="")',
 	'user_name': 'string(default="")',
-	'isAutomaticallyCheckForUpdates': 'boolean(default=True)',
 	'displayPhoneNumberInUsername': 'boolean(default=True)',
 	'automaticReadingOfNewMessages': 'boolean(default=False)',
 	'automatically_report_progress_indicators': 'boolean(default=False)',
