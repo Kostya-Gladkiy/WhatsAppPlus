@@ -1,4 +1,4 @@
-# WhatsAppPlus
+	# WhatsAppPlus
 * Autor: Kostia Glatkii (Ukrajina)
 * Telegram kanal:
 (https://t.me/UnigramPlus)
@@ -20,8 +20,8 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * ALT+T - Ime i status otvorenog ćaskanja.
 * ALT+shift+C - Upućivanje glasovnog poziva grupi ili kontaktu ili se pridružite tekućem glasovnom pozivu u grupi.
 * ALT+shift+V - upućivanje video poziva kontaktu ili grupi.
-* ALT+shiftY - Prihvati poziv.
-* ALT+shiftN - Pritisnite dugme "Odbij poziv" ako postoji dolazni poziv,  dugme "ili poziv" ako je poziv u toku.
+* NVDA+ALT+shiftY - Prihvati poziv.
+* NVDA+ALT+shiftN - Pritisnite dugme "Odbij poziv" ako postoji dolazni poziv,  dugme "ili poziv" ako je poziv u toku.
 * ALT+A - Privremeno isključite ili uključite mikrofon.
 * ALT+V - Uključite ili isključite kameru.
 * ALT+O - Pritisnite dugme još opcija.
@@ -45,7 +45,26 @@ Dodat je veliki broj prečica na tastaturi za produktivan i udoban rad u program
 * ALT+P: pusti/pauziraj glasovnu poruku koja se trenutno reprodukuje.
 ALT+U: Najavljivanje trenutne vrednosti trake napredka. Kada se dvaput pritisne uključivanje/isključivanje automatsko ozvučenje indikatora performansi.
 Control+space: Prebacivanje na režim izbora.
+ALT+backspace - Uređivanje poruka.
+
 ##Istorija promena
+
+###Verzija 2.1.0###
+* Rešen je problem sa čitanjem statusa korisnika.
+* Rešen je problem gde nije bilo moguće odgovoriti na poziv i odbiti poziv pomoću prečice na tastaturi. Imajte na umu da su prečice na tastaturi za odgovaranje i odbijanje poziva promenjene u NVDA+ALT+Y i NVDA+ALT+N.
+* Ispravljen neispravan rad funkcije koja čita nove poruke u otvorenom ćaskanju.
+* Rešen je problem gde je broj telefona čitan umesto vašeg imena u porukama koje ste poslali.
+* Rešen je problem sa slanjem glasovnih poruka pomoću Control+R.
+* Dodata kompatibilnost sa NVDA 2024.1.
+
+Verzija 2.0.0
+
+* Dodata prečica na tastaturi za uređivanje poruka. Podrazumevano, ova funkcija je dodeljena kombinaciji ALT+backspace
+* Fokusiranje na poruku koja sadrži datoteku sada će izgovoriti ime, tip i veličinu datoteke.
+* Sada funkcija automatskog čitanja novih poruka u otvorenom ćaskanju radi ispravno. Imajte na umu da za ispravan rad morate navesti svoj broj telefona i svoje ime u podešavanjima WhatsApPlus-a.
+* Sada će funkcija automatskog čitanja aktivnosti u otvorenim četovima raditi stabilnije.
+* ALT+D sada radi ispravno.
+
 Verzija 1.9.0
 * Dodata je prečica na tastaturi koja otvara listu svih WhatsAppPlus prečica na tastaturi. Ova funkcija je podrazumevano dodeljena ALT+H pokretu.
 * Ispravljena greška gde ALT+2 i ALT+3 pokreti nisu radili.

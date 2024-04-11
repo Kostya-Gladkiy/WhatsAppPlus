@@ -1,7 +1,7 @@
 # WhatsAppPlus #
 
 * Author: Kostya Gladkiy (Ukrain)
-* Download [stable version][1] (Compatible with NVDA 2021.2 to 2023.1)
+* Download [stable version][1] (Compatible with NVDA 2021.2 to 2024.1)
 * [Telegram channel][2]
 
 ## About ##
@@ -22,8 +22,8 @@ This add-on makes it easy to use the UWP version of the WhatsApp app, allowing u
 * ALT+T: Announce the name and status of an open chat.
 * ALT+shift+C: Make a voice call to a group or contact.
 * ALT+shift+V: Make a video call to a contact or group.
-* ALT+shift+Y: Accept call.
-* ALT+shift+N: Decline an incoming call or leave the current call.
+* NVDA+ALT+Y: Accept call.
+* NVDA+ALT+N: Decline an incoming call or leave the current call.
 * ALT+A: Turn the microphone on/off.
 * ALT+V: Turn video on/off.
 * ALT+O: Press more options button.
@@ -58,6 +58,15 @@ If you have a desire, and most importantly, the opportunity to support the devel
 * Card number: 5169360009004502 (Gladkiy Constantine).
 
 ## Changelog ##
+
+### Version 2.0.1 ###
+
+* Fixed the problem with reading user status.
+* Fixed an issue where it was not possible to answer a call and reject a call with a keyboard shortcut. Note that the keyboard shortcuts for answering and rejecting a call have been changed to NVDA+ALT+Y and NVDA+ALT+N.
+* Fixed incorrect operation of the function that reads new messages in open chat.
+* Fixed an issue where the phone number was read instead of your name in messages that you sent.
+* Fixed an issue with sending voice messages using control+R.
+* Added compatibility with NVDA 2024.1.
 
 ### Version 2.0.0 ###
 

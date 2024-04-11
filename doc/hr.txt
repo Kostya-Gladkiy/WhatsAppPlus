@@ -1,9 +1,9 @@
-* Dodan je tipkovnički prečac za uređivanje poruka. Prema zadanim postavkama, ova je značajka dodijeljena kombinaciji Alt+Backspace.
-* Fokusiranje na poruku koja sadrži datoteku sada će izgovoriti naziv, vrstu i veličinu datoteke.
-* Sada značajka automatskog čitanja novih poruka u otvorenom razgovoru radi ispravno. Imajte na umu da za ispravan rad trebate navesti svoj telefonski broj i svoje ime u postavkama WhatsAppPlusa.
-* Sada će značajka automatskog čitanja aktivnosti u otvorenom razgovoru raditi stabilnije.
-* Prečac Alt+D sada radi ispravno.
-* Riješen sukob nekih značajki s dodatkom "Bluetooth zvuk".
+* Fixed the problem with reading user status.
+* Fixed an issue where it was not possible to answer a call and reject a call with a keyboard shortcut. Note that the keyboard shortcuts for answering and rejecting a call have been changed to NVDA+ALT+Y and NVDA+ALT+N.
+* Fixed incorrect operation of the function that reads new messages in open chat.
+* Fixed an issue where the phone number was read instead of your name in messages that you sent.
+* Fixed an issue with sending voice messages using control+R.
+* Added compatibility with NVDA 2024.1.
 
 Ako imate želju, i što je najvažnije priliku, podržati programera ovog dodatka, možete to učiniti pomoću sljedećih podataka:
 * PayPal: gladkiy.kostya@gmail.com

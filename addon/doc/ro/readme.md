@@ -57,6 +57,15 @@ A fost adăugat un număr mare de comenzi rapide de la tastatură pentru o munc�
 
 ##Istoricul modificărilor
 
+### Versiunea 2.1.0 ###
+
+* S-a rezolvat problema cu citirea statusului utilizatorului.
+* A fost rezolvată o problemă în care nu era posibil să se răspundă la un apel și să se respingă un apel cu o comandă rapidă de la tastatură. Reține că prescurtările de la tastatură pentru a răspunde și a respinge un apel au fost modificate în NVDA+ALT+Y și NVDA+ALT+N.
+* A fost corectată funcția care citește mesajele noi în chat-ul deschis.
+* A fost rezolvată o problemă în care numărul de telefon era citit în loc de numele tău în mesajele trimise.
+* A fost remediată o problemă la trimiterea mesajelor vocale folosind control+R.
+* A fost adăugată compatibilitatea cu NVDA 2024.1.
+
 ### Versiunea 2.0.0 ###
 
 * A fost Adăugată o comandă rapidă de la tastatură pentru editarea mesajelor. În mod implicit, această funcție este atribuită combinației ALT+backspace.

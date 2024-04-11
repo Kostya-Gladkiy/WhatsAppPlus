@@ -122,34 +122,43 @@ class Chat_update:
 	active = False
 	pouse = False
 	interval = .4
+	interval = .12
 	app = False
 	last_message = None
+	
 	@classmethod
 	def tick(cls):
 		if not cls.active or cls.pouse: return
-		try : last_message = cls.app.get_messages_element().lastChild
-		except: last_message = None
-		if not last_message or not last_message.isInForeground:
+		try :
+			last_message = cls.app.get_messages_element().lastChild
+			total_count_messages = last_message.positionInfo["similarItemsInGroup"]
+			number_message = last_message.positionInfo["indexInGroup"]
+		except:
+			total_count_messages = None
+			last_message = None
+			number_message = None
+		if not last_message or not total_count_messages or not number_message or not last_message.isInForeground:
 			cls.pouse = True
 			return True
 		# The first element is the name of the chat in which the last message was received
-		# The second item is the text of message
+		# We consider the chat name to be the name of the text field for entering messages, since the name of the field is different in each chat
+		# The second item is the number of messages in the chat
 		last_saved_message = cls.last_message or ("", "")
-		if last_message.name != last_saved_message[1]:
+		if total_count_messages != last_saved_message[1] and total_count_messages == number_message:
 			try:
-				title = cls.app.get_title_element().children[2].name
+				title = cls.app.message_box_element.name
 			except:
 				Timer(cls.interval, cls.tick).start()
 				return False
 			is_my_message = cls.app.is_message_contains_user_name(last_message.name) or cls.app.is_message_contains_phone_number(last_message.name)
-			original_name = last_message.name
-			if title == last_saved_message[0] and not is_my_message:
+			if title == last_saved_message[0] and is_my_message == False:
 				cls.app.action_message_focus(last_message)
 				text = last_message.name
 				playWaveFile(baseDir+"whatsapp_incoming.wav")
 				queueHandler.queueFunction(queueHandler.eventQueue, message, text)
-			cls.last_message = (title, original_name)
+			cls.last_message = (title, total_count_messages)
 		Timer(cls.interval, cls.tick).start()
+	
 	@classmethod
 	def toggle(cls, app):
 		if not config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"]:
@@ -163,6 +172,7 @@ class Chat_update:
 			config.conf["WhatsAppPlus"]["automaticReadingOfNewMessages"] = False
 			cls.active = False
 			return False
+	
 	@classmethod
 	def restore(cls, app):
 		cls.pouse = False
@@ -451,15 +461,8 @@ class AppModule(appModuleHandler.AppModule):
 		if button: button.doAction()
 		else: message(_("Video call not available"))
 
-	# Accept call
-	@script(description=_("Accept call"), gesture="kb:ALT+shift+Y")
-	def script_answeringCall(self, gesture):
-		elements = api.getForegroundObject().children[1].firstChild.children
-		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue717"), None)
-		if button: button.doAction()
-
 	# End or decline call
-	@script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:ALT+shift+N")
+	# @script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:ALT+shift+N")
 	def script_callCancellation(self, gesture):
 		elements = api.getForegroundObject().children[1].firstChild.children
 		button = next((item for item in elements if item.role == controlTypes.Role.BUTTON and item.firstChild.name == "\ue65a"), None)
@@ -508,8 +511,9 @@ class AppModule(appModuleHandler.AppModule):
 	# Function of recording and sending a voice message
 	@script(description=_("Record and send a voice message"), gesture="kb:control+R")
 	def script_recordingVoiceMessage(self, gesture):
-		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("RightButton", "PttSendButton")), None)
-		if not button: return
+		button = next((item for item in self.get_elements() if item.role == controlTypes.Role.BUTTON and controlTypes.State.FOCUSABLE in item.states and item.UIAAutomationId in ("RightButton", "SendVoiceMessageButton")), None)
+		if not button:
+			return
 		if button.UIAAutomationId == "RightButton":
 			if button.firstChild.name == "\ue724":
 				# If the edit field is not empty
@@ -519,7 +523,7 @@ class AppModule(appModuleHandler.AppModule):
 				playWaveFile(baseDir+"wa_ptt_start_record.wav")
 			self.is_skip_name = 2
 			button.doAction()
-		elif button.UIAAutomationId == "PttSendButton":
+		elif button.UIAAutomationId == "SendVoiceMessageButton":
 			self.is_skip_name = 2
 			button.doAction()
 			if config.conf["WhatsAppPlus"]['playSoundWhenRecordingVoiceMessage']:
@@ -658,24 +662,23 @@ class AppModule(appModuleHandler.AppModule):
 		TextWindow(text.strip(), _("List of shortcuts"), readOnly=True)
 
 	def is_message_contains_user_name(self, text_message):
-		if config.conf["WhatsAppPlus"]["user_name"]:
-			if text_message.startswith(config.conf["WhatsAppPlus"]["user_name"]):
+		if not config.conf["WhatsAppPlus"]["user_name"]: return False
+		if text_message.startswith(config.conf["WhatsAppPlus"]["user_name"]):
 				return config.conf["WhatsAppPlus"]["user_name"]
 		else: return False
 	
 	def is_message_contains_phone_number(self, text_message):
-		if config.conf["WhatsAppPlus"]["number_phone"]:
-			number_in_message = text_message.split(" ")[0]
-			cleaned_phone = sub(r"[^\d+]", "", number_in_message)
-			number_phome = config.conf["WhatsAppPlus"]["number_phone"]
-			numbers = number_phome.split("|")
-			for number in numbers:
-				if number in cleaned_phone:
-					return number_in_message
-					break
-			else:
-				return False
-		else: return False
+		if not config.conf["WhatsAppPlus"]["number_phone"]: return False
+		number_in_message = text_message.split(":")[0]
+		cleaned_phone = sub(r"[^\d+]", "", number_in_message)
+		number_phome = config.conf["WhatsAppPlus"]["number_phone"]
+		numbers = number_phome.split("|")
+		for number in numbers:
+			if number in cleaned_phone:
+				return number_in_message
+				break
+		else:
+			return False
 
 	# Processing the message that got into focus
 	def action_message_focus(self, obj):
@@ -788,7 +791,11 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self,obj):
 		try:
 			if obj.role == controlTypes.Role.LISTITEM:
-				if obj.name in ('WhatsApp.CallParticipantVm', 'WhatsApp.SelfStreamVm', 'WhatsApp.RecipientItem', 'WhatsApp.ReceiptViewModel'):
+				parent = obj.parent
+				if obj.name == "WhatsApp.CleanViewModels.LightBox.ItemVm.LightBoxExtendedTextItemVm" and obj.firstChild:
+					# A caption for a text-only story
+					obj.name = obj.firstChild.name
+				elif obj.name in ('WhatsApp.CallParticipantVm', 'WhatsApp.SelfStreamVm', 'WhatsApp.RecipientItem', 'WhatsApp.ReceiptViewModel'):
 					obj.name = ", ".join([m.name for m in obj.children])
 				elif obj.name == 'WhatsApp.Design.LightBoxExtendedTextItemVm':
 					obj.name = obj.firstChild.name
@@ -800,6 +807,9 @@ class AppModule(appModuleHandler.AppModule):
 				elif obj.name == "WhatsApp.Design.CallHistoryListCellVm":
 					# We sign the list items in the "Calls" section
 					obj.name = ", ".join([item.name for item in obj.firstChild.children if item.name])
+				if obj.UIAAutomationId == "" and parent.UIAAutomationId == "FlipView" and obj.firstChild.role == controlTypes.Role.GROUPING:
+					# Caption for statuses that contain images or videos
+					obj.name = parent.next.next.next.next.name+ "\n" + obj.name
 			elif obj.role == controlTypes.Role.BUTTON:
 				if obj.name == "\ue8bb": obj.name = _("Cancel reply")
 				elif obj.UIAAutomationId == "CloseButton": obj.name = _("Close")
@@ -830,6 +840,8 @@ class AppModule(appModuleHandler.AppModule):
 				if obj.name == "" and obj.childCount == 3 and obj.parent.UIAAutomationId == "BubbleListItem":
 					# We sign the answer options in the surveys
 					obj.name = obj.firstChild.name+", "+obj.children[1].name+" votes"+obj.lastChild.value
+			elif obj.role == controlTypes.Role.EDITABLETEXT and obj.UIAAutomationId == "InputBarTextBox":
+				self.message_box_element = obj
 		except: pass
 
 	def event_valueChange(self, obj, nextHandler):

@@ -26,8 +26,8 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT+T - Açık bir sohbetin adını ve durumunu duyurun.
 * ALT+shift+C - Sesli arama yap.
 * ALT+shift+V - Görüntülü arama yap.
-* ALT+ shift+Y - Çağrıyı kabul edin.
-* ALT+ shift+N - Gelen bir arama 	varsa "aramayı reddet" düğmesine veya arama sürüyorsa "aramayı sonlandır" düğmesine basın.
+* NVDA+ALT+Y: Çağrıyı kabul edin.
+* NVDA+ALT+N: Gelen bir arama 	varsa "aramayı reddet" düğmesine veya arama sürüyorsa "aramayı sonlandır" düğmesine basın.
 * ALT+A - Mikrofon Açma/Kapatma düğmesine tıklar.
 * ALT+V - Kamerayı açar ve kapatır.
 * ALT+O - "Diğer Seçenekler" düğmesine basın.
@@ -54,6 +54,15 @@ Whatsapp'taki işinizi daha rahat ve üretken hale getirin. Bu eklenti, whatsapp
 * ALT+backspace: Mesajı düzenle.
 
 ##Değişiklik listesi:
+
+### Sürüm 2.1.0 ###
+
+* Kullanıcı durumunu okuma sorunu düzeltildi.
+* Bir aramayı cevaplamanın ve aramayı klavye kısayoluyla reddetmenin mümkün olmadığı bir sorun düzeltildi. Aramayı cevaplamak ve reddetmek için kullanılan klavye kısayollarının NVDA + ALT + Y ve NVDA+ ALT+N olarak değiştirildiğini unutmayın.
+* Açık sohbette yeni mesajları okuma özelliğinin düzgün çalışmaması düzeltildi.
+* Gönderdiğiniz mesajlarda adınız yerine telefon numarasının okunmasına neden olan bir sorun giderildi.
+* Control+R ile sesli mesaj gönderme sorunu düzeltildi.
+* NVDA 2024.1 ile uyumluluk eklendi.
 
 ### Sürüm 2.0.0
 

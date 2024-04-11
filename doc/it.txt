@@ -1,11 +1,11 @@
-* Aggiunta una scorciatoia da tastiera per modificare i messaggi. Di default, questa funzione è assegnata alla combinazione ALT+backspace.
-* Posizionarsi su un messaggio che contiene un allegato provocherà da parte di NVDA la pronuncia del nome e della dimensione dello stesso.
-* Ora la funzione di lettura automatica dei nuovi messaggi nella chat aperta funziona correttamente. Nota però che per un corretto funzionamento è necessario specificare il tuo numero di telefono e il tuo nome nelle impostazioni di WhatsAppPlus.
-* Ora la funzione di lettura automatica dell'attività nelle chat aperte funzionerà in modo più stabile.
-* ALT+D Ora funziona correttamente.
-* Risolto il conflitto di alcune funzioni con l'add-on "BluetoothAudio"..
+* Risolto il problema di lettura dello stato dell'utente.
+* Risolto un problema per il quale non era possibile rispondere e rifiutare una chiamata tramite le scorciatoie da tastiera. Si tenga presente che le relative scorciatoie sono state modificate in NVDA+ALT+Y e NVDA+ALT+N.
+* Risolto l'errato funzionamento della funzione per leggere i nuovi messaggi nella chat aperta.
+* Risolto un problema per il quale nei messaggi inviati veniva letto il proprio numero di telefono anziché il proprio nome.
+* Risolto un problema con l'invio di messaggi vocali tramite la scorciatoia control+r.
+* Aggiunta la compatibilità con NVDA 2024.1.
 
 Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore di questo componente aggiuntivo, puoi farlo utilizzando i seguenti metodi:
-* PeyPal: gladkiy.kostya@gmail.com.
+* PayPal: gladkiy.kostya@gmail.com.
 * Sistema di donazione Ucraino: https://unigramplus.diaka.ua/donate.
 * Numero carta di credito: 5169360009004502 (Gladkiy Constantine).

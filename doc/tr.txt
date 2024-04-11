@@ -1,0 +1,11 @@
+* Kullanıcı durumunu okuma sorunu düzeltildi.
+* Bir aramayı cevaplamanın ve aramayı klavye kısayoluyla reddetmenin mümkün olmadığı bir sorun düzeltildi. Aramayı cevaplamak ve reddetmek için kullanılan klavye kısayollarının NVDA + ALT + Y ve NVDA+ ALT+N olarak değiştirildiğini unutmayın.
+* Açık sohbette yeni mesajları okuma özelliğinin düzgün çalışmaması düzeltildi.
+* Gönderdiğiniz mesajlarda adınız yerine telefon numarasının okunmasına neden olan bir sorun giderildi.
+* Control+R ile sesli mesaj gönderme sorunu düzeltildi.
+* NVDA 2024.1 ile uyumluluk eklendi.
+
+Bu eklentinin geliştiricisini destekleme isteğiniz ve en önemlisi fırsatınız varsa, aşağıdaki ayrıntıları kullanarak bunu yapabilirsiniz:
+* PayPal: gladkiy.kostya@gmail.com.
+* Ukrayna bağış sistemi: https://unigramplus.diaka.ua/donate.
+* Kart numarası: 5169360009004502 (Gladkiy Constantine).

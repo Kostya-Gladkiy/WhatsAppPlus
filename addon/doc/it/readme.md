@@ -1,4 +1,25 @@
-# WhatsAppPlus#
+# WhatsAppPlus #
+
+* Author: Kostya Gladkiy (Ukrain)
+* Download [stable version][1] (Compatible with NVDA 2021.2 to 2024.1)
+* [Telegram channel][2]
+
+## About ##
+
+This add-on makes it easy to use the UWP version of the WhatsApp app, allowing users to easily interact with chats, messages, context menu items, and more.
+
+### General features ###
+
+* When replying to a message, the edit field will change the title.
+* Added accessibility labels for some WhatsApp elements.
+* A large number of keyboard shortcuts have been added to work productively and comfortably in WhatsApp, which can be found below.
+
+## Keyboard shortcuts: ##
+
+* ALT+1: Move focus to chat list.
+* ALT+2: Move focus to the last message in an open chat.
+* ALT+D: Move the focus to the edit field. If the focus is already in the edit field, then after pressing the hotkey, it will move to where it was before.
+* ALT+T: Announce the name and status of an open chat.# WhatsAppPlus#
 
 * Authore: Kostya Gladkiy (Ucraina)
 * Scarica [la versione stabile][1] (compatibile con NVDA da 2021.2 a 2023.1)
@@ -22,8 +43,8 @@ Questo componente aggiuntivo semplifica l'utilizzo della versione UWP dell'app W
 * ALT+T: Annuncia il nome e lo stato della chat aperta.
 * ALT+shift+C: Effettua una chiamata vocale a un contatto o gruppo, o partecipa ad una chiamata vocale in corso in un gruppo.
 * ALT+shift+V: Effettua una videochiamata a un contatto o gruppo.
-* ALT+shift+Y: Accetta una chiamata.
-* ALT+shift+N: rifiuta la chiamata in arrivo o abbandona quella in corso.
+* NVDA+ALT+Y: Accetta una chiamata in arrivo.
+* NVDA+ALT+N: rifiuta la chiamata in arrivo o abbandona quella in corso.
 * ALT+A: Attiva o disattiva il microfono.
 * ALT+V: Attiva o disattiva la videocamera.
 * ALT+O: Preme il pulsante Altre opzioni.
@@ -48,8 +69,32 @@ Questo componente aggiuntivo semplifica l'utilizzo della versione UWP dell'app W
 * ALT+U: annuncia il valore corrente di una barra di progresso. Se premuto due volte, attiva o disattiva l'annuncio automatico delle barre di progresso.
 * control+space: Passa alla modalità di selezione.
 * ALT+backspace: Modifica un messaggio.
+* ALT+A: Attiva o disattiva il microfono.
+* ALT+V: Attiva o disattiva la videocamera.
+* ALT+O: Preme il pulsante Altre opzioni.
+* control+R: Registra e invia un messaggio vocale.
+* control+D: Elimina la risposta a un messaggio o un messaggio vocale attualmente in registrazione.
+* control+shift+D: Mette in pausa o riprende la registrazione di un messaggio vocale.
+* ALT+delete: Cancella un messagio o una chat.
+* control+shift+P: Apre il profilo della chat corrente.
+* control+shift+E: Attiva o disattiva la modalità che rimuove la lettura del numero del mittente durante la lettura di messaggi inviati da numeri non presenti nell'elenco dei contatti.
+* ALT+S: Segna un messaggio come importante.
+* ALT+F: Inoltra il messaggio.
+* ALT+R: Rispondi al messaggio.
+* ALT+shift+R: Segna la chat come letta.
+* control+C: Copia il messaggio negli appunti, se contiene testo.
+* ALT+C: Mostra il testo del messaggio in una finestra popup.
+* NVDA+control+W: Apri la finestra delle impostazioni di WhatsAppPlus.
+* ALT+3: Sposta il focus sull'etichetta "messaggi non letti"..
+* control+shift+A: Preme il pulsante Allega file.
+* ALT+L: Abilita la lettura automatica dei nuovi messaggi nella chat corrente.
+* control+S: Aumenta/diminuisce la velocità di riproduzione dei messaggi vocali.
+* ALT+P: Riproduce/mette in pausa il messaggio vocale in riproduzione.
+* ALT+U: annuncia il valore corrente di una barra di progresso. Se premuto due volte, attiva o disattiva l'annuncio automatico delle barre di progresso.
+* control+spazio: Passa alla modalità di selezione.
+* ALT+backspace: Modifica un messaggio.
 
-## Informazioni sull'opportunità di donare allo sviluppatore: ##
+### Informazioni sull'opportunità di donare allo sviluppatore: ###
 
 Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore di questo componente aggiuntivo, puoi farlo utilizzando i seguenti metodi:
 
@@ -58,6 +103,15 @@ Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore
 * Numero carta di credito: 5169360009004502 (Gladkiy Constantine).
 
 ## Storico dei cambiamenti ##
+
+### Version 2.1.0 ###
+
+* Risolto il problema di lettura dello stato dell'utente.
+* Risolto un problema per il quale non era possibile rispondere e rifiutare una chiamata tramite le scorciatoie da tastiera. Si tenga presente che le relative scorciatoie sono state modificate in NVDA+ALT+Y e NVDA+ALT+N.
+* Risolto l'errato funzionamento della funzione per leggere i nuovi messaggi nella chat aperta.
+* Risolto un problema per il quale nei messaggi inviati veniva letto il proprio numero di telefono anziché il proprio nome.
+* Risolto un problema con l'invio di messaggi vocali tramite la scorciatoia control+r.
+* Aggiunta la compatibilità con NVDA 2024.1.
 
 ### Versione 2.0.0 ###
 
@@ -146,3 +200,9 @@ Se hai il desiderio, e soprattutto l'opportunità, di supportare lo sviluppatore
 * Ora le informazioni sulle reazioni ad un messaggio verranno annunciate quando ci si posiziona su quest'ultimo.
 * Ora quando si riproducono i propri messaggi vocali con la barra spaziatrice non appariranno finestre popup.
 * Risoluzione di bug minori.
+
+[1]: https://www.nvaccess.org/addonStore/legacy?file=whatsAppPlus
+
+[2]: https://t.me/unigramPlus
+
+[3]: https://unigramplus.diaka.ua/donate

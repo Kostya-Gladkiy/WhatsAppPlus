@@ -1,11 +1,11 @@
-* Added keyboard shortcut for editing messages. By default, this function is assigned to the ALT+backspace combination.
-* Focusing on a message containing a file will now speak the name, type, and size of the file.
-* Now the function of automatically reading new messages in open chat works correctly. Note though that for correct operation you need to specify your phone number and your name in the WhatsAppPlus settings.that for correct operation you need to specify your phone number in the WhatsAppPlus settings.
-* Now the function of automatic reading of activity in open chats will work more stably.
-* ALT+D now works correctly.
-* Fixed conflict of some functions with "BluetoothAudio" add-on.
+* Fixed the problem with reading user status.
+* Fixed an issue where it was not possible to answer a call and reject a call with a keyboard shortcut. Note that the keyboard shortcuts for answering and rejecting a call have been changed to NVDA+ALT+Y and NVDA+ALT+N.
+* Fixed incorrect operation of the function that reads new messages in open chat.
+* Fixed an issue where the phone number was read instead of your name in messages that you sent.
+* Fixed an issue with sending voice messages using control+R.
+* Added compatibility with NVDA 2024.1.
 
 If you have the desire, and most importantly the opportunity, to support the developer of this add-on, you can do so using the following details:
-* PeyPal: gladkiy.kostya@gmail.com.
+* PayPal: gladkiy.kostya@gmail.com.
 * Ukrainian donation system: https://unigramplus.diaka.ua/donate.
 * Card number: 5169360009004502 (Gladkiy Constantine).

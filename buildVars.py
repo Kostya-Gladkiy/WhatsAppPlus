@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""This add-on adds many hotkeys for quick navigation through the main elements of the window, convenient interaction with chat messages, and also adds many minor improvements that make working in WhatsApp much easier."""),
 	# version
-	"addon_version": "2.0.0",
+	"addon_version": "2.1.0",
 	# Author(s)
 	"addon_author": "Kostya Gladkiy<gladkiy.kostya@gmail.com>",
 	# URL for the add-on documentation support
@@ -37,7 +37,7 @@ addon_info = {
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2021.2.0",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2023.2",
+	"addon_lastTestedNVDAVersion": "2024.1",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!

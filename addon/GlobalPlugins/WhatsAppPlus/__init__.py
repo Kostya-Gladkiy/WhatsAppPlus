@@ -6,7 +6,8 @@ import addonHandler
 from scriptHandler import script
 import config
 import gui
-from gui import SettingsPanel, guiHelper, nvdaControls
+from gui import guiHelper, nvdaControls
+from gui.settingsDialogs import SettingsPanel
 import wx
 import urllib.request
 import core
@@ -17,6 +18,7 @@ import languageHandler
 import queueHandler
 import threading, time, queue, random
 from appModules.whatsapp import SPEC
+from appModules.whatsapp import AppModule
 
 
 lang = languageHandler.getLanguage().split("_")[0]
@@ -142,8 +144,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if os.path.exists(fp): os.remove(fp)
 		# Checking for updates
 		obj = api.getFocusObject()
-		if config.conf["WhatsAppPlus"]["isAutomaticallyCheckForUpdates"] and not isinstance(obj, IAccessibleHandler.SecureDesktopNVDAObject):
+		if config.conf["WhatsAppPlus"]["isAutomaticallyCheckForUpdates"] and not globalVars.appArgs.secure:
 			threading.Thread(target=onCheckForUpdates, args=(False, True,)).start()
+
+	# Call answer
+	@script(description=_("Accept call"), gesture="kb:NVDA+ALT+Y")
+	def script_answeringCall(self, gesture):
+		gesture.send()
+		desctop = api.getDesktopObject()
+		notification = next((item.firstChild.firstChild for item in desctop.children if item.firstChild and hasattr(item.firstChild, "UIAAutomationId") and item.firstChild.UIAAutomationId == "ToastCenterScrollViewer"), False)
+		if not notification:
+			return
+		button = next((item for item in notification.children if item.UIAAutomationId == "VerbButton"), None)
+		if button: button.doAction()
+
+	# End or decline call
+	@script(description=_("Press \"Decline call\" button  if there is an incoming call or \"End call\" button if a call is in progress"), gesture="kb:NVDA+ALT+N")
+	def script_callCancellation(self, gesture):
+		desctop = api.getDesktopObject()
+		notification = next((item.firstChild.firstChild for item in desctop.children if item.firstChild and hasattr(item.firstChild, "UIAAutomationId") and item.firstChild.UIAAutomationId == "ToastCenterScrollViewer"), False)
+		if not notification: return
+		button = next((item.next for item in notification.children if item.UIAAutomationId == "VerbButton"), None)
+		if button:
+			button.doAction()
+			return
+		AppModule.script_callCancellation(AppModule, gesture)
+
 
 	@script(description=_("Open WhatsAppPlus settings window"), gesture="kb:NVDA+control+W")
 	def script_open_settings_dialog(self, gesture, arg = False):

@@ -1,0 +1,29 @@
+{
+	"addonId": "whatsAppPlus",
+	"displayName": "WhatsAppPlus",
+	"URL": "",
+	"description": "This add-on adds many hotkeys for quick navigation through the main elements of the window, convenient interaction with chat messages, and also adds many minor improvements that make working in WhatsApp much easier.",
+	"sha256": "51792930830111007cc97f12d9e89787a7470a96e12049f7ed2e9b2d921f2f54",
+	"homepage": "https://github.com/Kostya-Gladkiy/WhatsAppPlus",
+	"addonVersionName": "2.0.3",
+	"addonVersionNumber": {
+		"major": 2,
+		"minor": 0,
+		"patch": 3
+	},
+	"minNVDAVersion": {
+		"major": 2021,
+		"minor": 2,
+		"patch": 0
+	},
+	"lastTestedVersion": {
+		"major": 2024,
+		"minor": 1,
+		"patch": 0
+	},
+	"channel": "stable",
+	"publisher": "",
+	"sourceURL": "https://github.com/Kostya-Gladkiy/WhatsAppPlus",
+	"license": "GPL 2",
+	"licenseURL": "https://www.gnu.org/licenses/gpl-2.0.html"
+}
